@@ -394,7 +394,10 @@ $(function() {
       }
     });
     
+    // sign validation chick
     
+  
+
     
     
     
