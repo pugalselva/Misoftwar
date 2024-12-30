@@ -59,101 +59,69 @@
     </div>
 </div>
 
-    
     <!--====== PRELOADER PART START ======-->
 
     <!--====== HEADER PART START ======-->
     
     <header id="header-part"> 
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-11 col-md-10 col-sm-9 col-9">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a href="index-4.html" class="logo-container">
-                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                    
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item">
-                                        <a class="active" href="index-4.html">Home</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="index-2.html">Home 01</a></li>
-                                            <li><a href="index-3.html">Home 02</a></li>
-                                            <li><a class="active" href="index-4.html">Home 03</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.html">About us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="courses.html">Courses</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="courses.html">Courses</a></li>
-                                            <li><a href="courses-singel.html">Course Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="events.html">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.html">Events</a></li>
-                                            <li><a href="events-singel.html">Event Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="teachers.html">Our Trainer</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="teachers.html">Trainer</a></li>
-                                            <li><a href="teachers-singel.html">Trainer Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-singel.html">Blog Singel</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li class="nav-item">
-                                        <a href="project.html">Project</a>
-                                        <ul class="sub-menu">
-                                            <!-- <li><a href="project.html">Project</a></li> -->
-                                            <!-- <li><a href="shop-singel.html">Project Singel</a></li> -->
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.html">Contact</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                            <li><a href="contact-2.html">Contact Us 2</a></li>
-                                        </ul> -->
-                                    </li>
+            <div class="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="index-4.php" class="logo-container">
+                                    <img class="logo-image" src="images/mi logo1.png" alt="Logo">
+                                    <h2 class="logo-text">Misoftwar</h2>
+                                </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                        
+                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="active" href="index-4.php">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="about.php">About us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="courses.php">Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="events.php">Events</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="events.php">Events</a></li>
+                                                <li><a href="events-singel.php">Event Singel</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="project.php">Project</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="contact.php">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav> <!-- nav -->
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-3 col-3">
+                            <div class="right-icon text-right">
+                                <ul>
+                                    <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
                                 </ul>
-                            </div>
-                        </nav> <!-- nav -->
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-sm-3 col-3">
-                        <div class="right-icon text-right">
-                            <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
-                            </ul>
-                        </div> <!-- right icon -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-    </header>
+                            </div> <!-- right icon -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div>
+        </header>
     
     <!--====== HEADER PART ENDS ======-->
    
@@ -248,142 +216,46 @@
 
     <!--====== COUNTER PART START ======-->
     
-    <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">30,000</span>+</span>
-                        <p>Students enrolled</p>
-                    </div> <!-- singel counter -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">41,000</span>+</span>
-                        <p>Courses Uploaded</p>
-                    </div> <!-- singel counter -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">11,000</span>+</span>
-                        <p>People certifie</p>
-                    </div> <!-- singel counter -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">39,000</span>+</span>
-                        <p>Global Teachers</p>
-                    </div> <!-- singel counter -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div>
+    
     
     <!--====== COUNTER PART ENDS ======-->
    
     <!--====== TEACHERS PART START ======-->
     
     <section id="teachers-part" class="pt-65 pb-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="section-title mt-50 pb-35">
-                        <h5>Featured Trainers</h5>
-                        <h2>Meet Our Trainers</h2>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-1.jpg" alt="Teachers">
+        <!-- <div class="container"> -->
+            <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="singel-counter text-center mt-40">
+                                <span><span class="counter">30,000</span>+</span>
+                                <p>Students enrolled</p>
+                            </div> <!-- singel counter -->
                         </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="singel-counter text-center mt-40">
+                                <span><span class="counter">41,000</span>+</span>
+                                <p>Courses Uploaded</p>
+                            </div> <!-- singel counter -->
                         </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-2.jpg" alt="Teachers">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="singel-counter text-center mt-40">
+                                <span><span class="counter">11,000</span>+</span>
+                                <p>People certifie</p>
+                            </div> <!-- singel counter -->
                         </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="singel-counter text-center mt-40">
+                                <span><span class="counter">39,000</span>+</span>
+                                <p>Global Teachers</p>
+                            </div> <!-- singel counter -->
                         </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-3.jpg" alt="Teachers">
-                        </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
-                        </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-4.jpg" alt="Teachers">
-                        </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
-                        </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-5.jpg" alt="Teachers">
-                        </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
-                        </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-6.jpg" alt="Teachers">
-                        </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
-                        </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-7.jpg" alt="Teachers">
-                        </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
-                        </div>
-                    </div> <!-- singel teachers -->
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="singel-teachers mt-30 text-center">
-                        <div class="image">
-                            <img src="images/teachers/t-8.jpg" alt="Teachers">
-                        </div>
-                        <div class="cont">
-                            <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                            <span>Vice chencelor</span>
-                        </div>
-                    </div> <!-- singel teachers -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div>
+            <!-- row -->
+        <!-- </div> container -->
     </section>
     
     <!--====== TEACHERS PART ENDS ======-->
@@ -503,17 +375,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
+                                <a href="index-4.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -522,11 +394,11 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
+                                <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
+                                <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>

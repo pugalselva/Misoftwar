@@ -44,7 +44,49 @@
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
   
-  
+    <style>
+        /* Custom styles for the message */
+        #messages {
+            display: inline-block;
+            font-size: 1.2em;  
+            font-weight: 600;  
+            margin-left: 15px; 
+            margin-top: 10px;  
+            margin-bottom: 10px; 
+            vertical-align: middle; 
+        }
+
+        .success-message {
+            color: green;
+        }
+        .error-message {
+            color: red;
+        }
+        /* Button normal style */
+.main-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.main-btn:hover {
+    background-color: #2980b9; /* Change color on hover */
+    transform: scale(1.05); 
+}
+
+/* Button active effect (when clicked) */
+.main-btn:active {
+    background-color: #1c6f8c; /* Darker color when clicked */
+    transform: scale(0.98); /* Button shrinks a bit on click */
+}
+
+    </style>
 </head>
 
 <body>
@@ -75,7 +117,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a href="index-4.html" class="logo-container">
+                                <a href="index-4.php" class="logo-container">
                                     <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                     <h2 class="logo-text">Misoftwar</h2>
                                 </a>
@@ -86,57 +128,26 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="active" href="index-4.html">Home</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="index-2.html">Home 01</a></li>
-                                                <li><a href="index-3.html">Home 02</a></li>
-                                                <li><a class="active" href="index-4.html">Home 03</a></li>
-                                            </ul> -->
+                                            <a class="active" href="index-4.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="about.html">About us</a>
+                                            <a href="about.php">About us</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="courses.html">Courses</a>
+                                            <a href="courses.php">Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="events.php">Events</a>
                                             <ul class="sub-menu">
-                                                <li><a href="courses.html">Courses</a></li>
-                                                <li><a href="courses-singel.html">Course Singel</a></li>
+                                                <li><a href="events.php">Events</a></li>
+                                                <li><a href="events-singel.php">Event Singel</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="events.html">Events</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="events.html">Events</a></li>
-                                                <li><a href="events-singel.html">Event Singel</a></li>
-                                            </ul>
+                                            <a href="project.php">Project</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="teachers.html">Our Trainer</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="teachers.html">Trainer</a></li>
-                                                <li><a href="teachers-singel.html">Trainer Singel</a></li>
-                                            </ul>
-                                        </li>
-                                        <!-- <li class="nav-item">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-singel.html">Blog Singel</a></li>
-                                            </ul>
-                                        </li> -->
-                                        <li class="nav-item">
-                                            <a href="project.html">Project</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="project.html">Project</a></li>
-                                                <li><a href="shop-singel.html">Project Singel</a></li>
-                                            </ul> -->
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="contact.html">Contact</a>
-                                            <!-- <ul class="sub-menu">
-                                                <li><a href="contact.html">Contact Us</a></li>
-                                                <li><a href="contact-2.html">Contact Us 2</a></li>
-                                            </ul> -->
+                                            <a href="contact.php">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -209,27 +220,27 @@
                             <h2>Keep in touch</h2>
                         </div>
                         <div class="main-form pt-45">
-                            <form id="contact-form" action="#" method="post" data-toggle="validator">
+                            <form id="contact-form" action="contact-conn.php" method="post" data-toggle="validator">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-12">
                                         <div class="singel-form form-group">
                                             <input name="name" type="text" placeholder="Your name" data-error="Name is required." required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-12">
                                         <div class="singel-form form-group">
                                             <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-12">
                                         <div class="singel-form form-group">
                                             <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-12">
                                         <div class="singel-form form-group">
                                             <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required>
                                             <div class="help-block with-errors"></div>
@@ -237,13 +248,14 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="singel-form form-group">
-                                            <textarea name="messege" placeholder="Message" data-error="Please leave us a message." required></textarea>
+                                            <textarea name="message" placeholder="Message" data-error="Please leave us a message." required></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="singel-form">
                                             <button type="submit" class="main-btn">Send</button>
+                                            <p id="messages"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -314,17 +326,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
+                                <a href="index-4.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -333,11 +345,11 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
+                                <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
+                                <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>

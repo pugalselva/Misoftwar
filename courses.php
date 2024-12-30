@@ -66,95 +66,64 @@
     <!--====== HEADER PART START ======-->
     
     <header id="header-part"> 
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-11 col-md-10 col-sm-9 col-9">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a href="index-4.html" class="logo-container">
-                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                    
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item">
-                                        <a class="active" href="index-4.html">Home</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="index-2.html">Home 01</a></li>
-                                            <li><a href="index-3.html">Home 02</a></li>
-                                            <li><a class="active" href="index-4.html">Home 03</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.html">About us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="courses.html">Courses</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="courses.html">Courses</a></li>
-                                            <li><a href="courses-singel.html">Course Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="events.html">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.html">Events</a></li>
-                                            <li><a href="events-singel.html">Event Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="teachers.html">Our Trainer</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="teachers.html">Trainer</a></li>
-                                            <li><a href="teachers-singel.html">Trainer Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-singel.html">Blog Singel</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li class="nav-item">
-                                        <a href="project.html">Project</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="project.html">Project</a></li>
-                                            <li><a href="shop-singel.html">Project Singel</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.html">Contact</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                            <li><a href="contact-2.html">Contact Us 2</a></li>
-                                        </ul> -->
-                                    </li>
+            <div class="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="index-4.php" class="logo-container">
+                                    <img class="logo-image" src="images/mi logo1.png" alt="Logo">
+                                    <h2 class="logo-text">Misoftwar</h2>
+                                </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                        
+                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="active" href="index-4.php">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="about.php">About us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="courses.php">Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="events.php">Events</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="events.php">Events</a></li>
+                                                <li><a href="events-singel.php">Event Singel</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="project.php">Project</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="contact.php">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav> <!-- nav -->
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-sm-3 col-3">
+                            <div class="right-icon text-right">
+                                <ul>
+                                    <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
                                 </ul>
-                            </div>
-                        </nav> <!-- nav -->
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-sm-3 col-3">
-                        <div class="right-icon text-right">
-                            <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
-                            </ul>
-                        </div> <!-- right icon -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-    </header>
+                            </div> <!-- right icon -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div>
+        </header>
     
     <!--====== HEADER PART ENDS ======-->
    
@@ -185,7 +154,7 @@
                         <h2>Our Courses</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index-4.php">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Courses</li>
                             </ol>
                         </nav>
@@ -219,8 +188,10 @@
                                 <input type="text" placeholder="Search">
                                 <button type="button"><i class="fa fa-search"></i></button>
                             </form>
-                        </div> <!-- courses search -->
-                    </div> <!-- courses top search -->
+                        </div> 
+                        <!-- courses search -->
+                    </div> 
+                    <!-- courses top search -->
                 </div>
             </div> <!-- row -->
             <div class="tab-content" id="myTabContent">
@@ -230,35 +201,16 @@
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="images/course/cu-1.jpg" alt="Course">
+                                        <img src="images/course/py2.jpg" alt="Course">
                                     </div>
                                     <div class="price">
-                                        <span>Free</span>
+                                        <span>Join</span>
                                     </div>
                                 </div>
                                 <div class="cont">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>(20 Reviews)</span>
-                                    <a href="courses-singel.html"><h4>Introduction to Python Programming</h4></a>
+                                    <a href="courses-detail.php"><h4>Introduction to Python Programming</h4></a>
                                     <div class="course-teacher">
-                                        <div class="thum">
-                                            <a href="#"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
-                                        </div>
-                                        <div class="name">
-                                            <a href="#"><h6>Jane Doe</h6></a>
-                                        </div>
-                                        <div class="admin">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-user"></i><span>45</span></a></li>
-                                                <li><a href="#"><i class="fa fa-heart"></i><span>15</span></a></li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div> <!-- singel course -->
@@ -267,35 +219,17 @@
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="images/course/cu-2.jpg" alt="Course">
+                                        <img src="images/course/html.png" alt="Course">
                                     </div>
                                     <div class="price">
-                                        <span>Free</span>
+                                        <span>Join</span>
                                     </div>
                                 </div>
                                 <div class="cont">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>(20 Reviews)</span>
-                                    <a href="courses-singel.html"><h4>Web Development with HTML, CSS, and JavaScript</h4></a>
+                                    <a href="web.php"><h4>Web Development with HTML, CSS, and JavaScript</h4></a>
                                     <div class="course-teacher">
-                                        <div class="thum">
-                                            <a href="#"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a>
-                                        </div>
-                                        <div class="name">
-                                            <a href="#"><h6>John Smith</h6></a>
-                                        </div>
-                                        <div class="admin">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
-                                                <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a></li>
-                                            </ul>
-                                        </div>
+                                        <div class="thum"> </div>
+                                        
                                     </div>
                                 </div>
                             </div> <!-- singel course -->
@@ -304,35 +238,81 @@
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="images/course/cu-3.jpg" alt="Course">
+                                        <img src="images/course/react.png" alt="Course">
                                     </div>
                                     <div class="price">
-                                        <span>Free</span>
+                                        <span>Join</span>
                                     </div>
                                 </div>
                                 <div class="cont">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ ```html
+                                    <a href="react.php"><h4>ReactJS</h4></a>
+                                    <div class="course-teacher">
+                                        <div class="thum"> </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> <!-- singel course -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="singel-course mt-30">
+                                <div class="thum">
+                                    <div class="image">
+                                        <img src="images/course/angular.jpg" alt="Course">
+                                    </div>
+                                    <div class="price">
+                                        <span>Join</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <a href="angular.php"><h4>AngularJS</h4></a>
+                                    <div class="course-teacher">
+                                        <div class="thum"> </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> <!-- singel course -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="singel-course mt-30">
+                                <div class="thum">
+                                    <div class="image">
+                                        <img src="images/course/php.png" alt="Course">
+                                    </div>
+                                    <div class="price">
+                                        <span>Join</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                <a href="php.php"></a><h4>PHP</h4>
+                                <div class="course-teacher">
+                                    <div class="thum"></div>
+                                    
+                                </div>
+                            </div>
+                        </div> <!-- singel course -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="singel-course mt-30">
+                            <div class="thum">
+                                <div class="image">
+                                    <img src="images/course/corejava.jpg" alt="Course">
+                                </div>
+                                <div class="price">
+                                    <span>Join</span>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <!-- <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
                                 </ul>
-                                <span>(20 Reviews)</span>
-                                <a href="courses-singel.html"><h4>Data Science and Machine Learning Basics</h4></a>
+                                <span>(20 Reviews)</span> -->
+                                <a href="core-java.php"><h4>Core-Java</h4></a>
                                 <div class="course-teacher">
                                     <div class="thum">
-                                        <a href="#"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
-                                    </div>
-                                    <div class="name">
-                                        <a href="#"><h6>Emily Johnson</h6></a>
-                                    </div>
-                                    <div class="admin">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-user"></i><span>50</span></a></li>
-                                            <li><a href="#"><i class="fa fa-heart"></i><span>20</span></a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -342,34 +322,17 @@
                         <div class="singel-course mt-30">
                             <div class="thum">
                                 <div class="image">
-                                    <img src="images/course/cu-4.jpg" alt="Course">
+                                    <img src="images/course/mysql.png" alt="Course">
                                 </div>
                                 <div class="price">
-                                    <span>Free</span>
+                                    <span>Join</span>
                                 </div>
                             </div>
                             <div class="cont">
-                                <ul>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                                <span>(20 Reviews)</span>
-                                <a href="courses-singel.html"><h4>Cybersecurity Fundamentals</h4></a>
+                                <a href="sql.php"><h4>MYSQL</h4></a>
                                 <div class="course-teacher">
                                     <div class="thum">
-                                        <a href="#"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a>
-                                    </div>
-                                    <div class="name">
-                                        <a href="#"><h6>Michael Brown</h6></a>
-                                    </div>
-                                    <div class="admin">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-user"></i><span>40</span></a></li>
-                                            <li><a href="#"><i class="fa fa-heart"></i><span>12</span></a></li>
-                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -379,34 +342,36 @@
                         <div class="singel-course mt-30">
                             <div class="thum">
                                 <div class="image">
-                                    <img src="images/course/cu-5.jpg" alt="Course">
+                                    <img src="images/course/net.png" alt="Course">
                                 </div>
                                 <div class="price">
-                                    <span>Free</span>
+                                    <span>Join</span>
                                 </div>
                             </div>
                             <div class="cont">
-                                <ul>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                                <span>(20 Reviews)</span>
-                                <a href="courses-singel.html"><h4>Cloud Computing Essentials</h4></a>
+                                <a href="net.php"><h4>.NET Framework</h4></a>
                                 <div class="course-teacher">
                                     <div class="thum">
-                                        <a href="#"><img src="images/course/teacher/t-5.jpg" alt="teacher"></a>
-                                    </div>
-                                    <div class="name">
-                                        <a href="#"><h6>Sarah Wilson</h6></a>
-                                    </div>
-                                    <div class="admin">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-user"></i><span>35</span></a></li>
-                                            <li><a href="#"><i class="fa fa-heart"></i><span>8</span></a></li>
-                                        </ul>
+                                         </div>
+                                </div>
+                            </div>
+                        </div> <!-- singel course -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="singel-course mt-30">
+                            <div class="thum">
+                                <div class="image">
+                                    <img src="images/course/spring.png" alt="Course">
+                                </div>
+                                <div class="price">
+                                    <span>Join</span>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <a href="spring.php"><h4>spring-framework</h4></a>
+                                <div class="course-teacher">
+                                    <div class="thum">
+
                                     </div>
                                 </div>
                             </div>
@@ -417,16 +382,15 @@
             <div class="tab-pane fade" id="courses-list" role="tabpanel" aria-labelledby="courses-list-tab">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="singel-course ```html
-            mt-30">
+                        <div class="singel-course mt-30">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="images/course/cu-1.jpg" alt="Course">
+                                            <img src="images/course/python.jpeg" alt="Course">
                                         </div>
                                         <div class="price">
-                                            <span>Free</span>
+                                            <span>Join</span>
                                         </div>
                                     </div>
                                 </div>
@@ -440,7 +404,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                         <span>(20 Reviews)</span>
-                                        <a href="#"><h4>Introduction to Python Programming</h4></a>
+                                        <a href="courses-detail"><h4>Introduction to Python Programming</h4></a>
                                         <div class="course-teacher">
                                             <div class="thum">
                                                 <a href="#"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
@@ -466,10 +430,10 @@
                                 <div class="col-md-6">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="images/course/cu-2.jpg" alt="Course">
+                                            <img src="images/course/html.png" alt="Course">
                                         </div>
                                         <div class="price">
-                                            <span>Free</span>
+                                            <span>Join</span>
                                         </div>
                                     </div>
                                 </div>
@@ -483,7 +447,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                         <span>(20 Reviews)</span>
-                                        <a href="#"><h4>Web Development with HTML, CSS, and JavaScript</h4></a>
+                                        <a href="web.php"><h4>Web Development with HTML, CSS, and JavaScript</h4></a>
                                         <div class="course-teacher">
                                             <div class="thum">
                                                 <a href="#"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a>
@@ -509,10 +473,10 @@
                                 <div class="col-md-6">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="images/course/cu-3.jpg" alt="Course">
+                                            <img src="images/course/java.jpeg" alt="Course">
                                         </div>
                                         <div class="price">
-                                            <span>Free</span>
+                                            <span>Join</span>
                                         </div>
                                     </div>
                                 </div>
@@ -526,7 +490,7 @@
                                             <li><i class=" fa-star"></i></li>
                                         </ul>
                                         <span>(20 Reviews)</span>
-                                        <a href="#"><h4>Data Science and Machine Learning Basics</h4></a>
+                                        <a href="core-java.php"><h4>Core Java Learning Basics</h4></a>
                                         <div class="course-teacher">
                                             <div class="thum">
                                                 <a href="#"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
@@ -552,15 +516,15 @@
                                 <div class="col-md-6">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="images/course/cu-4.jpg" alt="Course">
+                                            <img src="images/course/react.png" alt="Course">
                                         </div>
                                         <div class="price">
-                                            <span>Free</span>
+                                            <span>Join</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="cont">
+                                    <div class="cont"> 
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
@@ -569,7 +533,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                         <span>(20 Reviews)</span>
-                                        <a href="#"><h4>Cybersecurity Fundamentals</h4></a>
+                                        <a href="react.php"><h4>Reactjs Learning</h4></a>
                                         <div class="course-teacher">
                                             <div class="thum">
                                                 <a href="#"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a>
@@ -627,17 +591,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
+                                <a href="index-4.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -646,11 +610,11 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
+                                <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
+                                <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -748,6 +712,26 @@
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.courses-search input');
+            const courses = document.querySelectorAll('.singel-course');
+    
+            searchInput.addEventListener('input', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+    
+                courses.forEach(course => {
+                    const courseName = course.querySelector('h4').textContent.toLowerCase();
+                    if (courseName.includes(searchTerm)) {
+                        course.parentElement.style.display = 'block';
+                    } else {
+                        course.parentElement.style.display = 'none'; 
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

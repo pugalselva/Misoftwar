@@ -1,0 +1,122 @@
+<section id="slider-part-3" class="bg_cover"  style="background-image: url(images/slider/s-3.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="slider-cont-3 text-center">
+                    <h2>Search for preferred courses</h2>
+                    <span>More than courses for you</span>
+                    <div class="slider-search mt-65">
+                        <form action="#">
+                            <div class="row no-gutters">
+                                <div class="col-sm-2">
+                                    <select id="category-dropdown">
+                                        <option value="">Category</option>
+                                        <option value="frontend">Frontend</option>
+                                        <option value="backend">Backend</option>
+                                        <option value="database">Database</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <select id="courses-dropdown">
+                                        <option value="">Courses</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="text" id="search-keyword" placeholder="Search keyword">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="main-btn" id="search-button">Search Now</button>
+                                </div>
+                            </div> <!-- row -->
+                        </form>
+                    </div>
+                </div> <!-- slider cont3 -->
+            </div>
+        </div>
+        
+        <div class="slider-feature pt-30 d-none d-md-block">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="singel-slider-feature justify-content-center mt-30">
+                        <div class="icon">
+                            <img src="images/all-icon/man.png" alt="icon">
+                        </div>
+                        <div class="cont">
+                            <h3>4000+</h3>
+                            <span>Worldwide Students</span>
+                        </div>
+                    </div> <!-- singel slider feature -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="singel-slider-feature justify-content-center mt-30">
+                        <div class="icon">
+                            <img src="images/all-icon/book.png" alt="icon">
+                        </div>
+                        <div class="cont">
+                            <h3>10+</h3>
+                            <span>Available Courses</span>
+                        </div>
+                    </div> <!-- singel slider feature -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="singel-slider-feature justify-content-center mt-30">
+                        <div class="icon">
+                            <img src="images/all-icon/expert.png" alt="icon">
+                        </div>
+                        <div class="cont">
+                            <h3>Expert Instructor</h3>
+                            <span>Expert Instructors</span>
+                        </div>
+                    </div> <!-- singel slider feature -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- slider feature -->
+    </div> <!-- container -->
+</section>
+<script>
+    // Course data mapped by categories
+    const coursesData = {
+        frontend: [
+            { value: "html", text: "HTML" },
+            { value: "css", text: "CSS" },
+            { value: "javascript", text: "JavaScript" },
+            { value: "reactjs", text: "ReactJS" },
+            { value: "angularjs", text: "AngularJS" }
+        ],
+        backend: [
+            { value: "php", text: "PHP" },
+            { value: "python", text: "Python" },
+            { value: ".net", text: ".NET Framework" },
+            { value: "core-java", text: "Core Java" },
+            { value: "spring-framework", text: "Spring Framework" }
+        ],
+        database: [
+            { value: "mysql", text: "MYSQL" }
+        ]
+    };
+
+    // Dropdown elements
+    const categoryDropdown = document.getElementById("category-dropdown");
+    const coursesDropdown = document.getElementById("courses-dropdown");
+
+    // Function to handle category change and populate courses dropdown
+    function handleCategoryChange(selectedCategory) {
+        // Clear existing options in the courses dropdown
+        coursesDropdown.innerHTML = '<option value="">Courses</option>';
+
+        // Populate courses dropdown if category exists in data
+        if (coursesData[selectedCategory]) {
+            coursesData[selectedCategory].forEach(course => {
+                const option = document.createElement("option");
+                option.value = course.value;
+                option.textContent = course.text;
+                coursesDropdown.appendChild(option);
+            });
+        }
+    }
+
+    // Initialize dropdown with event listener
+    categoryDropdown.addEventListener("change", () => {
+        handleCategoryChange(categoryDropdown.value);
+    });
+</script>

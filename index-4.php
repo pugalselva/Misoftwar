@@ -76,7 +76,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index-4.html" class="logo-container">
+                            <a href="index-4.php" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                 <h2 class="logo-text">Misoftwar</h2>
                             </a>
@@ -87,57 +87,26 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-4.html">Home</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="index-2.html">Home 01</a></li>
-                                            <li><a href="index-3.html">Home 02</a></li>
-                                            <li><a class="active" href="index-4.html">Home 03</a></li>
-                                        </ul> -->
+                                        <a class="active" href="index-4.php">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html">About us</a>
+                                        <a href="about.php">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.html">Courses</a>
+                                        <a href="courses.php">Courses</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="events.php">Events</a>
                                         <ul class="sub-menu">
-                                            <li><a href="courses.html">Courses</a></li>
-                                            <li><a href="courses-singel.html">Course Singel</a></li>
+                                            <li><a href="events.php">Events</a></li>
+                                            <li><a href="events-singel.php">Event Singel</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="events.html">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.html">Events</a></li>
-                                            <li><a href="events-singel.html">Event Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a href="teachers.html">Our Trainer</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="teachers.html">Trainer</a></li>
-                                            <li><a href="teachers-singel.html">Trainer Singel</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <!-- <li class="nav-item">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-singel.html">Blog Singel</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li class="nav-item">
-                                        <a href="project.html">Project</a>
-                                        <ul class="sub-menu">
-                                            <!-- <li><a href="project.html">Project</a></li> -->
-                                            <!-- <li><a href="shop-singel.html">Project Singel</a></li> -->
-                                        </ul>
+                                        <a href="project.php">Project</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.html">Contact</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                            <li><a href="contact-2.html">Contact Us 2</a></li>
-                                        </ul> -->
+                                        <a href="contact.php">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -183,38 +152,35 @@
                 <div class="col-lg-10">
                     <div class="slider-cont-3 text-center">
                         <h2>Search for preferred courses</h2>
-                        <span>More then courses for you</span>
-                        <div class="slider-search mt-45">
-                           <form action="#">
+                        <span>More than courses for you</span>
+                        <div class="slider-search mt-65">
+                            <form action="#">
                                 <div class="row no-gutters">
-                                    <div class="col-sm-3">
-                                        <select>
-                                            <option value="0">Courses</option>
-                                            <option value="1">HTML</option>
-                                            <option value="1">CSS</option>
-                                            <option value="1">JavaScript</option>
-                                            <option value="1">ReactJS</option>
-                                            <option value="1">AngularJS</option>
-                                            <option value="1">PHP</option>
-                                            <option value="1">MYSQL</option>
-                                            <option value="1">Python</option>
-                                            <option value="1">.NET Framework</option>
-                                            <option value="1">Core Java</option>
-                                            <option value="1">Spring Framework</option>
+                                    <div class="col-sm-2">
+                                        <select id="category-dropdown">
+                                            <option value="">Category</option>
+                                            <option value="frontend">Frontend</option>
+                                            <option value="backend">Backend</option>
+                                            <option value="database">Database</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" placeholder="Search keyword">
+                                    <div class="col-sm-2">
+                                        <select id="courses-dropdown">
+                                            <option value="">Courses</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <input type="text" id="search-keyword" placeholder="Search keyword">
                                     </div>
                                     <div class="col-sm-3">
-                                        <button type="button" class="main-btn">Search Now</button>
+                                        <button type="button" class="main-btn" id="search-button">Search Now</button>
                                     </div>
                                 </div> <!-- row -->
                             </form>
                         </div>
                     </div> <!-- slider cont3 -->
                 </div>
-            </div> <!-- row -->
+            </div>
             <div class="slider-feature pt-30 d-none d-md-block">
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6">
@@ -234,7 +200,7 @@
                                 <img src="images/all-icon/book.png" alt="icon">
                             </div>
                             <div class="cont">
-                                <h3>11+</h3>
+                                <h3>10+</h3>
                                 <span>Available Courses</span>
                             </div>
                         </div> <!-- singel slider feature -->
@@ -269,8 +235,8 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5> Python <br>Programming</h5>
-                                <!-- <span>24 courses</span> -->
+                                <h5>UI/UX <br>design</h5>
+                                <!-- <span>"HTML", "CSS", "JavaScript", "ReactJS", "AngularJS"</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -282,8 +248,8 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>Web Development With HTML, <br> CSS, and Javascript </h5>
-                                <!-- <span>24 courses</span> -->
+                                <h5>Programming  </h5>
+                                <!-- <span>"PHP", "Python", ".NET Framework", "Core Java"</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -295,8 +261,8 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>UI/UX</h5>
-                                <span>Design</span>
+                                <h5>Database</h5>
+                                <!-- <span>MYSQL</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -308,7 +274,7 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5> Core Java <br>Programming </h5>
+                                <h5> UI/UX <br>design</h5>
                                 <!-- <span>24 courses</span> -->
                             </a>
                         </div>
@@ -319,6 +285,8 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
+
+    
     
     <!--====== CATEGORY PART ENDS ======-->
     
@@ -342,11 +310,11 @@
                                 <img src="images/course/py2.jpg" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -363,7 +331,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="courses-detail.html"><h4>Introduction to Python <br> Programming</h4></a>
+                            <a href="courses-detail.php"><h4>Introduction to Python <br> Programming</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -374,11 +342,11 @@
                                 <img src="images/course/html.png" alt="hmtl" width="800px" height="600px">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -395,7 +363,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Web Development With HTML, <br> CSS, and Javascript</h4></a>
+                            <a href="web.php"><h4>Web Development With HTML, <br> CSS, and Javascript</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -406,11 +374,11 @@
                                 <img src="images/course/react1.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -427,7 +395,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>ReactJS</h4></a>
+                            <a href="react.php"><h4>ReactJS</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -438,11 +406,11 @@
                                 <img src="images/course/angular.jpg" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -470,11 +438,11 @@
                                 <img src="images/course/php.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -491,7 +459,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>PHP</h4></a>
+                            <a href="php.php"><h4>PHP</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -502,11 +470,11 @@
                                 <img src="images/course/mysql.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -523,7 +491,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>MYSQL</h4></a>
+                            <a href="sql.php"><h4>MYSQL</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -534,11 +502,11 @@
                                 <img src="images/course/net.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -555,7 +523,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>.Net Framework</h4></a>
+                            <a href="net.php"><h4>.Net Framework</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -566,11 +534,11 @@
                                 <img src="images/course/corejava.jpg" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -587,7 +555,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Core Java</h4></a>
+                            <a href="core-java.php"><h4>Core Java</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -598,11 +566,11 @@
                                 <img src="images/course/spring.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Free</span>
+                                <span>Join</span>
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="images/course/teacher/t-5.jpg" alt="teacher"></a>
+                                    <a href="courses-singel.php"><img src="images/course/teacher/t-5.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
                                     <a href="#"><h6>Mark anthem</h6></a>
@@ -619,16 +587,50 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Spring Framework</h4></a>
+                            <a href="spring.php"><h4>Spring Framework</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
             </div> <!-- course slied -->
         </div> <!-- container -->
     </section>
-    
+    <style>
+       
+
+</style>
+
+
+
     <!--====== COURSE PART ENDS ======-->
-    
+    <!-- Popup Container -->
+<div class="popup-wrapper" id="popupWrapper">
+    <div class="popup-content">
+        <div class="popup-close-btn" onclick="closePopup()">&times;</div>
+        <div class="form-wrapper">
+            <div class="form-header text-center">
+                <h3>Free Enquiry!</h3>
+                <span>Sign up now</span>
+            </div>
+            <div class="form-body">
+                <form id="enquiryForm" action="#">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="submit-btn" type="button" onclick="validateForm()">Get it Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!--====== COUNT DOWN PART START ======-->
     
     <section id="count-down-part" class="bg_cover pt-70 pb-120" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
@@ -692,7 +694,7 @@
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.html"><h4>Campus clean workshop</h4></a>
+                                        <a href="events-singel.php"><h4>Campus clean workshop</h4></a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
@@ -700,7 +702,7 @@
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.html"><h4>Tech Summit</h4></a>
+                                        <a href="events-singel.php"><h4>Tech Summit</h4></a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
@@ -708,7 +710,7 @@
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.html"><h4>Enviroement conference</h4></a>
+                                        <a href="events-singel.php"><h4>Enviroement conference</h4></a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
@@ -919,17 +921,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
+                                <a href="index-4.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -938,11 +940,11 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
+                                <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
+                                <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -997,11 +999,6 @@
    
     
     
-    
-    
-    
-    
-    
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -1045,8 +1042,8 @@
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email validation regex
-            const phonePattern = /^[0-9]+$/; // Only digits allowed
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            const phonePattern = /^[0-9]+$/; 
     
             if (!name) {
                 alert("Please enter your name.");
@@ -1064,10 +1061,78 @@
             }
     
             alert("Form submitted successfully!");
-            // Add your form submission logic here
             return true;
         }
     </script>
+<script>
+    // Course data mapped by categories
+    const coursesData = {
+        frontend: [
+            { value: "html", text: "HTML" },
+            { value: "css", text: "CSS" },
+            { value: "javascript", text: "JavaScript" },
+            { value: "reactjs", text: "ReactJS" },
+            { value: "angularjs", text: "AngularJS" }
+        ],
+        backend: [
+            { value: "php", text: "PHP" },
+            { value: "python", text: "Python" },
+            { value: ".net", text: ".NET Framework" },
+            { value: "core-java", text: "Core Java" },
+            { value: "spring-framework", text: "Spring Framework" }
+        ],
+        database: [
+            { value: "mysql", text: "MYSQL" }
+        ]
+    };
+
+    // Dropdown elements
+    const categoryDropdown = document.getElementById("category-dropdown");
+    const coursesDropdown = document.getElementById("courses-dropdown");
+
+    // Function to handle category change and populate courses dropdown
+    function handleCategoryChange(selectedCategory) {
+        // Clear existing options in the courses dropdown
+        coursesDropdown.innerHTML = '<option value="">Courses</option>';
+
+        // Populate courses dropdown if category exists in data
+        if (coursesData[selectedCategory]) {
+            coursesData[selectedCategory].forEach(course => {
+                const option = document.createElement("option");
+                option.value = course.value;
+                option.textContent = course.text;
+                coursesDropdown.appendChild(option);
+            });
+        }
+    }
+    // Initialize dropdown with event listener
+    categoryDropdown.addEventListener("change", () => {
+        handleCategoryChange(categoryDropdown.value);
+    });
+</script>
+<script>
+function closePopup() {
+    document.getElementById('popupWrapper').style.display = 'none';
+}
+
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (name && email && phone) {
+        alert('Form submitted successfully!');
+        closePopup();
+    } else {
+        alert('Please fill in all fields.');
+    }
+}
+
+window.onload = function() {
+    document.getElementById('popupWrapper').style.display = 'flex';
+};
+</script>
+
 
 </body>
 

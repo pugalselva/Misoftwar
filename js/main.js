@@ -394,7 +394,8 @@ $(function() {
       }
     });
     
-    // sign validation chick
+ 
+
     
   
 

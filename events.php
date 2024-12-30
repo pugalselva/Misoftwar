@@ -75,7 +75,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a href="index-4.html" class="logo-container">
+                                <a href="index-4.php" class="logo-container">
                                     <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                     <h2 class="logo-text">Misoftwar</h2>
                                 </a>
@@ -86,35 +86,26 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="active" href="index-4.html">Home</a>
-                                            
+                                            <a class="active" href="index-4.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="about.html">About us</a>
+                                            <a href="about.php">About us</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="courses.html">Courses</a>
+                                            <a href="courses.php">Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="events.php">Events</a>
                                             <ul class="sub-menu">
-                                                <li><a href="courses.html">Courses</a></li>
-                                                <li><a href="courses-singel.html">Course Singel</a></li>
+                                                <li><a href="events.php">Events</a></li>
+                                                <li><a href="events-singel.php">Event Singel</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="events.html">Events</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="events.html">Events</a></li>
-                                                <li><a href="events-singel.html">Event Singel</a></li>
-                                            </ul>
-                                        </li>
-                                        
-                                        
-                                        <li class="nav-item">
-                                            <a href="project.html">Project</a>
-                                            
+                                            <a href="project.php">Project</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="contact.html">Contact</a>
-                                            
+                                            <a href="contact.php">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -186,7 +177,7 @@
                         </div>
                         <div class="event-cont">
                             <span><i class="fa fa-calendar"></i> 15 March 2023</span>
-                            <a href="events-singel.html"><h4>Women in Tech Conference</h4></a>
+                            <a href="events-singel.php"><h4>Women in Tech Conference</h4></a>
                             <span><i class="fa fa-clock-o"></i> 10:00 AM - 4:00 PM</span>
                             <span><i class="fa fa-map-marker"></i> Idhaya Auditorium</span>
                             <p>Join us for a day of inspiring talks and workshops led by successful women in the tech industry. Network with peers and learn about the latest trends in technology.</p>
@@ -200,7 +191,7 @@
                         </div>
                         <div class="event-cont">
                             <span><i class="fa fa-calendar"></i> 22 March 2023</span>
-                            <a href="events-singel.html"><h4>Hackathon 2023</h4></a>
+                            <a href="events-singel.php"><h4>Hackathon 2023</h4></a>
                             <span><i class="fa fa-clock-o"></i> 9:00 AM - 6:00 PM</span>
                             <span><i class="fa fa-map-marker"></i> Computer Lab</span>
                             <p>Put your coding skills to the test in our annual hackathon! Collaborate with fellow students to create innovative solutions and win exciting prizes.</p>
@@ -214,7 +205,7 @@
                         </div>
                         <div class="event-cont">
                             <span><i class="fa fa-calendar"></i> 5 April 2023</span>
-                            <a href="events-singel.html"><h4>AI and Machine Learning Workshop</h4></a>
+                            <a href="events-singel.php"><h4>AI and Machine Learning Workshop</h4></a>
                             <span><i class="fa fa-clock-o"></i> 10:00 AM - 3:00 PM</span>
                             <span><i class="fa fa-map-marker"></i> Seminar Hall</span>
                             <p>Explore the fundamentals of AI and machine learning in this hands-on workshop. Learn from industry experts and gain practical experience.</p>
@@ -228,7 +219,7 @@
                         </div>
                         <div class="event-cont">
                             <span><i class="fa fa-calendar"></i> 12 April 2023</span>
-                            <a href="events-singel.html"><h4>Career Fair 2023</h4></a>
+                            <a href="events-singel.php"><h4>Career Fair 2023</h4></a>
                             <span><i class="fa fa-clock-o"></i> 10:00 AM - 5:00 PM</span>
                             <span><i class="fa fa-map-marker"></i> College Grounds</span>
                             <p>Meet potential employers and explore job opportunities at our annual career fair. Bring your resume and get ready to network!</p>
@@ -242,7 +233,7 @@
                         </div>
                         <div class="event-cont">
                             <span><i class="fa fa-calendar"></i> 20 April 2023</span>
-                            <a href="events-singel.html"><h4>Cybersecurity Awareness Seminar</h4></a>
+                            <a href="events-singel.php"><h4>Cybersecurity Awareness Seminar</h4></a>
                             <span><i class="fa fa-clock-o"></i> 1:00 PM - 4:00 PM</span>
                             <span><i class="fa fa-map-marker"></i> Lecture Hall</span>
                             <p>Learn about the importance of cybersecurity in today's digital world. This seminar will cover best practices and strategies to protect yourself online.</p>
@@ -256,7 +247,7 @@
                         </div>
                         <div class="event-cont">
                             <span><i class="fa fa-calendar"></i> 28 April 2023</span>
-                            <a href="events-singel.html"><h4>Robotics Workshop</h4></a>
+                            <a href="events-singel.php"><h4>Robotics Workshop</h4></a>
                             <span><i class="fa fa-clock-o"></i> 10:00 AM - 3:00 PM</span>
                             <span><i class="fa fa-map-marker"></i> Robotics Lab</span>
                             <p>Join us for an exciting workshop on robotics! Learn about the basics of robotics and get hands-on experience building your own robot.</p>
@@ -300,17 +291,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
+                                <a href="index-2.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -319,85 +310,11 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-address mt-40">
-                            <div class="footer-title pb-25">
-                                <h6>Contact Us</h6>
-                            </div>
-                            <ul>
-                                <li class="d-flex mb-3">
-                                    <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Idhaya Engineering College for Women, Chinna Salem.</p>
-                                </li>
-                                <li class="d-flex mb-3">
-                                    <i class="fa fa-phone"></i>
-                                    <p class="Con ml-3">+91 93440 23645</p>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthu22@gmail.com</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright Section -->
-        <div class="footer-copyright pt-10 pb-25">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
-                        <p>© Copyright PearlSys. All Rights Reserved</p>
-                    </div>
-                    <div class="col-md-4 text-md-right text-center">
-                        <p>Designed by PearlSys</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer><footer id="footer-part">
-        <div class="footer-top pt-40 pb-70">
-            <div class="container">
-                <div class="row">
-                    <!-- About Section -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer-about mt-40">
-                            <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
-                                </a>
-                            </div>
-                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
-                            <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Support -->
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer-link support mt-40">
-                            <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
+                                <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
+                                <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>

@@ -76,7 +76,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a href="index-4.html" class="logo-container">
+                                <a href="index-4.php" class="logo-container">
                                     <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                     <h2 class="logo-text">Misoftwar</h2>
                                 </a>
@@ -87,34 +87,26 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="active" href="index-4.html">Home</a>
-                                            
+                                            <a class="active" href="index-4.php">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="about.html">About us</a>
+                                            <a href="about.php">About us</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="courses.html">Courses</a>
+                                            <a href="courses.php">Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="events.php">Events</a>
                                             <ul class="sub-menu">
-                                                <li><a href="courses.html">Courses</a></li>
-                                                <li><a href="courses-singel.html">Course Singel</a></li>
+                                                <li><a href="events.php">Events</a></li>
+                                                <li><a href="events-singel.php">Event Singel</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="events.html">Events</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="events.html">Events</a></li>
-                                                <li><a href="events-singel.html">Event Singel</a></li>
-                                            </ul>
-                                        </li>
-                                        
-                                        <li class="nav-item">
-                                            <a href="project.html">Project</a>
-                                            
+                                            <a href="project.php">Project</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="contact.html">Contact</a>
-                                            
+                                            <a href="contact.php">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -256,17 +248,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.html" class="logo-container d-flex align-items-center">
+                                <a href="index-2.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -275,11 +267,11 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.html"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
+                                <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
+                                <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>
