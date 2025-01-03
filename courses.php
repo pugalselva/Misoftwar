@@ -283,7 +283,7 @@
                                     </div>
                                 </div>
                                 <div class="cont">
-                                <a href="php.php"></a><h4>PHP</h4>
+                                <a href="php.php"><h4>PHP</h4></a>
                                 <div class="course-teacher">
                                     <div class="thum"></div>
                                     

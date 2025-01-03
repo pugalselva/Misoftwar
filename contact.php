@@ -213,56 +213,57 @@
         <div class="container">
             <div class="row">
                 <!-- Contact Form Section -->
-                <div class="col-lg-7 col-md-12">
-                    <div class="contact-from mt-30">
-                        <div class="section-title">
-                            <h5>Contact Us</h5>
-                            <h2>Keep in touch</h2>
-                        </div>
-                        <div class="main-form pt-45">
-                            <form id="contact-form" action="contact-conn.php" method="post" data-toggle="validator">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="singel-form form-group">
-                                            <input name="name" type="text" placeholder="Your name" data-error="Name is required." required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="singel-form form-group">
-                                            <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="singel-form form-group">
-                                            <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="singel-form form-group">
-                                            <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="singel-form form-group">
-                                            <textarea name="message" placeholder="Message" data-error="Please leave us a message." required></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="singel-form">
-                                            <button type="submit" class="main-btn">Send</button>
-                                            <p id="messages"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+        <div class="col-lg-7 col-md-12">
+            <div class="contact-from mt-30">
+                <div class="section-title">
+                    <h5>Contact Us</h5>
+                    <h2>Keep in touch</h2>
                 </div>
+                <div class="main-form pt-45">
+                    <form id="contact-form" action="contact-conn.php" method="post" data-toggle="validator">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="singel-form form-group">
+                                    <input name="name" type="text" placeholder="Your name" data-error="Name is required." required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="singel-form form-group">
+                                    <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="singel-form form-group">
+                                    <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="singel-form form-group">
+                                    <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="singel-form form-group">
+                                    <textarea name="message" placeholder="Message" data-error="Please leave us a message." required></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="singel-form">
+                                    <button type="submit" class="main-btn">Send</button>
+                                    <p id="messages"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+   
                 <!-- Contact Address Section -->
                 <div class="col-lg-5 col-md-12">
                     <div class="contact-address mt-30">
@@ -447,6 +448,35 @@
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script>
+    $(document).ready(function() {
+        $('#contact-form').on('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Perform AJAX request to send the form data
+            $.ajax({
+                url: $(this).attr('action'), // Get the action URL from the form
+                type: $(this).attr('method'), // Get the method (POST/GET) from the form
+                data: $(this).serialize(), // Serialize the form data
+                success: function(response) {
+                    // Show success message to the user
+                    alert('Your message has been sent successfully!');
+                    
+                    // Redirect to a specific page (e.g., thank-you.html)
+                    window.location.href = 'contact.php'; // Update to your desired redirection page
+                },
+                error: function(xhr, status, error) {
+                    // Show an error message
+                    alert('There was an error sending your message. Please try again later.');
+                    console.error('Error details:', status, error); // Log details for debugging
+                }
+            });
+        });
+    });
+</script>
+
     
 
 </body>

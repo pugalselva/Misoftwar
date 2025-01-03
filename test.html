@@ -1,3 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Course Search Form</title>
+    <style>
+        .main-btn {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="course-search-form">
+        <div class="row no-gutters">
+            <div class="col-sm-2">
+                <select class="form-control" id="course-select">
+                    <option value="">Select Course</option>
+                    <option value="html.html">HTML</option>
+                    <option value="css.html">CSS</option>
+                    <option value="javascript.html">JavaScript</option>
+                    <option value="php.html">PHP</option>
+                </select>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" id="search-keyword" class="form-control" placeholder="Search keyword">
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-primary main-btn" id="search-button">Search Now</button>
+            </div>
+        </div> <!-- row -->
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('search-button').addEventListener('click', function() {
+        var selectedCourse = document.getElementById('course-select').value;
+        var searchKeyword = document.getElementById('search-keyword').value;
+
+        if (selectedCourse) {
+            // Redirect to the selected course page
+            window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
+        } else {
+            alert('Please select a course.');
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
 <section id="slider-part-3" class="bg_cover"  style="background-image: url(images/slider/s-3.jpg)">
     <div class="container">
         <div class="row justify-content-center">
