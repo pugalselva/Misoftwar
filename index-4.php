@@ -1,3 +1,38 @@
+<?php
+
+$host = 'localhost';
+$username = 'root'; 
+$password = 'MYSQL70@pug';    
+$database = 'enquiries_mi'; 
+
+$conn = new mysqli($host, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die('Connection failed: ' . $conn->connect_error);
+}
+
+// Check if form data POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $conn->real_escape_string($_POST['name']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $phone = $conn->real_escape_string($_POST['phone']);
+
+    if (!empty($name) && !empty($email) && !empty($phone)) {
+
+        $sql = "INSERT INTO Enquiries_mis (name, email, phone) VALUES ('$name', '$email', '$phone')";
+
+        if ($conn->query($sql) === TRUE) {
+            // echo "Enquiry submitted successfully!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    } else {
+        echo "All fields are required!";
+    }
+
+}
+$conn->close();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -217,7 +252,7 @@
         </div> 
     </section> -->
 
-    <section id="slider-part-3" class="bg_cover"  style="background-image: url(images/slider/s-3.jpg)">
+    <section id="slider-part-3" class="bg_cover"  style="background-image: url(images/slider/sw-1.jpg)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -380,7 +415,7 @@
                     <div class="singel-course-2">
                         <div class="thum">
                             <div class="image">
-                                <img src="images/course/py2.jpg" alt="Course">
+                                <img src="images/course/py1.png" alt="Course">
                             </div>
                             <div class="price">
                                 <span>Join</span>
@@ -676,7 +711,7 @@
 
     <!--====== COURSE PART ENDS ======-->
     <!-- Popup Container -->
-<div class="popup-wrapper" id="popupWrapper">
+<!-- <div class="popup-wrapper" id="popupWrapper">
     <div class="popup-content">
         <div class="popup-close-btn" onclick="closePopup()">&times;</div>
         <div class="form-wrapper">
@@ -702,7 +737,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
     <!--====== COUNT DOWN PART START ======-->
     
@@ -1031,7 +1066,11 @@
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Idhaya Engineering College for Women, Chinna Salem.</p>
+                                    <p class="Con ml-3">Misoftwar
+                                            No.78, Kudi Street,
+                                            Umayalpuram,
+                                            P.N. Palayam(T.K),
+                                            Salem(D.T)-636119</p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -1177,28 +1216,7 @@
         handleCategoryChange(categoryDropdown.value);
     });
 </script> -->
-<script>
-    function closePopup() {
-        document.getElementById('popupWrapper').style.display = 'none';
-    }
 
-    function validateForm() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-
-        if (name && email && phone) {
-            alert('Form submitted successfully!');
-            closePopup();
-        } else {
-            alert('Please fill in all fields.');
-        }
-    }
-
-    window.onload = function() {
-        document.getElementById('popupWrapper').style.display = 'flex';
-    };
-</script>
 <!-- select course -->
 <script>
     document.getElementById('search-button').addEventListener('click', function() {
@@ -1234,7 +1252,7 @@
                 window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
             } else {
                 // Redirect to home page if no course is selected
-                window.location.href = 'index.html'; // Change 'index.html' to your home page URL
+                window.location.href = 'enquiry.html'; // Change 'index.html' to your home page URL
             }
         });
     });

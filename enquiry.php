@@ -53,41 +53,40 @@
      <!--====== COUNT DOWN PART START ======-->
     
      <section id="count-down-part" class="bg_cover" data-overlay="8" style="background-image: url(images/bg-2.jpg);height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-5 offset-lg-0 col-md-10">
-                    <div class="category-form category-form-3 pt-180 ">
-                        <div class="form-title text-center">
-                            <h3>Free Enquiry!</h3>
-                            <span>Sign up now </span>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-5 offset-lg-0 col-md-10">
+                <div class="popup-wrapper" id="popupWrapper">
+                    <div class="popup-content">
+                        <div class="popup-close-btn" onclick="closePopup()">&times;</div>
+                        <div class="form-wrapper">
+                            <div class="form-header text-center">
+                                <h3>Free Enquiry!</h3>
+                                <span>Sign up now</span>
+                            </div>
+                            <div class="form-body">
+                                <form id="enquiryForm" method="POST" action="index-4.php">
+                                    <div class="form-group">
+                                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="phone" name="phone" placeholder="Your Phone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="submit-btn" type="submit">Get it Now</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="main-form">
-                            <form id="demoForm" action="#">
-                                <div class="singel-form">
-                                    <input type="text" id="name" placeholder="Your name" required>
-                                </div>
-                                <div class="singel-form">
-                                    <input type="email" id="email" placeholder="Your Mail" required>
-                                </div>
-                                <div class="singel-form">
-                                    <input type="text" id="phone" placeholder="Your Phone" required>
-                                </div>
-                                <div class="singel-form">
-                                    <button class="main-btn" type="button" onclick="validateForm()">Sign Up</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div> 
-                </div>
-            </div> 
+                    </div>
+                </div> 
+            </div>
         </div> 
-    </section>
-    
-    <!--====== COUNT DOWN PART ENDS ======-->
-    
-    
-    
-    
+    </div> 
+</section>
     
     
     <!--====== jquery js ======-->
@@ -128,7 +127,7 @@
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
-    <script>
+    <!-- <script>
         function validateForm() {
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -161,7 +160,53 @@
             window.location.href="index-4.php";
             //return true;
         }
-    </script>
+    </script> -->
+    <script>
+    async function validateForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        if (name && email && phone) {
+            // Prepare form data
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+
+            try {
+                const response = await fetch('', { // PHP file to handle data
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.text();
+
+                if (response.ok) {
+                    alert(result); 
+                    closePopup();
+                    window.location.href = 'index-4.html'; // Redirect to a thank-you page
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('An error occurred. Please try again.');
+            }
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+
+    function closePopup() {
+        document.getElementById('popupWrapper').style.display = 'none';
+    }
+
+    window.onload = function() {
+        document.getElementById('popupWrapper').style.display = 'flex';
+    };
+</script>
+
     <!-- function showHostname() {
         let currentURL = window.location.hostname;
         alert("The hostname of the current URL is: " + currentURL);

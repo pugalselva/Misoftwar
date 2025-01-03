@@ -201,7 +201,7 @@
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="images/course/py2.jpg" alt="Course">
+                                        <img src="images/course/py1.png" alt="Course">
                                     </div>
                                     <div class="price">
                                         <span>Join</span>
@@ -628,7 +628,11 @@
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Idhaya Engineering College for Women, Chinna Salem.</p>
+                                    <p class="Con ml-3">Misoftwar
+                                            No.78, Kudi Street,
+                                            Umayalpuram,
+                                            P.N. Palayam(T.K),
+                                            Salem(D.T)-636119</p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>

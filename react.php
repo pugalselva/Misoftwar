@@ -642,7 +642,11 @@
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Idhaya Engineering College for Women, Chinna Salem.</p>
+                                    <p class="Con ml-3">Misoftwar
+                                            No.78, Kudi Street,
+                                            Umayalpuram,
+                                            P.N. Palayam(T.K),
+                                            Salem(D.T)-636119</p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
