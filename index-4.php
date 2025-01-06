@@ -33,6 +33,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $conn->close();
 ?>
+<?php
+// Define the path to the events.json file
+$file = 'events.json';
+
+// Initialize events as an empty array if the file doesn't exist or is unreadable
+if (file_exists($file)) {
+    $events = json_decode(file_get_contents($file), true);
+    if ($events === null) {
+        $events = []; // If JSON is invalid or null, set as an empty array
+    }
+} else {
+    $events = []; // If the file doesn't exist, initialize as an empty array
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -135,7 +149,7 @@ $conn->close();
                                         <a href="events.php">Events</a>
                                         <ul class="sub-menu">
                                             <li><a href="events.php">Events</a></li>
-                                            <li><a href="events-singel.php">Event Singel</a></li>
+                                            <li><a href="events-singel.php">Event Single</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">

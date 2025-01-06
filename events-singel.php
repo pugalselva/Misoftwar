@@ -1,3 +1,31 @@
+<?php
+// Process the form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $event_date = $_POST['event_date'];
+    $event_title = $_POST['event_title'];
+    $event_time = $_POST['event_time'];
+    $event_location = $_POST['event_location'];
+
+    // Save event details to a database or file
+    $events = [
+        'date' => $event_date,
+        'title' => $event_title,
+        'time' => $event_time,
+        'location' => $event_location
+    ];
+
+    // For demonstration, save to a JSON file
+    $file = 'events.json';
+    $currentEvents = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
+    $currentEvents[] = $events;
+
+    file_put_contents($file, json_encode($currentEvents));
+
+    echo "Event successfully updated! <a href='upcoming_events.php'>View Events</a>";
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -99,7 +127,7 @@
                                             <a href="events.php">Events</a>
                                             <ul class="sub-menu">
                                                 <li><a href="events.php">Events</a></li>
-                                                <li><a href="events-singel.php">Event Singel</a></li>
+                                                <li><a href="events-singel.php">Event Single</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
@@ -235,6 +263,24 @@
             </div> <!-- events-area -->
         </div> <!-- container -->
     </section>
+    <!-- events form -->
+
+    <h2>Update Upcoming Events</h2>
+    <form action="process_event.php" method="post">
+        <label for="event-date">Event Date</label>
+        <input type="date" id="event-date" name="event_date" required>
+
+        <label for="event-title">Event Title</label>
+        <input type="text" id="event-title" name="event_title" placeholder="Enter event title" required>
+
+        <label for="event-time">Event Time</label>
+        <input type="text" id="event-time" name="event_time" placeholder="e.g., 10:00 AM - 3:00 PM" required>
+
+        <label for="event-location">Event Location</label>
+        <input type="text" id="event-location" name="event_location" placeholder="Enter event location" required>
+
+        <button type="submit">Update Event</button>
+    </form>
     
 
     <!--====== EVENTS PART ENDS ======-->
