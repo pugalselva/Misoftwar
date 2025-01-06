@@ -33,20 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $conn->close();
 ?>
-<?php
-// Define the path to the events.json file
-$file = 'events.json';
-
-// Initialize events as an empty array if the file doesn't exist or is unreadable
-if (file_exists($file)) {
-    $events = json_decode(file_get_contents($file), true);
-    if ($events === null) {
-        $events = []; // If JSON is invalid or null, set as an empty array
-    }
-} else {
-    $events = []; // If the file doesn't exist, initialize as an empty array
-}
-?>
 
 <!doctype html>
 <html lang="en">
@@ -90,12 +76,11 @@ if (file_exists($file)) {
     <link rel="stylesheet" href="css/default.css">
     
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/style.css">
-     <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+     <link rel="stylesheet" href="css/style.css">
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
-  
   
 </head>
 
@@ -1219,46 +1204,6 @@ if (file_exists($file)) {
             return true;
         }
     </script>
-<!-- <script>
-    const coursesData = {
-        frontend: [
-            { value: "html", text: "HTML" },
-            { value: "css", text: "CSS" },
-            { value: "javascript", text: "JavaScript" },
-            { value: "reactjs", text: "ReactJS" },
-            { value: "angularjs", text: "AngularJS" }
-        ],
-        backend: [
-            { value: "php", text: "PHP" },
-            { value: "python", text: "Python" },
-            { value: ".net", text: ".NET Framework" },
-            { value: "core-java", text: "Core Java" },
-            { value: "spring-framework", text: "Spring Framework" }
-        ],
-        database: [
-            { value: "mysql", text: "MYSQL" }
-        ]
-    };
-    const categoryDropdown = document.getElementById("category-dropdown");
-    const coursesDropdown = document.getElementById("courses-dropdown");
-
-    function handleCategoryChange(selectedCategory) {
-        coursesDropdown.innerHTML = '<option value="">Courses</option>';
-
-        if (coursesData[selectedCategory]) {
-            coursesData[selectedCategory].forEach(course => {
-                const option = document.createElement("option");
-                option.value = course.value;
-                option.textContent = course.text;
-                coursesDropdown.appendChild(option);
-            });
-        }
-    }
-    categoryDropdown.addEventListener("change", () => {
-        handleCategoryChange(categoryDropdown.value);
-    });
-</script> -->
-
 <!-- select course -->
 <script>
     document.getElementById('search-button').addEventListener('click', function() {

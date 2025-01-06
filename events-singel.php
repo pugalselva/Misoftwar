@@ -235,50 +235,7 @@
             </div> <!-- events-area -->
         </div> <!-- container -->
     </section>
-    <style>
-       
-       form {
-           max-width: 500px;
-           margin: 0 auto;
-       }
-       label {
-           display: block;
-           margin-top: 10px;
-           font-weight: bold;
-       }
-       input, textarea, button {
-           width: 100%;
-           padding: 8px;
-           margin-top: 5px;
-           border: 1px solid #ccc;
-           border-radius: 5px;
-       }
-       button {
-           background-color: #28a745;
-           color: white;
-           border: none;
-           cursor: pointer;
-       }
-       button:hover {
-           background-color: #218838;
-       }
-   </style>
-   <h2>Update Upcoming Events</h2>
-   <form action="process_event.php" method="post">
-       <label for="event-date">Event Date</label>
-       <input type="date" id="event-date" name="event_date" required>
-
-       <label for="event-title">Event Title</label>
-       <input type="text" id="event-title" name="event_title" placeholder="Enter event title" required>
-
-       <label for="event-time">Event Time</label>
-       <input type="text" id="event-time" name="event_time" placeholder="e.g., 10:00 AM - 3:00 PM" required>
-
-       <label for="event-location">Event Location</label>
-       <input type="text" id="event-location" name="event_location" placeholder="Enter event location" required>
-
-       <button type="submit">Update Event</button>
-   </form>
+    
 
     <!--====== EVENTS PART ENDS ======-->
 

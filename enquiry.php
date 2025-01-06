@@ -185,7 +185,7 @@
                 if (response.ok) {
                     alert(result); 
                     closePopup();
-                    window.location.href = 'index-4.html'; // Redirect to a thank-you page
+                    window.location.href = 'index-4.php'; // Redirect to a thank-you page
                 } else {
                     alert('Submission failed. Please try again.');
                 }
