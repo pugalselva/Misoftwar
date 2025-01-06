@@ -1,3 +1,23 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Collect form data and validate
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $subject = trim($_POST['subject']);
+    $message = trim($_POST['message']);
+    
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        echo json_encode(['status' => 'error', 'message' => 'All fields are required.']);
+        exit;
+    }
+
+    // Simulating successful email sending
+    echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully!']);
+}
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -255,8 +275,9 @@
                             <div class="col-md-12">
                                 <div class="singel-form">
                                     <button type="submit" class="main-btn">Send</button>
-                                    <p id="messages"></p>
                                 </div>
+                                    <!-- <p id="messages"></p> -->
+                                
                             </div>
                         </div>
                     </form>
@@ -454,31 +475,67 @@
     <script src="js/map-script.js"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-    <script>
-    $(document).ready(function() {
-        $('#contact-form').on('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission behavior
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-            // Perform AJAX request to send the form data
-            $.ajax({
-                url: $(this).attr('action'), // Get the action URL from the form
-                type: $(this).attr('method'), // Get the method (POST/GET) from the form
-                data: $(this).serialize(), // Serialize the form data
-                success: function(response) {
-                    // Show success message to the user
+<script>
+   $(document).ready(function () {
+    $('#contact-form').on('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Disable the send button to prevent multiple submissions
+        $('#contact-form button[type="submit"]').prop('disabled', true).text('Sending...');
+
+        $.ajax({
+            url: $(this).attr('action'), // Backend script URL
+            type: $(this).attr('method'), // Form method (POST)
+            data: $(this).serialize(), // Serialize form data
+            dataType: 'json', // Expect JSON response
+            success: function (response) {
+                // Log the response to check what is returned by the backend
+                console.log(response);
+
+                if (response.status === 'success') {
+                    // Show success message in alert
                     alert('Your message has been sent successfully!');
+
+                    // Show success message on the page
+                    $('#messages')
+                        .text(response.message)
+                        .css('color', 'green');
                     
-                    // Redirect to a specific page (e.g., thank-you.html)
-                    window.location.href = 'contact.php'; // Update to your desired redirection page
-                },
-                error: function(xhr, status, error) {
-                    // Show an error message
-                    alert('There was an error sending your message. Please try again later.');
-                    console.error('Error details:', status, error); // Log details for debugging
+                    // Optionally reset the form after success
+                    $('#contact-form')[0].reset();
+
+                    // Enable and reset button text
+                    $('#contact-form button[type="submit"]').prop('disabled', true).text('Send');
+                } else {
+                    // Show error message for backend validation issues
+                    $('#messages')
+                        .text(response.message)
+                        .css('color', 'red');
+
+                    // Enable and reset button text
+                    $('#contact-form button[type="submit"]').prop('disabled', false).text('Send');
                 }
-            });
+            },
+            error: function (xhr) {
+                // Log error response
+                console.error(xhr);
+
+                // Handle server errors
+                const errorMessage = xhr.responseJSON?.message || 'An error occurred. Please try again later.';
+                $('#messages')
+                    .text(errorMessage)
+                    .css('color', 'red');
+
+                // Enable and reset button text
+                $('#contact-form button[type="submit"]').prop('disabled', false).text('Send');
+            }
         });
     });
+});
+
+
 </script>
 
     
