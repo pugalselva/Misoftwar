@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!empty($name) && !empty($email) && !empty($phone)) {
 
-        $sql = "INSERT INTO Enquiries_mis (name, email, phone) VALUES ('$name', '$email', '$phone')";
+        $sql = "INSERT INTO Enquiries_table (name, email, phone) VALUES ('$name', '$email', '$phone')";
 
         if ($conn->query($sql) === TRUE) {
             // echo "Enquiry submitted successfully!";
@@ -33,6 +33,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $conn->close();
 ?>
+<?php
+// Define the path to the events.json file
+$file = 'events.json';
+
+// Initialize events as an empty array if the file doesn't exist or is unreadable
+if (file_exists($file)) {
+    $events = json_decode(file_get_contents($file), true);
+    if ($events === null) {
+        $events = []; // If JSON is invalid or null, set as an empty array
+    }
+} else {
+    $events = []; // If the file doesn't exist, initialize as an empty array
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -339,7 +354,7 @@ $conn->close();
                 <div class="col-lg-3 col-md-6">
                     <div class="singel-items text-center mt-30">
                         <div class="items-image">
-                            <img src="images/category/python.jpeg" alt="Category">
+                            <img src="images/category/uiux_copy.jpg" alt="Category">
                         </div>
                         <div class="items-cont">
                             <a href="#">
@@ -349,10 +364,11 @@ $conn->close();
                         </div>
                     </div> <!-- singel items -->
                 </div>
+                
                 <div class="col-lg-3 col-md-6">
-                    <div class="singel-items text-center mt-30">
-                        <div class="items-image">
-                            <img src="images/category/uix.jpeg" alt="Category">
+                    <div class="singel-items text-center mt-30" >
+                        <div class="items-image" >
+                            <img src="images/category/pro1.jpg" alt="Category" style="height: 100% !important;">
                         </div>
                         <div class="items-cont">
                             <a href="#">
@@ -365,7 +381,7 @@ $conn->close();
                 <div class="col-lg-3 col-md-6">
                     <div class="singel-items text-center mt-30">
                         <div class="items-image">
-                            <img src="images/category/uix.jpeg" alt="Category">
+                            <img src="images/category/dp1.jpeg" alt="Category">
                         </div>
                         <div class="items-cont">
                             <a href="#">
@@ -378,11 +394,11 @@ $conn->close();
                 <div class="col-lg-3 col-md-6">
                     <div class="singel-items text-center mt-30">
                         <div class="items-image">
-                            <img src="images/category/java.jpeg" alt="Category">
+                            <img src="images/category/iot_copy1.png" alt="Category">
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5> UI/UX <br>design</h5>
+                                <h5> Internet of Things</h5>
                                 <!-- <span>24 courses</span> -->
                             </a>
                         </div>
@@ -428,13 +444,13 @@ $conn->close();
                                     <a href="#"><h6>Mark anthem</h6></a>
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -794,10 +810,13 @@ $conn->close();
             <div class="event-bg bg_cover" style="background-image: url(images/bg-3.jpg)">
                 <div class="row">
                     <div class="col-lg-5 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-                        <div class="event-2 pt-90 pb-70">
+                        <!-- UPCOMING EVENTS -->
+                        <!-- <div class="event-2 pt-90 pb-70">
                             <div class="event-title">
                                 <h3>Upcoming events</h3>
-                            </div> <!-- event title -->
+                            </div>  
+
+
                             <ul>
                                 <li>
                                     <div class="singel-event">
@@ -824,7 +843,30 @@ $conn->close();
                                     </div>
                                 </li>
                             </ul> 
-                        </div> <!-- event 2 -->
+                        </div> -->
+                        <div class="event-2 pt-90 pb-70">
+                            <div class="event-title">
+                                <h3>Upcoming Events</h3>
+                            </div> 
+                            <ul>
+                                <?php if (!empty($events)): ?>
+                                    <?php foreach ($events as $event): ?>
+                                        <li>
+                                            <div class="singel-event">
+                                                <span><i class="fa fa-calendar"></i> <?= htmlspecialchars($event['date']) ?></span>
+                                                <a href="events-singel.php">
+                                                    <h4><?= htmlspecialchars($event['title']) ?></h4>
+                                                </a>
+                                                <span><i class="fa fa-clock-o"></i> <?= htmlspecialchars($event['time']) ?></span>
+                                                <span><i class="fa fa-map-marker"></i> <?= htmlspecialchars($event['location']) ?></span>
+                                            </div>
+                                        </li>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <li>No upcoming events available.</li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
                     </div>
                 </div> <!-- row -->
             </div>
@@ -1256,6 +1298,7 @@ $conn->close();
             }
         });
     });
+</script>
 
 </body>
 
