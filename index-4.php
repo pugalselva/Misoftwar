@@ -150,7 +150,7 @@ if (file_exists($file)) {
                                         <a href="events.php">Events</a>
                                         <ul class="sub-menu">
                                             <li><a href="events.php">Events</a></li>
-                                            <li><a href="events-singel.php">Event Single</a></li>
+                                            <li><a href="events-singel.php">Event Update</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
