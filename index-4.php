@@ -48,6 +48,7 @@ if (file_exists($file)) {
 }
 ?>
 
+
 <!doctype html>
 <html lang="en">
 
@@ -358,7 +359,6 @@ if (file_exists($file)) {
                         <div class="items-cont">
                             <a href="#">
                                 <h5>UI/UX <br>design</h5>
-                                <!-- <span>"HTML", "CSS", "JavaScript", "ReactJS", "AngularJS"</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->

@@ -1,29 +1,4 @@
-<?php
-// Process the form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $event_date = $_POST['event_date'];
-    $event_title = $_POST['event_title'];
-    $event_time = $_POST['event_time'];
-    $event_location = $_POST['event_location'];
 
-    // Save event details to a database or file
-    $events = [
-        'date' => $event_date,
-        'title' => $event_title,
-        'time' => $event_time,
-        'location' => $event_location
-    ];
-
-    // For demonstration, save to a JSON file
-    $file = 'events.json';
-    $currentEvents = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
-    $currentEvents[] = $events;
-
-    file_put_contents($file, json_encode($currentEvents));
-
-    echo "Event successfully updated! <a href='upcoming_events.php'>View Events</a>";
-}
-?>
 
 
 <!doctype html>
@@ -73,6 +48,136 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
 
+    <style>
+        /* General Reset */
+body, h2, label, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Styling */
+#page-banner {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding-top: 105px;
+    padding-bottom: 110px;
+    background-size: cover;
+    background-position: center;
+}
+
+#page-banner[data-overlay]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Data overlay value */
+    z-index: 1;
+}
+
+#page-banner .container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+#page-banner h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #page-banner {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #page-banner .container {
+        padding: 15px;
+    }
+
+    #page-banner h2 {
+        font-size: 24px;
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #page-banner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    #page-banner h2 {
+        font-size: 20px;
+    }
+
+    #page-banner .container {
+        padding: 10px;
+    }
+}
+
+    </style>
 
 </head>
 
@@ -174,113 +279,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-3.jpg)">
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/event/singel-event/se-1.jpg)">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-banner-cont">
-                        <h2>Campus clean workshop</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Events</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Campus clean workshop</li>
-                            </ol>
-                        </nav>
-                    </div> <!-- page banner cont -->
-                </div>
-            </div> <!-- row -->
+        <h2>Update Upcoming Events</h2>
+        <form action="process_event.php" method="post">
+            <label for="event-date">Event Date</label>
+            <input type="date" id="event-date" name="event_date" required>
+
+            <label for="event-title">Event Title</label>
+            <input type="text" id="event-title" name="event_title" placeholder="Enter event title" required>
+
+            <label for="event-time">Event Time</label>
+            <input type="text" id="event-time" name="event_time" placeholder="e.g., 10:00 AM - 3:00 PM" required>
+
+            <label for="event-location">Event Location</label>
+            <input type="text" id="event-location" name="event_location" placeholder="Enter event location" required>
+
+            <button type="submit">Update Event</button>
+        </form> <!-- row -->
         </div> <!-- container -->
     </section>
 
     <!--====== PAGE BANNER PART ENDS ======-->
-
-    <!--====== EVENTS PART START ======-->
-
-    <section id="event-singel" class="pt-120 pb-120 gray-bg">
-        <div class="container">
-            <div class="events-area">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="events-left">
-                            <h3>Campus clean workshop</h3>
-                            <a href="#"><span><i class="fa fa-calendar"></i> 2 December 2018</span></a>
-                            <a href="#"><span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span></a>
-                            <a href="#"><span><i class="fa fa-map-marker"></i> Rc Auditorim</span></a>
-                            <img src="images/event/Event-1.jpeg" alt="Event">
-                            <p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam</p>
-                        </div> <!-- events left -->
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="events-right">
-                            <div class="events-coundwon bg_cover" data-overlay="8" style="background-image: url(images/event/singel-event/coundown.jpg)">
-                                <div data-countdown="2020/03/12"></div>
-                                <div class="events-coundwon-btn pt-30">
-                                    <a href="#" class="main-btn">Book Your Seat</a>
-                                </div>
-                            </div> <!-- events coundwon -->
-                            <div class="events-address mt-30">
-                                <ul>
-                                    <li>
-                                        <div class="singel-address">
-                                            <div class="icon">
-                                                <i class="fa fa-clock-o"></i>
-                                            </div>
-                                            <div class="cont">
-                                                <h6>Start Time</h6>
-                                                <span>12:00 Am</span>
-                                            </div>
-                                        </div> <!-- singel address -->
-                                    </li>
-                                    <li>
-                                        <div class="singel-address">
-                                            <div class="icon">
-                                                <i class="fa fa-bell-slash"></i>
-                                            </div>
-                                            <div class="cont">
-                                                <h6>Finish Time</h6>
-                                                <span>05:00 Am</span>
-                                            </div>
-                                        </div> <!-- singel address -->
-                                    </li>
-                                    <li>
-                                        <div class="singel-address">
-                                            <div class="icon">
-                                                <i class="fa fa-map"></i>
-                                            </div>
-                                            <div class="cont">
-                                                <h6>Address</h6>
-                                                <span>Street Park ,America</span>
-                                            </div>
-                                        </div> <!-- singel address -->
-                                    </li>
-                                </ul>
-                                <div id="contact-map" class="mt-25"></div> <!-- Map -->
-                            </div> <!-- events address -->
-                        </div> <!-- events right -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- events-area -->
-        </div> <!-- container -->
-    </section>
-    <!-- events form -->
-
-    <h2>Update Upcoming Events</h2>
-    <form action="process_event.php" method="post">
-        <label for="event-date">Event Date</label>
-        <input type="date" id="event-date" name="event_date" required>
-
-        <label for="event-title">Event Title</label>
-        <input type="text" id="event-title" name="event_title" placeholder="Enter event title" required>
-
-        <label for="event-time">Event Time</label>
-        <input type="text" id="event-time" name="event_time" placeholder="e.g., 10:00 AM - 3:00 PM" required>
-
-        <label for="event-location">Event Location</label>
-        <input type="text" id="event-location" name="event_location" placeholder="Enter event location" required>
-
-        <button type="submit">Update Event</button>
-    </form>
     
 
     <!--====== EVENTS PART ENDS ======-->

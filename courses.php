@@ -387,7 +387,7 @@
                                 <div class="col-md-6">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="images/course/python.jpeg" alt="Course">
+                                            <img src="images/course/py1.png" alt="Course">
                                         </div>
                                         <div class="price">
                                             <span>Join</span>
@@ -473,7 +473,7 @@
                                 <div class="col-md-6">
                                     <div class="thum">
                                         <div class="image">
-                                            <img src="images/course/java.jpeg" alt="Course">
+                                            <img src="images/course/corejava.jpg" alt="Course">
                                         </div>
                                         <div class="price">
                                             <span>Join</span>
@@ -489,7 +489,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class=" fa-star"></i></li>
                                         </ul>
-                                        <span>(20 Reviews)</span>
+                                        <span>(20 Reviews)</span> <br>
                                         <a href="core-java.php"><h4>Core Java Learning Basics</h4></a>
                                         <div class="course-teacher">
                                             <div class="thum">
@@ -532,7 +532,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
-                                        <span>(20 Reviews)</span>
+                                        <span>(20 Reviews)</span> <br>
                                         <a href="react.php"><h4>Reactjs Learning</h4></a>
                                         <div class="course-teacher">
                                             <div class="thum">
