@@ -34,79 +34,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="css/slick.css">
+<!--====== Slick css ======-->
+<link rel="stylesheet" href="css/slick.css">
 
-    <!--====== Animate css ======-->
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="css/nice-select.css">
-    
-    <!--====== Nice Number css ======-->
-    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+<!--====== Animate css ======-->
+<link rel="stylesheet" href="css/animate.css">
 
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<!--====== Nice Select css ======-->
+<link rel="stylesheet" href="css/nice-selects.css">
 
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="css/default.css">
-    
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!--====== Responsive css ======-->
-    <link rel="stylesheet" href="css/responsive.css">
-  
-    <style>
-        /* Custom styles for the message */
-        #messages {
-            display: inline-block;
-            font-size: 1.2em;  
-            font-weight: 600;  
-            margin-left: 15px; 
-            margin-top: 10px;  
-            margin-bottom: 10px; 
-            vertical-align: middle; 
-        }
+<!--====== Nice Number css ======-->
+<link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-        .success-message {
-            color: green;
-        }
-        .error-message {
-            color: red;
-        }
-        /* Button normal style */
-.main-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
+<!--====== Magnific Popup css ======-->
+<link rel="stylesheet" href="css/magnific-popup.css">
 
-/* Button hover effect */
-.main-btn:hover {
-    background-color: #2980b9; /* Change color on hover */
-    transform: scale(1.05); 
-}
+<!--====== Bootstrap css ======-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
-/* Button active effect (when clicked) */
-.main-btn:active {
-    background-color: #1c6f8c; /* Darker color when clicked */
-    transform: scale(0.98); /* Button shrinks a bit on click */
-}
+<!--====== Fontawesome css ======-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
 
-    </style>
+<!--====== Default css ======-->
+<link rel="stylesheet" href="css/default.css">
+
+<!--====== Style css ======-->
+<link rel="stylesheet" href="css/styles.css">
+
+<!--====== Responsive css ======-->
+<link rel="stylesheet" href="css/responsive.css">
+
+    <style></style>
 </head>
 
 <body>
@@ -177,7 +135,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="right-icon text-right">
                                 <ul>
                                     <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
+                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                    
                                 </ul>
                             </div> <!-- right icon -->
                         </div>

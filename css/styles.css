@@ -4164,6 +4164,7 @@ p.form-message.error {
     }
 }
 
+
 /* footer contact us page */
 #footer-part {
     background-color: #f8f9fa; /* Light background color */
@@ -4263,7 +4264,7 @@ h6.text-primary {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    /* background: rgba(0, 0, 0, 0.9);  */
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -4275,7 +4276,7 @@ h6.text-primary {
     padding: 25px;
     border-radius: 12px;
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     position: relative;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.4s ease-in-out;
@@ -4345,11 +4346,11 @@ h6.text-primary {
 }
 
 /* Form Group */
-.form-group {
-    margin-bottom: 20px;
-}
 
-.form-group input {
+
+.form-group input,
+.form-group select,
+.form-group textarea  {
     width: 100%;
     padding: 12px;
     font-size: 15px;
@@ -4358,7 +4359,10 @@ h6.text-primary {
     transition: all 0.3s ease-in-out;
 }
 
-.form-group input:focus {
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
@@ -4367,21 +4371,22 @@ h6.text-primary {
 /* Submit Button */
 .submit-btn {
     width: 100%;
-    padding: 12px 18px;
-    font-size: 15px;
-    background: #007bff;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
     color: #fff;
+    background-color: #007bff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .submit-btn:hover {
     background: #0056b3;
     box-shadow: 0 4px 12px rgba(0, 91, 179, 0.3);
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -4397,9 +4402,15 @@ h6.text-primary {
         font-size: 13px;
     }
 
-    .form-group input {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
         font-size: 14px;
         padding: 10px;
+    }
+
+    .form-group textarea {
+        height: auto; /* Adjust height for smaller screens */
     }
 
     .submit-btn {
@@ -4421,9 +4432,15 @@ h6.text-primary {
         font-size: 12px;
     }
 
-    .form-group input {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
         font-size: 13px;
         padding: 8px;
+    }
+
+    .form-group textarea {
+        height: auto; /* Adjust height for smaller screens */
     }
 
     .submit-btn {
@@ -4431,7 +4448,137 @@ h6.text-primary {
         padding: 8px 12px;
     }
 }
-/* send mail contact page responsive */
+
+/* Update events */
+body, h2, label, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Styling */
+/* #page-banner {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding-top: 105px;
+    padding-bottom: 110px;
+    background-size: cover;
+    background-position: center;
+} */
+
+/* #page-banner[data-overlay]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    z-index: 1;
+} */
+
+/* #page-banner .container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Form Heading */
+.page-banner-cont h2 {
+    font-size: 52px;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #page-banner {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #page-banner .container {
+        padding: 15px;
+    }
+
+    #page-banner h2 {
+        font-size: 24px;
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #page-banner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    #page-banner h2 {
+        font-size: 20px;
+    }
+
+    #page-banner .container {
+        padding: 10px;
+    }
+}
+
+/* admin page  */
+
+
 
 
 

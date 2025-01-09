@@ -11,43 +11,38 @@
     <!--====== Title ======-->
     <title>Misoftwar</title>
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/mi logo1.png" type="image/png" />
+     <!--====== Favicon Icon ======-->
+     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="css/slick.css" />
+<!--====== Slick css ======-->
+<link rel="stylesheet" href="css/slick.css">
 
-    <!--====== Animate css ======-->
-    <link rel="stylesheet" href="css/animate.css" />
+<!--====== Animate css ======-->
+<link rel="stylesheet" href="css/animate.css">
 
-    <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="css/nice-select.css" />
+<!--====== Nice Select css ======-->
+<link rel="stylesheet" href="css/nice-selects.css">
 
-    <!--====== Nice Number css ======-->
-    <link rel="stylesheet" href="css/jquery.nice-number.min.css" />
+<!--====== Nice Number css ======-->
+<link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="css/magnific-popup.css" />
+<!--====== Magnific Popup css ======-->
+<link rel="stylesheet" href="css/magnific-popup.css">
 
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+<!--====== Bootstrap css ======-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+<!--====== Fontawesome css ======-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="css/default.css" />
+<!--====== Default css ======-->
+<link rel="stylesheet" href="css/default.css">
 
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/style.css" />
+<!--====== Style css ======-->
+<link rel="stylesheet" href="css/styles.css">
 
-    <!--====== Responsive css ======-->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- boostrap responsive code  -->
-    <!-- <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-    rel="stylesheet"
-  /> -->
+<!--====== Responsive css ======-->
+<link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -121,7 +116,8 @@
                         <div class="right-icon text-right">
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
+                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+
                             </ul>
                         </div> <!-- right icon -->
                     </div>

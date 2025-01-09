@@ -120,7 +120,8 @@
                         <div class="right-icon text-right">
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
+                                <li><a href="index-4.php"><i class="fa fa-sign-out"></i><span></span></a></li>
+
                             </ul>
                         </div> <!-- right icon -->
                     </div>

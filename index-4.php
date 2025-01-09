@@ -12,25 +12,26 @@ if ($conn->connect_error) {
 }
 
 // Check if form data POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
     $name = $conn->real_escape_string($_POST['name']);
     $email = $conn->real_escape_string($_POST['email']);
     $phone = $conn->real_escape_string($_POST['phone']);
+    $course = $conn->real_escape_string($_POST['course']);
+    $message = $conn->real_escape_string($_POST['message']);
 
-    if (!empty($name) && !empty($email) && !empty($phone)) {
+    // Insert data into the database
+    $sql = "INSERT INTO enquiries (name, email, phone, course, message) 
+            VALUES ('$name', '$email', '$phone', '$course', '$message')";
 
-        $sql = "INSERT INTO Enquiries_table (name, email, phone) VALUES ('$name', '$email', '$phone')";
-
-        if ($conn->query($sql) === TRUE) {
-            // echo "Enquiry submitted successfully!";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+    if ($conn->query($sql) === TRUE) {
+        echo "Thank you! Your enquiry has been submitted.";
     } else {
-        echo "All fields are required!";
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
 }
+
+// Close the connection
 $conn->close();
 ?>
 <?php
@@ -63,39 +64,38 @@ if (file_exists($file)) {
     <!--====== Title ======-->
     <title>Misoftwar</title>
     
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
+     <!--====== Favicon Icon ======-->
+     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="css/slick.css">
+<!--====== Slick css ======-->
+<link rel="stylesheet" href="css/slick.css">
 
-    <!--====== Animate css ======-->
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="css/nice-select.css">
-    
-    <!--====== Nice Number css ======-->
-    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+<!--====== Animate css ======-->
+<link rel="stylesheet" href="css/animate.css">
 
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<!--====== Nice Select css ======-->
+<link rel="stylesheet" href="css/nice-selects.css">
 
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="css/default.css">
-    
-    <!--====== Style css ======-->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-     <link rel="stylesheet" href="css/style.css">
-    
-    <!--====== Responsive css ======-->
-    <link rel="stylesheet" href="css/responsive.css">
+<!--====== Nice Number css ======-->
+<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+
+<!--====== Magnific Popup css ======-->
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<!--====== Bootstrap css ======-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!--====== Fontawesome css ======-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!--====== Default css ======-->
+<link rel="stylesheet" href="css/default.css">
+
+<!--====== Style css ======-->
+<link rel="stylesheet" href="css/styles.css">
+
+<!--====== Responsive css ======-->
+<link rel="stylesheet" href="css/responsive.css">
   
 </head>
 
@@ -167,7 +167,7 @@ if (file_exists($file)) {
                         <div class="right-icon text-right">
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
+                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                             </ul>
                         </div> <!-- right icon -->
                     </div>
