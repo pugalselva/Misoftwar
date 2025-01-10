@@ -95,10 +95,6 @@
                                         </li>
                                         <li class="nav-item">
                                             <a href="events.php">Events</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="events.php">Events</a></li>
-                                                <li><a href="events-singel.php">Event Update</a></li>
-                                            </ul>
                                         </li>
                                         <li class="nav-item">
                                             <a href="project.php">Project</a>
@@ -229,19 +225,19 @@
                     <div class="row">
                         <div class="col-lg-4 col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">100</span>+</span>
+                                <span><span class="counter">4000</span>+</span>
                                 <p>Students enrolled</p>
                             </div> <!-- singel counter -->
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">15</span>+</span>
+                                <span><span class="counter">10</span>+</span>
                                 <p>Courses Uploaded</p>
                             </div> <!-- singel counter -->
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">100</span>+</span>
+                                <span><span class="counter">4000</span>+</span>
                                 <p>People certifie</p>
                             </div> <!-- singel counter -->
                         </div>

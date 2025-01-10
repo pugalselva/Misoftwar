@@ -148,10 +148,6 @@ if (file_exists($file)) {
                                     </li>
                                     <li class="nav-item">
                                         <a href="events.php">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.php">Events</a></li>
-                                            <li><a href="events-singel.php">Event Update</a></li>
-                                        </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a href="project.php">Project</a>
@@ -1253,11 +1249,13 @@ if (file_exists($file)) {
                 window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
             } else {
                 // Redirect to home page if no course is selected
-                window.location.href = 'enquiry.html'; // Change 'index.html' to your home page URL
+                window.location.href = 'index-4.php'; // Change 'index.html' to your home page URL
             }
         });
     });
 </script>
+
+
 
 </body>
 

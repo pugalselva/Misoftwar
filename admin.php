@@ -259,23 +259,13 @@
                                         <a class="active" href="index-4.php">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.php">About us</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a href="courses.php">Courses</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="events.php">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.php">Events</a></li>
-                                            <li><a href="events-singel.php">Event Update</a></li>
-                                        </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a href="project.php">Project</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.php">Contact</a>
                                     </li>
                                 </ul>
                             </div>
