@@ -44,129 +44,19 @@
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
-
-
-</head>
-
-<body>
-
-    <!--====== PRELOADER PART START ======-->
-
-    <div class="preloader">
-        <div class="loader rubix-cube">
-            <div>
-                <img src="images/mi logo1.png" alt="Logo" class="logo-reload">
-            </div>
-        </div>
-    </div>
-
-
-    <!--====== PRELOADER PART START ======-->
-
-    <!--====== HEADER PART START ======-->
-
-    <header id="header-part">
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-11 col-md-10 col-sm-9 col-9">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a href="index-4.php" class="logo-container">
-                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item">
-                                        <a class="active" href="index-4.php">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.php">About us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="courses.php">Courses</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="events.php">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.php">Events</a></li>
-                                            <li><a href="events-singel.php">Event Update</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="project.php">Project</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.php">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav> <!-- nav -->
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-sm-3 col-3">
-                        <div class="right-icon text-right">
-                            <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="index-4.php"><i class="fa fa-sign-out"></i><span></span></a></li>
-
-                            </ul>
-                        </div> <!-- right icon -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-    </header>
-
-    <!--====== HEADER PART ENDS ======-->
-
-    <!--====== SEARCH BOX PART START ======-->
-
-    <div class="search-box">
-        <div class="serach-form">
-            <div class="closebtn">
-                <span></span>
-                <span></span>
-            </div>
-            <form action="#">
-                <input type="text" placeholder="Search by keyword">
-                <button><i class="fa fa-search"></i></button>
-            </form>
-        </div> <!-- serach form -->
-    </div>
-
-    <!--====== SEARCH BOX PART ENDS ======-->
-
-    <!--====== PAGE BANNER PART START ======-->
-<style>
-    /* General Styles for the Section */
+    <style>
+    
 #page-banner {
     position: relative;
     background-size: cover;
     background-position: center;
     padding-top: 105px;
     padding-bottom: 110px;
-    color: #fff; /* Set text color to white for better contrast with background */
+    color: #fff; 
 }
 
-/* Container and Row Styling */
-
-
-/* Popup Content Styling */
 .popup-contents {
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    background: rgba(255, 255, 255, 0.9); 
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -319,6 +209,112 @@
 }
 
 </style>
+
+
+</head>
+
+<body>
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader rubix-cube">
+            <div>
+                <img src="images/mi logo1.png" alt="Logo" class="logo-reload">
+            </div>
+        </div>
+    </div>
+
+
+    <!--====== PRELOADER PART START ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <header id="header-part">
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="index-4.php" class="logo-container">
+                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
+                                <h2 class="logo-text">Misoftwar</h2>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="active" href="index-4.php">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about.php">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="courses.php">Courses</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="events.php">Events</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="events.php">Events</a></li>
+                                            <li><a href="events-singel.php">Event Update</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="project.php">Project</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contact.php">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav> <!-- nav -->
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-sm-3 col-3">
+                        <div class="right-icon text-right">
+                            <ul>
+                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <li><a href="index-4.php"><i class="fa fa-sign-out"></i><span></span></a></li>
+
+                            </ul>
+                        </div> 
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== SEARCH BOX PART START ======-->
+
+    <div class="search-box">
+        <div class="serach-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- serach form -->
+    </div>
+
+    <!--====== SEARCH BOX PART ENDS ======-->
+
+    <!--====== PAGE BANNER PART START ======-->
 <section id="page-banner" class="pt-105 pb-110 bg_cover"  style="background-image: url(images/event/singel-event/se-1.jpg)">
 
         <div class="container">
@@ -327,7 +323,7 @@
                     <div class="popup-content">
                         <div class="form-wrapper">
                             <div class="form-header text-center">
-                                <h2>Update Upcoming Events</h2>
+                                <h2>Update Events</h2>
                             </div>
                             <div class="form-bodys">
 

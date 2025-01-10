@@ -362,7 +362,7 @@
                                     </div>
                                     <!-- curriculam cont -->
                                 </div>
-                                <div class="tab-pane fade" id="instructor" role="tabpanel"
+                                <!-- <div class="tab-pane fade" id="instructor" role="tabpanel"
                                     aria-labelledby="instructor-tab">
                                     <div class="instructor-cont">
                                         <div class="instructor-author">
@@ -389,8 +389,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <!-- instructor cont -->
-                                </div>
+                                </div> -->
                                 <div class="tab-pane fade" id="reviews" role="tabpanel"
                                     aria-labelledby="reviews-tab">
                                     <div class="reviews-cont">

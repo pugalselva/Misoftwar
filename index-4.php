@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$name', '$email', '$phone', '$course', '$message')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Thank you! Your enquiry has been submitted.";
+        // echo "Thank you! Your enquiry has been submitted.";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -433,14 +433,14 @@ if (file_exists($file)) {
                                 <img src="images/course/py1.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
                                     <!-- <ul>
@@ -465,23 +465,23 @@ if (file_exists($file)) {
                                 <img src="images/course/html.png" alt="hmtl" width="800px" height="600px">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -497,23 +497,23 @@ if (file_exists($file)) {
                                 <img src="images/course/react1.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -529,23 +529,23 @@ if (file_exists($file)) {
                                 <img src="images/course/angular.jpg" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -561,23 +561,23 @@ if (file_exists($file)) {
                                 <img src="images/course/php.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -593,23 +593,23 @@ if (file_exists($file)) {
                                 <img src="images/course/mysql.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -625,23 +625,23 @@ if (file_exists($file)) {
                                 <img src="images/course/net.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -657,23 +657,23 @@ if (file_exists($file)) {
                                 <img src="images/course/corejava.jpg" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -689,23 +689,23 @@ if (file_exists($file)) {
                                 <img src="images/course/spring.png" alt="Course">
                             </div>
                             <div class="price">
-                                <span>Join</span>
+                                <!-- <span>Join</span> -->
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-5.jpg" alt="teacher"></a>
+                                    <!-- <a href="courses-singel.php"><img src="images/course/teacher/t-5.jpg" alt="teacher"></a> -->
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <!-- <a href="#"><h6>Mark anthem</h6></a> -->
                                 </div>
                                 <div class="review">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
