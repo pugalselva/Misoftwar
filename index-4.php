@@ -1,15 +1,6 @@
 <?php
 
-$host = 'localhost';
-$username = 'root'; 
-$password = 'MYSQL70@pug';    
-$database = 'enquiries_mi'; 
-
-$conn = new mysqli($host, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die('Connection failed: ' . $conn->connect_error);
-}
+include 'db.php';  // Assuming db.php is in the same directory as react.php
 
 // Check if form data POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

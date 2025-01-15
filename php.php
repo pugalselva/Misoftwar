@@ -1,3 +1,63 @@
+
+<?php
+include 'db.php';  // Assuming db.php is in the same directory as react.php
+
+
+// Fetch course details from the database
+$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$result = $conn->query($sql);
+
+$course = $result->fetch_assoc();
+
+$conn->close();
+?>
+
+<?php
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $title = htmlspecialchars($_POST['title']);
+    $rating = intval($_POST['rating']);
+    $comment = htmlspecialchars($_POST['comment']);
+    $date = date('Y-m-d');
+
+    // Prepare the review data
+    $review = [
+        'name' => $name,
+        'email' => $email,
+        'title' => $title,
+        'rating' => $rating,
+        'comment' => $comment,
+        'date' => $date
+    ];
+
+    // Save the review to a file
+    $reviewsFile = 'reviews.json';
+
+    if (file_exists($reviewsFile)) {
+        $reviews = json_decode(file_get_contents($reviewsFile), true);
+    } else {
+        $reviews = [];
+    }
+
+    $reviews[] = $review;
+    file_put_contents($reviewsFile, json_encode($reviews));
+
+    // Redirect back to the reviews page
+    header('Location: php.php');
+    exit;
+}
+?>
+<?php
+// Load reviews from file
+$reviewsFile = 'reviews.json';
+$reviews = [];
+
+if (file_exists($reviewsFile)) {
+    $reviews = json_decode(file_get_contents($reviewsFile), true);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +104,16 @@
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
 
+<!-- stylesheet -->
+<style>
+     .author-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    }
+ </style>
 </head>
 
 <body>
@@ -386,110 +456,46 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="tab-pane fade" id="reviews" role="tabpanel"
-                                    aria-labelledby="reviews-tab">
-                                    <div class="reviews-cont">
-                                        <div class="title">
-                                            <h6>Student Reviews</h6>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <div class="singel-reviews">
-                                                    <div class="reviews-author">
-                                                        <div class="author-thum">
-                                                            <img src="images/review/r-1.jpg" alt="Reviews" />
-                                                        </div>
-                                                        <div class="author-name">
-                                                            <h6>Bobby Aktar</h6>
-                                                            <span>April 03, 2019</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="reviews-description pt-20">
-                                                        <p>
-                                                            There are many variations of passages of Lorem
-                                                            Ipsum available, but the majority have suffered
-                                                            alteration in some form, by injected humour, or
-                                                            randomised words which.
-                                                        </p>
-                                                        <div class="rating">
-                                                            <ul>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                            </ul>
-                                                            <span>/ 5 Star</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- singel reviews -->
-                                            </li>
-                                        </ul>
-                                        <div class="title pt-15">
-                                            <h6>Leave A Comment</h6>
-                                        </div>
-                                        <div class="reviews-form">
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-singel">
-                                                            <input type="text" placeholder="Fast name" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-singel">
-                                                            <input type="text" placeholder="Last Name" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="form-singel">
-                                                            <div class="rate-wrapper">
-                                                                <div class="rate-label">Your Rating:</div>
-                                                                <div class="rate">
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
+                                
+                                <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                                        <div class="reviews-cont">
+                                            <div class="title">
+                                                <h6>Student Reviews</h6>
+                                            </div>
+                                            <ul>
+                                                <?php foreach ($reviews as $review): ?>
+                                                    <li>
+                                                        <div class="singel-reviews">
+                                                            <div class="reviews-author">
+                                                                <div class="author-thumb">
+                                                                    <img src="images/MI logo.png" alt="Reviews" />
+                                                                </div>
+                                                                <div class="author-name">
+                                                                    <h6><?= htmlspecialchars($review['name']); ?></h6>
+                                                                    <span><?= htmlspecialchars($review['date']); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="reviews-description pt-20">
+                                                                <h4><?= htmlspecialchars($review['title']) ?></h4>
+                                                                <p><?= htmlspecialchars($review['comment']); ?></p>
+                                                                <div class="rating">
+                                                                    <ul>
+                                                                        <?php for ($i = 0; $i < $review['rating']; $i++): ?>
+                                                                            <li><i class="fa fa-star"></i></li>
+                                                                        <?php endfor; ?>
+                                                                    </ul>
+                                                                    <span>/ <?= $review['rating']; ?> Star<?= $review['rating'] > 1 ? 's' : ''; ?></span>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="form-singel">
-                                                            <textarea placeholder="Comment"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <div class="form-singel">
-                                                            <button type="button" class="main-btn">
-                                                                Post Comment
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- row -->
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- reviews cont -->
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                    </div><!-- reviews cont -->
                                 </div>
-                            </div>
-                            <!-- tab content -->
+                            </div><!-- tab content -->
                         </div>
-                    </div>
-                    <!-- corses singel left -->
+                    </div> <!-- corses singel left -->
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
@@ -499,14 +505,19 @@
                                 <ul>
                                     <li>
                                         <i class="fa fa-clock-o"></i>Duration:
-                                        <span>2 Month</span>
+                                        <span><?php echo htmlspecialchars($course['duration']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-clone"></i>Training mode: <span>Online and offline </span>
+                                        <i class="fa fa-clone"></i>Training mode: 
+                                        <span><?php echo htmlspecialchars($course['training_mode']); ?></span>
                                     </li>
-                                    <li><i class="fa fa-beer"></i> Class Time: <span>1:30 Hours</span></li>
                                     <li>
-                                        <i class="fa fa-user-o"></i>Students: <span>100</span>
+                                        <i class="fa fa-beer"></i> Class Time: 
+                                        <span><?php echo htmlspecialchars($course['class_time']); ?></span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-user-o"></i>Students: 
+                                        <span><?php echo htmlspecialchars($course['students']); ?></span>
                                     </li>
                                 </ul>
                                 <div class="price-button pt-10">

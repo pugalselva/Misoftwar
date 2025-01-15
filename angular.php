@@ -1,3 +1,15 @@
+<?php
+include 'db.php';  // Assuming db.php is in the same directory as react.php
+
+// Fetch course details from the database
+$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$result = $conn->query($sql);
+
+$course = $result->fetch_assoc();
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

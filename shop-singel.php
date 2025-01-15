@@ -1,3 +1,7 @@
+<?php
+include 'db.php';  // Assuming db.php is in the same directory as react.php
+?>
+
 <!doctype html>
 <html lang="en">
 

@@ -1,4 +1,7 @@
 <?php
+include 'db.php';  // Assuming db.php is in the same directory as react.php
+?>
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Collect form data and validate
     $name = trim($_POST['name']);

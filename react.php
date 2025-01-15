@@ -1,3 +1,13 @@
+<?php
+include 'db.php';  // Assuming db.php is in the same directory as react.php
+
+$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$result = $conn->query($sql);
+
+$course = $result->fetch_assoc();
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,8 +121,8 @@
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>  
+                                 <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
 
                             </ul>
                         </div> <!-- right icon -->
@@ -491,22 +501,28 @@
                     </div>
                     <!-- corses singel left -->
                 </div>
+                
                 <div class="col-lg-4">
                     <div class="row">
-                        <div class="col-lg-12 col-md-6">
+                    <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features</h4>
                                 <ul>
                                     <li>
                                         <i class="fa fa-clock-o"></i>Duration:
-                                        <span>2 Month</span>
+                                        <span><?php echo htmlspecialchars($course['duration']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-clone"></i>Training mode: <span>Online and offline </span>
+                                        <i class="fa fa-clone"></i>Training mode: 
+                                        <span><?php echo htmlspecialchars($course['training_mode']); ?></span>
                                     </li>
-                                    <li><i class="fa fa-beer"></i> Class Time: <span>1:30 Hours</span></li>
                                     <li>
-                                        <i class="fa fa-user-o"></i>Students: <span>100</span>
+                                        <i class="fa fa-beer"></i> Class Time: 
+                                        <span><?php echo htmlspecialchars($course['class_time']); ?></span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-user-o"></i>Students: 
+                                        <span><?php echo htmlspecialchars($course['students']); ?></span>
                                     </li>
                                 </ul>
                                 <div class="price-button pt-10">
