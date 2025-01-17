@@ -622,13 +622,13 @@ $conn->close();
                                     </div>
                                     <div class="cont">
                                         <a href="#">
-                                            <h4>Introduction to machine languages</h4>
+                                            <h4>Introduction to corejava</h4>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>31</a>
                                             </li>
-                                            <li>$50</li>
+                                            <!-- <li>$50</li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -638,13 +638,13 @@ $conn->close();
                                     </div>
                                     <div class="cont">
                                         <a href="#">
-                                            <h4>How to build a basis game with java</h4>
+                                            <h4>Getting Started with corejava: A Beginner's Guide</h4>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>31</a>
                                             </li>
-                                            <li>$50</li>
+                                            <!-- <li>$50</li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -654,13 +654,13 @@ $conn->close();
                                     </div>
                                     <div class="cont">
                                         <a href="#">
-                                            <h4>Basic accounting from primary</h4>
+                                            <h4>Basic Learn corejava</h4>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>31</a>
                                             </li>
-                                            <li>$50</li>
+                                            <!-- <li>$50</li> -->
                                         </ul>
                                     </div>
                                 </div>

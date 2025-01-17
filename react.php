@@ -1,5 +1,5 @@
 <?php
-include 'db.php';  // Assuming db.php is in the same directory as react.php
+include 'db.php';
 
 $sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
 $result = $conn->query($sql);
@@ -540,13 +540,13 @@ $conn->close();
                                     </div>
                                     <div class="cont">
                                         <a href="#">
-                                            <h4>Introduction to machine languages</h4>
+                                            <h4>Introduction to ReactJS</h4>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>31</a>
                                             </li>
-                                            <li>$50</li>
+                                            <!-- <li>$50</li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -556,13 +556,13 @@ $conn->close();
                                     </div>
                                     <div class="cont">
                                         <a href="#">
-                                            <h4>How to build a basis game with java</h4>
+                                            <h4>Getting Started with ReactJS: A Beginner's Guide</h4>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>31</a>
                                             </li>
-                                            <li>$50</li>
+                                            <!-- <li>$50</li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -572,13 +572,13 @@ $conn->close();
                                     </div>
                                     <div class="cont">
                                         <a href="#">
-                                            <h4>Basic accounting from primary</h4>
+                                            <h4>Basic Learn Reactjs</h4>
                                         </a>
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>31</a>
                                             </li>
-                                            <li>$50</li>
+                                            <!-- <li>$50</li> -->
                                         </ul>
                                     </div>
                                 </div>
