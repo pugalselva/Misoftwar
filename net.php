@@ -1,13 +1,61 @@
 <?php
-include 'db.php';  // Assuming db.php is in the same directory as react.php
+include 'db.php';
 
-$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$sql = 'SELECT * FROM courses_details WHERE id = 1'; // Change the condition as needed
 $result = $conn->query($sql);
 
 $course = $result->fetch_assoc();
 
 $conn->close();
 ?>
+<!--  -->
+<?php
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $title = htmlspecialchars($_POST['title']);
+    $rating = intval($_POST['rating']);
+    $comment = htmlspecialchars($_POST['comment']);
+    $date = date('Y-m-d');
+
+    // Prepare the review data
+    $review = [
+        'name' => $name,
+        'email' => $email,
+        'title' => $title,
+        'rating' => $rating,
+        'comment' => $comment,
+        'date' => $date,
+    ];
+
+    // Save the review to a file
+    $reviewsFile = 'reviews.json';
+
+    if (file_exists($reviewsFile)) {
+        $reviews = json_decode(file_get_contents($reviewsFile), true);
+    } else {
+        $reviews = [];
+    }
+
+    $reviews[] = $review;
+    file_put_contents($reviewsFile, json_encode($reviews));
+
+    // Redirect back to the reviews page
+    header('Location: net.php');
+    exit();
+}
+?>
+<?php
+// Load reviews from file
+$reviewsFile = 'reviews.json';
+$reviews = [];
+
+if (file_exists($reviewsFile)) {
+    $reviews = json_decode(file_get_contents($reviewsFile), true);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,35 +72,45 @@ $conn->close();
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/styles.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/styles.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .author-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+    </style>
 
 </head>
 
@@ -84,7 +142,7 @@ $conn->close();
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index-4.php" class="logo-container">
+                            <a href="index.php" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                 <h2 class="logo-text">Misoftwar</h2>
                             </a>
@@ -97,7 +155,7 @@ $conn->close();
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-4.php">Home</a>
+                                        <a class="active" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.php">About us</a>
@@ -123,7 +181,7 @@ $conn->close();
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
                                 <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
-                                
+
                             </ul>
                         </div> <!-- right icon -->
                     </div>
@@ -188,59 +246,65 @@ $conn->close();
             <div class="row">
                 <div class="col-lg-8">
                     <div class="corses-singel-left mt-30">
-                    <div class="title">
-                        <h3>.NET Framework Training Course</h3>
-                        <div class="course-terms">
-                            <ul>
-                                <li>
-                                    <div class="teacher-name">
-                                        <div class="thum">
-                                            <img src="images/course/teacher/t-1.jpg" alt="Teacher" />
+                        <div class="title">
+                            <h3>.NET Framework Training Course</h3>
+                            <div class="course-terms">
+                                <ul>
+                                    <li>
+                                        <div class="teacher-name">
+                                            <div class="thum">
+                                                <img src="images/course/teacher/t-1.jpg" alt="Teacher" />
+                                            </div>
+                                            <div class="name">
+                                                <span>Trainer</span>
+                                                <h6>Ram Kumar</h6>
+                                            </div>
                                         </div>
-                                        <div class="name">
-                                            <span>Trainer</span>
-                                            <h6>Ram Kumar</h6>
+                                    </li>
+                                    <li>
+                                        <div class="course-category">
+                                            <span>Category</span>
+                                            <h6>Software Development</h6>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="course-category">
-                                        <span>Category</span>
-                                        <h6>Software Development</h6>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review">
-                                        <span>Review</span>
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li class="rating">(20 Reviews)</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li>
+                                        <div class="review">
+                                            <span>Review</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li class="rating">(20 Reviews)</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>
+                                .NET Framework Online Training will make you an expert in software development
+                                to become a Professional .NET Developer with real-world projects. Learn .NET Framework
+                                from scratch to design, develop, and deploy web and desktop applications effectively
+                                with hands-on demo sessions.
+                                This course will help you master .NET concepts such as working with C#, ASP.NET, MVC,
+                                and Web API. Gain practical knowledge in application development, data access, and
+                                security.
+                                You will become proficient in using .NET Framework for building scalable applications
+                                with our .NET Framework Online Training Course led by certified trainers and an updated
+                                syllabus.
+                            </p>
                         </div>
-                        <p>
-                            .NET Framework Online Training will make you an expert in software development
-                            to become a Professional .NET Developer with real-world projects. Learn .NET Framework from scratch to design, develop, and deploy web and desktop applications effectively with hands-on demo sessions.
-                            This course will help you master .NET concepts such as working with C#, ASP.NET, MVC, and Web API. Gain practical knowledge in application development, data access, and security. 
-                            You will become proficient in using .NET Framework for building scalable applications with our .NET Framework Online Training Course led by certified trainers and an updated syllabus.
-                        </p>
-                    </div>
 
 
                         <!-- title -->
@@ -272,25 +336,35 @@ $conn->close();
                             </ul>
 
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                                    aria-labelledby="overview-tab">
                                     <div class="overview-description container">
                                         <div class="singel-description pt-4">
                                             <h6 class="text-primary">.NET Framework Training Course Overview</h6>
                                             <p class="text-justify">
-                                                This Comprehensive Online .NET Framework Training Course will equip you with the skills to design, develop, and maintain applications using .NET technologies. 
-                                                You will gain hands-on experience in C#, ASP.NET, MVC, Web APIs, and more. The course will help you master key concepts in .NET development, object-oriented programming, 
+                                                This Comprehensive Online .NET Framework Training Course will equip you
+                                                with the skills to design, develop, and maintain applications using .NET
+                                                technologies.
+                                                You will gain hands-on experience in C#, ASP.NET, MVC, Web APIs, and
+                                                more. The course will help you master key concepts in .NET development,
+                                                object-oriented programming,
                                                 and web application development.
                                             </p>
                                             <p class="text-justify">
-                                                Learn how to build scalable web applications, work with databases using Entity Framework, and integrate your applications with cloud services. 
-                                                This training is ideal for beginners and professionals looking to enhance their .NET skills. The course includes real-world projects, coding challenges, 
-                                                and placement assistance to help you advance your career as a .NET Developer.
+                                                Learn how to build scalable web applications, work with databases using
+                                                Entity Framework, and integrate your applications with cloud services.
+                                                This training is ideal for beginners and professionals looking to
+                                                enhance their .NET skills. The course includes real-world projects,
+                                                coding challenges,
+                                                and placement assistance to help you advance your career as a .NET
+                                                Developer.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="curriculam" role="tabpanel" aria-labelledby="curriculam-tab">
+                                <div class="tab-pane fade" id="curriculam" role="tabpanel"
+                                    aria-labelledby="curriculam-tab">
                                     <div class="curriculam-cont">
                                         <div class="title">
                                             <h6>.NET Framework Course Content</h6>
@@ -399,60 +473,65 @@ $conn->close();
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="tab-pane fade" id="reviews" role="tabpanel"
+                                <div class="tab-pane fade show active" id="reviews" role="tabpanel"
                                     aria-labelledby="reviews-tab">
                                     <div class="reviews-cont">
                                         <div class="title">
                                             <h6>Student Reviews</h6>
                                         </div>
                                         <ul>
+                                            <?php foreach ($reviews as $review): ?>
                                             <li>
                                                 <div class="singel-reviews">
                                                     <div class="reviews-author">
-                                                        <div class="author-thum">
-                                                            <img src="images/review/r-1.jpg" alt="Reviews" />
+                                                        <div class="author-thumb">
+                                                            <img src="images/MI logo.png" alt="Reviews" />
                                                         </div>
                                                         <div class="author-name">
-                                                            <h6>Bobby Aktar</h6>
-                                                            <span>April 03, 2019</span>
+                                                            <h6><?= htmlspecialchars($review['name']) ?></h6>
+                                                            <span><?= htmlspecialchars($review['date']) ?></span>
                                                         </div>
                                                     </div>
                                                     <div class="reviews-description pt-20">
-                                                        <p>
-                                                            There are many variations of passages of Lorem
-                                                            Ipsum available, but the majority have suffered
-                                                            alteration in some form, by injected humour, or
-                                                            randomised words which.
-                                                        </p>
+                                                        <h4><?= htmlspecialchars($review['title']) ?></h4>
+                                                        <p><?= htmlspecialchars($review['email']) ?></p>
+                                                        <p><?= htmlspecialchars($review['comment']) ?></p>
                                                         <div class="rating">
                                                             <ul>
+                                                                <?php for ($i = 0; $i < $review['rating']; $i++): ?>
                                                                 <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
+                                                                <?php endfor; ?>
                                                             </ul>
-                                                            <span>/ 5 Star</span>
+                                                            <span>/ <?= $review['rating'] ?>
+                                                                Star<?= $review['rating'] > 1 ? 's' : '' ?></span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- singel reviews -->
                                             </li>
+                                            <?php endforeach; ?>
                                         </ul>
                                         <div class="title pt-15">
                                             <h6>Leave A Comment</h6>
                                         </div>
                                         <div class="reviews-form">
-                                            <form action="#">
+                                            <form action="net.php" method="POST">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-singel">
-                                                            <input type="text" placeholder="Fast name" />
+                                                            <input type="text" name="name"
+                                                                placeholder="Fast name" required />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-singel">
-                                                            <input type="text" placeholder="Last Name" />
+                                                            <input type="email" name="email"
+                                                                placeholder="Enter Gmail" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-singel">
+                                                            <input type="text" name="title"
+                                                                placeholder="Enter Title" required />
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
@@ -460,19 +539,21 @@ $conn->close();
                                                             <div class="rate-wrapper">
                                                                 <div class="rate-label">Your Rating:</div>
                                                                 <div class="rate">
-                                                                    <div class="rate-item">
+                                                                    <input type="hidden" name="rating"
+                                                                        id="rating-value" value="0" />
+                                                                    <div class="rate-item" data-value="1">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="2">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="3">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="4">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="5">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
                                                                 </div>
@@ -481,18 +562,16 @@ $conn->close();
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-singel">
-                                                            <textarea placeholder="Comment"></textarea>
+                                                            <textarea name="comment" placeholder="Comment" required></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-singel">
-                                                            <button type="button" class="main-btn">
-                                                                Post Comment
-                                                            </button>
+                                                            <button type="submit" class="main-btn">Post
+                                                                Comment</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- row -->
                                             </form>
                                         </div>
                                     </div>
@@ -506,20 +585,25 @@ $conn->close();
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
-                        <div class="col-lg-12 col-md-6">
+                    <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features</h4>
                                 <ul>
                                     <li>
                                         <i class="fa fa-clock-o"></i>Duration:
-                                        <span>2 Month</span>
+                                        <span><?php echo htmlspecialchars($course['duration']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-clone"></i>Training mode: <span>Online and offline </span>
+                                        <i class="fa fa-clone"></i>Training mode: 
+                                        <span><?php echo htmlspecialchars($course['training_mode']); ?></span>
                                     </li>
-                                    <li><i class="fa fa-beer"></i> Class Time: <span>1:30 Hours</span></li>
                                     <li>
-                                        <i class="fa fa-user-o"></i>Students: <span>100</span>
+                                        <i class="fa fa-beer"></i> Class Time: 
+                                        <span><?php echo htmlspecialchars($course['class_time']); ?></span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-user-o"></i>Students: 
+                                        <span><?php echo htmlspecialchars($course['students']); ?></span>
                                     </li>
                                 </ul>
                                 <div class="price-button pt-10">
@@ -603,7 +687,7 @@ $conn->close();
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-4.php" class="logo-container d-flex align-items-center">
+                                <a href="index.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
@@ -628,7 +712,7 @@ $conn->close();
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>HOME</a></li>
                                 <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
@@ -647,10 +731,10 @@ $conn->close();
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
                                     <p class="Con ml-3">Misoftwar
-                                            No.78, Kudi Street,
-                                            Umayalpuram,
-                                            P.N. Palayam(T.K),
-                                            Salem(D.T)-636119</p>
+                                        No.78, Kudi Street,
+                                        Umayalpuram,
+                                        P.N. Palayam(T.K),
+                                        Salem(D.T)-636119</p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -727,6 +811,24 @@ $conn->close();
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
+
+    <script>
+        document.querySelectorAll('.rate-item').forEach(item => {
+            item.addEventListener('click', function() {
+
+                const ratingValue = this.getAttribute('data-value');
+
+                document.getElementById('rating-value').value = ratingValue;
+
+                document.querySelectorAll('.rate-item').forEach(star => {
+                    star.querySelector('i').classList.remove('selected');
+                });
+                for (let i = 0; i < ratingValue; i++) {
+                    document.querySelectorAll('.rate-item')[i].querySelector('i').classList.add('selected');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

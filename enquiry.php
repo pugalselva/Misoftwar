@@ -66,7 +66,7 @@
                                     <span>Sign up now</span>
                                 </div>
                                 <div class="form-body">
-                                    <form id="enquiryForm" method="POST" action="index-4.php">
+                                    <form id="enquiryForm" method="POST" action="index.php">
                                         <div class="form-group">
                                             <input type="text" id="name" name="name" placeholder="Your Name"
                                                 required>
@@ -179,7 +179,7 @@
                 icon: "success"
             });
             // Add your form submission logic here
-            window.location.href = "index-4.php";
+            window.location.href = "index.php";
             //return true;
         }
     </script> -->
@@ -207,7 +207,7 @@
                     if (response.ok) {
                         alert(result);
                         closePopup();
-                        window.location.href = 'index-4.php'; // Redirect to a thank-you page
+                        window.location.href = 'index.php'; // Redirect to a thank-you page
                     } else {
                         alert('Submission failed. Please try again.');
                     }

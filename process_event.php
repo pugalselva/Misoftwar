@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the query
     if ($stmt->execute()) {
-        echo "Event successfully added! <a href='index-4.php'>View Events</a>";
+        echo "Event successfully added! <a href='index.php'>View Events</a>";
     } else {
         echo "Error: " . $stmt->error;
     }

@@ -75,7 +75,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a href="index-4.php" class="logo-container">
+                                <a href="index.php" class="logo-container">
                                     <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                     <h2 class="logo-text">Misoftwar</h2>
                                 </a>
@@ -86,7 +86,7 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="active" href="index-4.php">Home</a>
+                                            <a class="active" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="about.php">About us</a>
@@ -150,7 +150,7 @@
                         <h2>Our Courses</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index-4.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Courses</li>
                             </ol>
                         </nav>
@@ -587,7 +587,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-4.php" class="logo-container d-flex align-items-center">
+                                <a href="index.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
@@ -606,7 +606,7 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>HOME</a></li>
                                 <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>

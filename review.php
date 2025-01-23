@@ -1,5 +1,7 @@
 <?php
-include 'db.php';  // Assuming db.php is in the same directory as react.php
+
+include 'db.php';
+
 ?>
 <?php
 // Check if the form is submitted
@@ -34,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents($reviewsFile, json_encode($reviews));
 
     // Redirect back to the reviews page
-    header('Location: php.php');
+    header('Location: review.php');
     exit();
 }
 ?>
@@ -106,132 +108,111 @@ if (file_exists($reviewsFile)) {
 
 <body>
     <div class="corses-tab mt-30">
-        <ul class="nav nav-justified" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
-                    aria-selected="false">Reviews</a>
-            </li>
-        </ul>
-        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-            <div class="reviews-cont">
-                <div class="title">
-                    <h6>Student Reviews</h6>
-                </div>
-                <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-                    <div class="reviews-cont">
-                        <div class="title">
-                            <h6>Student Reviews</h6>
-                        </div>
-                        <ul>
-                            <?php foreach ($reviews as $review): ?>
-                            <li>
-                                <div class="singel-reviews">
-                                    <div class="reviews-author">
-                                        <div class="author-thumb">
-                                            <img src="images/MI logo.png" alt="Reviews" />
-                                        </div>
-                                        <div class="author-name">
-                                            <h6><?= htmlspecialchars($review['name']) ?></h6>
-                                            <span><?= htmlspecialchars($review['date']) ?></span>
-                                        </div>
-                                    </div>
-                                    <div class="reviews-description pt-20">
-                                        <p><?= htmlspecialchars($review['comment']) ?></p>
-                                        <div class="rating">
-                                            <ul>
-                                                <?php for ($i = 0; $i < $review['rating']; $i++): ?>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <?php endfor; ?>
-                                            </ul>
-                                            <span>/ <?= $review['rating'] ?>
-                                                Star<?= $review['rating'] > 1 ? 's' : '' ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-                <div class="title pt-15">
-                    <h6>Leave A Comment</h6>
-                </div>
-                <div class="reviews-form">
-                    <form action="review.php" method="POST">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-singel">
-                                    <input type="text" name="name" placeholder="Enter Name" required />
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-singel">
-                                    <input type="email" name="email" placeholder="Enter Gmail" required />
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-singel">
-                                    <input type="text" name="title" placeholder="Enter Title" required />
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-singel">
-                                    <div class="rate-wrapper">
-                                        <div class="rate-label">Your Rating:</div>
-                                        <div class="rate">
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true" name></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                    <div class="rate-item">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </div>
-                                                                </div>
-                                        <div class="rate">
-                                            <label name="rating"   value="1" required >
-                                            <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                            </label>
-                                            <label name="rating"   value="1" required >
-                                            <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                            </label>
-                                            <label name="rating"   value="1" required >
-                                            <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                            </label>
-                                            <label name="rating"   value="1" required >
-                                            <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                            </label>
-                                            <label name="rating"   value="1" required >
-                                            <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-singel">
-                                    <textarea name="comment" placeholder="Comment" required></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-singel">
-                                    <button type="submit" class="main-btn">Post Comment</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
 
+        <!-- <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab"> -->
+        <div class="reviews-cont">
+            <div class="title">
+                <h6>Student Reviews</h6>
             </div>
-            <!-- reviews cont -->
+            <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                <div class="reviews-cont">
+                    <div class="title">
+                        <h6>Student Reviews</h6>
+                    </div>
+                    <ul>
+                        <?php foreach ($reviews as $review): ?>
+                        <li>
+                            <div class="singel-reviews">
+                                <div class="reviews-author">
+                                    <div class="author-thumb">
+                                        <img src="images/MI logo.png" alt="Reviews" />
+                                    </div>
+                                    <div class="author-name">
+                                        <h6><?= htmlspecialchars($review['name']) ?></h6>
+                                        <span><?= htmlspecialchars($review['date']) ?></span>
+                                    </div>
+                                </div>
+                                <div class="reviews-description pt-20">
+                                    <h4><?= htmlspecialchars($review['title']) ?></h4>
+                                    <p><?= htmlspecialchars($review['email']) ?></p>
+                                    <p><?= htmlspecialchars($review['comment']) ?></p>
+                                    <div class="rating">
+                                        <ul>
+                                            <?php for ($i = 0; $i < $review['rating']; $i++): ?>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <?php endfor; ?>
+                                        </ul>
+                                        <span>/ <?= $review['rating'] ?>
+                                            Star<?= $review['rating'] > 1 ? 's' : '' ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="title pt-15">
+                <h6>Leave A Comment</h6>
+            </div>
+            <div class="reviews-form">
+                <form action="net.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-singel">
+                                <input type="text" name="name" placeholder="Enter Name" required />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-singel">
+                                <input type="email" name="email" placeholder="Enter Gmail" required />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-singel">
+                                <input type="text" name="title" placeholder="Enter Title" required />
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-singel">
+                                <div class="rate-wrapper">
+                                    <div class="rate-label">Your Rating:</div>
+                                    <div class="rate">
+                                        <input type="hidden" name="rating" id="rating-value" value="0" />
+                                        <div class="rate-item" data-value="1">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rate-item" data-value="2">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rate-item" data-value="3">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rate-item" data-value="4">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="rate-item" data-value="5">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-singel">
+                                <textarea name="comment" placeholder="Comment" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-singel">
+                                <button type="submit" class="main-btn">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
+    </div>
     </div>
     <!-- tab content -->
     </div>
@@ -272,6 +253,24 @@ if (file_exists($reviewsFile)) {
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
+
+    <script>
+        document.querySelectorAll('.rate-item').forEach(item => {
+            item.addEventListener('click', function() {
+                
+                const ratingValue = this.getAttribute('data-value');
+                
+                document.getElementById('rating-value').value = ratingValue;
+                
+                document.querySelectorAll('.rate-item').forEach(star => {
+                    star.querySelector('i').classList.remove('selected');
+                });
+                for (let i = 0; i < ratingValue; i++) {
+                    document.querySelectorAll('.rate-item')[i].querySelector('i').classList.add('selected');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

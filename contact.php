@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a href="index-4.php" class="logo-container">
+                                <a href="index.php" class="logo-container">
                                     <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                     <h2 class="logo-text">Misoftwar</h2>
                                 </a>
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="active" href="index-4.php">Home</a>
+                                            <a class="active" href="index.php">Home</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="about.php">About us</a>
@@ -306,7 +306,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-4.php" class="logo-container d-flex align-items-center">
+                                <a href="index.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
@@ -325,7 +325,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>HOME</a></li>
                                 <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
@@ -436,64 +436,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-   $(document).ready(function () {
+  $(document).ready(function () {
     $('#contact-form').on('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
 
+        const $form = $(this);
+        const $submitButton = $form.find('button[type="submit"]');
+        const $messages = $('#messages');
+
         // Disable the send button to prevent multiple submissions
-        $('#contact-form button[type="submit"]').prop('disabled', true).text('Sending...');
+        $submitButton.prop('disabled', true).text('Sending...');
 
         $.ajax({
-            url: $(this).attr('action'), // Backend script URL
-            type: $(this).attr('method'), // Form method (POST)
-            data: $(this).serialize(), // Serialize form data
-            dataType: 'json', // Expect JSON response
+            url: $form.attr('action'), 
+            type: $form.attr('method') || 'POST', 
+            data: $form.serialize(), 
+            dataType: 'json', 
             success: function (response) {
-                // Log the response to check what is returned by the backend
-                console.log(response);
+                console.log('Response:', response); // Log response for debugging
 
-                if (response.status === 'success') {
-                    // Show success message in alert
-                    alert('Your message has been sent successfully!');
-
-                    // Show success message on the page
-                    $('#messages')
-                        .text(response.message)
-                        .css('color', 'green');
-                    
-                    // Optionally reset the form after success
-                    $('#contact-form')[0].reset();
-
-                    // Enable and reset button text
-                    $('#contact-form button[type="submit"]').prop('disabled', true).text('Send');
-                } else {
-                    // Show error message for backend validation issues
-                    $('#messages')
-                        .text(response.message)
+                if (response.status !== 'success') {
+                    // Display error message if the status is not success
+                    $messages
+                        .text(response.message || 'There was an issue with your submission.')
                         .css('color', 'red');
-
-                    // Enable and reset button text
-                    $('#contact-form button[type="submit"]').prop('disabled', false).text('Send');
                 }
+
+                // Optionally reset the form even on success
+                $form[0].reset();
             },
             error: function (xhr) {
-                // Log error response
-                console.error(xhr);
+                console.error('Error:', xhr); // Log error for debugging
 
-                // Handle server errors
+                // Handle server errors or unexpected issues
                 const errorMessage = xhr.responseJSON?.message || 'An error occurred. Please try again later.';
-                $('#messages')
+                $messages
                     .text(errorMessage)
                     .css('color', 'red');
-
-                // Enable and reset button text
-                $('#contact-form button[type="submit"]').prop('disabled', false).text('Send');
+            },
+            complete: function () {
+                // Enable and reset the button text in all cases
+                $submitButton.prop('disabled', false).text('Send');
             }
         });
     });
 });
-
-
 </script>
 
     

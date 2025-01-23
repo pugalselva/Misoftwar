@@ -393,6 +393,52 @@ $(function() {
         enabled:true
       }
     });
+
+    // enquiry page 
+
+    async function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      if (name && email && phone) {
+          // Prepare form data
+          const formData = new FormData();
+          formData.append('name', name);
+          formData.append('email', email);
+          formData.append('phone', phone);
+
+          try {
+              const response = await fetch('', { // PHP file to handle data
+                  method: 'POST',
+                  body: formData,
+              });
+
+              const result = await response.text();
+
+              if (response.ok) {
+                  alert(result);
+                  closePopup();
+                  window.location.href = 'index.php'; // Redirect to a thank-you page
+              } else {
+                  alert('Submission failed. Please try again.');
+              }
+          } catch (error) {
+              console.error('Error submitting form:', error);
+              alert('An error occurred. Please try again.');
+          }
+      } else {
+          alert('Please fill in all fields.');
+      }
+  }
+
+  function closePopup() {
+      document.getElementById('popupWrapper').style.display = 'none';
+  }
+
+  window.onload = function() {
+      document.getElementById('popupWrapper').style.display = 'flex';
+  };
     
 
 

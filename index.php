@@ -118,7 +118,7 @@ if (file_exists($file)) {
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index-4.php" class="logo-container">
+                            <a href="index.php" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                 <h2 class="logo-text">Misoftwar</h2>
                             </a>
@@ -129,7 +129,7 @@ if (file_exists($file)) {
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-4.php">Home</a>
+                                        <a class="active" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.php">About us</a>
@@ -760,20 +760,41 @@ if (file_exists($file)) {
                             <span>Sign up now </span>
                         </div>
                         <div class="main-form">
-                            <form id="demoForm" action="#">
-                                <div class="singel-form">
-                                    <input type="text" id="name" placeholder="Your name" required>
-                                </div>
-                                <div class="singel-form">
-                                    <input type="email" id="email" placeholder="Your Mail" required>
-                                </div>
-                                <div class="singel-form">
-                                    <input type="text" id="phone" placeholder="Your Phone" required>
-                                </div>
-                                <div class="singel-form">
-                                    <button class="main-btn" type="button" onclick="validateForm()">Get it Now</button>
-                                </div>
-                            </form>
+                        <form id="enquiryForm" method="POST" action="index.php">
+                                        <div class="form-group">
+                                            <input type="text" id="name" name="name" placeholder="Your Name"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="email" name="email" placeholder="Your Email"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone" placeholder="Your Phone"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="course" name="course" required>
+                                                <option value="">Select Course</option>
+                                                <option value="web.php">HTML</option>
+                                                <option value="web.php">CSS</option>
+                                                <option value="web.php">JavaScript</option>
+                                                <option value="react.php">Reactjs</option>
+                                                <option value="angular.php">Angularjs</option>
+                                                <option value="php.php">PHP</option>
+                                                <option value="sql.php">MYSQL</option>
+                                                <option value="net.php">.Net Framework</option>
+                                                <option value="core-java.php">Core-Java</option>
+                                                <option value="spring.php">Spring Framework</option>
+                                            </select>
+                                        </div> 
+                                        <div class="form-group" >
+                                            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="submit-btn" type="submit">Get it Now</button>
+                                        </div>
+                                    </form>
                         </div>
                     </div> <!-- category form -->
                 </div>
@@ -1057,7 +1078,7 @@ if (file_exists($file)) {
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-4.php" class="logo-container d-flex align-items-center">
+                                <a href="index.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
@@ -1076,7 +1097,7 @@ if (file_exists($file)) {
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>HOME</a></li>
                                 <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
@@ -1240,7 +1261,7 @@ if (file_exists($file)) {
                 window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
             } else {
                 // Redirect to home page if no course is selected
-                window.location.href = 'index-4.php'; // Change 'index.html' to your home page URL
+                window.location.href = 'index.php'; // Change 'index.html' to your home page URL
             }
         });
     });

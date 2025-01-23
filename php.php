@@ -144,7 +144,7 @@ if (file_exists($reviewsFile)) {
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index-4.php" class="logo-container">
+                            <a href="index.php" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                 <h2 class="logo-text">Misoftwar</h2>
                             </a>
@@ -157,7 +157,7 @@ if (file_exists($reviewsFile)) {
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-4.php">Home</a>
+                                        <a class="active" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.php">About us</a>
@@ -315,7 +315,6 @@ if (file_exists($reviewsFile)) {
                             <img src="images/course/php.png" alt="Courses" />
                         </div>
                         <!-- corses singel image -->
-
                         <div class="corses-tab mt-30">
                             <ul class="nav nav-justified" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -424,39 +423,7 @@ if (file_exists($reviewsFile)) {
                                     </div>
                                     <!-- curriculam cont -->
                                 </div>
-
-
-
-
-                                <!-- <div class="tab-pane fade" id="instructor" role="tabpanel"
-                                    aria-labelledby="instructor-tab">
-                                    <div class="instructor-cont">
-                                        <div class="instructor-author">
-                                            <div class="author-thum">
-                                                <img src="images/instructor/i-1.jpg" alt="Instructor" />
-                                            </div>
-                                            <div class="author-name">
-                                                <a href="#">
-                                                    <h5>Sumon Hasan</h5>
-                                                </a>
-                                                <span>Senior WordPress Developer</span>
-                                            </div>
-                                        </div>
-                                        <div class="instructor-description pt-25">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit. Delectus fuga ratione molestiae unde provident
-                                                quibusdam sunt, doloremque. Error omnis mollitia, ex
-                                                dolor sequi. Et, quibusdam excepturi. Animi assumenda,
-                                                consequuntur dolorum odio sit inventore aliquid, optio
-                                                fugiat alias. Veritatis minima, dicta quam repudiandae
-                                                repellat non sit, distinctio, impedit, expedita
-                                                tempora numquam?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                
+                                <!-- Review paga -->       
                                 <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                                         <div class="reviews-cont">
                                             <div class="title">
@@ -477,6 +444,7 @@ if (file_exists($reviewsFile)) {
                                                             </div>
                                                             <div class="reviews-description pt-20">
                                                                 <h4><?= htmlspecialchars($review['title']) ?></h4>
+                                                                <p><?= htmlspecialchars($review['email']) ?></p>
                                                                 <p><?= htmlspecialchars($review['comment']); ?></p>
                                                                 <div class="rating">
                                                                     <ul>
@@ -601,7 +569,7 @@ if (file_exists($reviewsFile)) {
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-4.php" class="logo-container d-flex align-items-center">
+                                <a href="index.php" class="logo-container d-flex align-items-center">
                                     <img class="logo-image" src="images/MI logo.png" alt="Logo">
                                     <h2 class="logo-texts ml-3">Misoftwar</h2>
                                 </a>
@@ -626,7 +594,7 @@ if (file_exists($reviewsFile)) {
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>HOME</a></li>
                                 <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>

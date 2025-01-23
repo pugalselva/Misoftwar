@@ -243,7 +243,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index-4.php" class="logo-container">
+                            <a href="index.php" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                 <h2 class="logo-text">Misoftwar</h2>
                             </a>
@@ -256,7 +256,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-4.php">Home</a>
+                                        <a class="active" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="courses.php">Courses</a>
@@ -275,7 +275,7 @@
                         <div class="right-icon text-right">
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="index-4.php"><i class="fa fa-sign-out"></i><span></span></a></li>
+                                <li><a href="index.php"><i class="fa fa-sign-out"></i><span></span></a></li>
 
                             </ul>
                         </div> 
@@ -399,7 +399,7 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
                             <ul>
-                                <li><a href="index-4.php"><i class="fa fa-angle-right"></i>HOME</a></li>
+                                <li><a href="index.php"><i class="fa fa-angle-right"></i>HOME</a></li>
                                 <li><a href="about.php"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
