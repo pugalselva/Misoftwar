@@ -269,7 +269,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>+91 93440 23645</p>
+                                        <p>+91 04447781715</p>
                                     </div>
                                 </div>
                             </li>
@@ -351,7 +351,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
-                                    <p class="Con ml-3">+91 93440 23645</p>
+                                    <p class="Con ml-3">+91 04447781715</p>
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
