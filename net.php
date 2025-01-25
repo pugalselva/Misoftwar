@@ -742,7 +742,7 @@ if (file_exists($reviewsFile)) {
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthu22@gmail.com</p>
+                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
                                 </li>
                             </ul>
                         </div>

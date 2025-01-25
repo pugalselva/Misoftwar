@@ -279,7 +279,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>muthu22@gmail.com</p>
+                                        <p>muthusoftware22@gmail.com</p>
                                     </div>
                                 </div>
                             </li>

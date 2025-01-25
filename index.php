@@ -10,6 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $conn->real_escape_string($_POST['phone']);
     $course = $conn->real_escape_string($_POST['course']);
     $message = $conn->real_escape_string($_POST['message']);
+    // Validate required fields
+    if (empty($name) || empty($email) || empty($phone) || empty($course) || empty($message)) {
+        echo "All fields are required!";
+        exit;
+    }
 
     // Insert data into the database
     $sql = "INSERT INTO enquiries (name, email, phone, course, message) 
@@ -20,10 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+     // Close connection
+    $conn->close();
+} else {
+    // if the form is not submitted, redirect to the form page
+    header("Location: enquiry.php");
+    exit;
 }
 
-// Close the connection
-$conn->close();
 ?>
 <?php
 // Define the path to the events.json file
@@ -162,7 +171,7 @@ if (file_exists($file)) {
             </div> <!-- container -->
         </div>
     </header>
-    
+
     <!--====== HEADER PART ENDS ======-->
    
     <!--====== SEARCH BOX PART START ======-->
@@ -1127,7 +1136,7 @@ if (file_exists($file)) {
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthu22@gmail.com</p>
+                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
                                 </li>
                             </ul>
                         </div>
@@ -1266,6 +1275,8 @@ if (file_exists($file)) {
         });
     });
 </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
