@@ -44,6 +44,14 @@
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
+<style>
+    .form-body {
+             overflow-y: auto; 
+        }
+
+       
+
+</style>
 
 </head>
 
@@ -234,7 +242,19 @@
         alert("The hostname of the current URL is: " + currentURL);
     } -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function () {
+            // Smooth scrolling when filling out the form
+            $('input, select, textarea').on('focus', function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top - 50
+                }, 500);
+            });
 
+            // Prevent dropdown from being too long
+            $('#course').css('max-height', '40px');
+        });
+    </script>   
 </body>
 
 </html>

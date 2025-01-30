@@ -46,6 +46,17 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
+<!-- stylesheet icon -->
+<style>
+        .testimonial-thum {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;  
+            /* border: 2px solid #ddd;       */
+            /* clip-path: circle(50%);   */
+        }
+    </style>
 
   
 </head>
@@ -254,7 +265,6 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
     <!--====== TEACHERS PART ENDS ======-->
    
     <!--====== TEASTIMONIAL PART START ======-->
-    
     <section id="testimonial" class="bg_cover pt-115 pb-120" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
         <div class="container">
             <div class="row">
@@ -269,7 +279,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                 <div class="col-lg-4 col-md-6">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-1.jpg" alt="Testimonial">
+                            <img src="images/testimonial/icong1.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -284,7 +294,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                 <div class="col-lg-4 col-md-6">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-2.jpg" alt="Testimonial">
+                            <img src="images/testimonial/iconb1.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -299,7 +309,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                 <div class="col-lg-4 col-md-6">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <img src="images/testimonial/icong3.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -449,14 +459,6 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
     <!--====== BACK TO TOP PART ENDS ======-->
 
 
-    
-    
-    
-    
-    
-    
-    
-    
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>

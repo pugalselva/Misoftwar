@@ -1,68 +1,55 @@
 <?php
 // Include necessary files, start the session
-session_start();
+// session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+// include 'db.php';
 
-    if ($username == 'admin' && $password == 'admin123') {
-        $_SESSION['admin_logged_in'] = true;
-        header('Location: admin.php');
-        exit();
-    } else {
-        echo "Invalid login details.";
-    }
-}
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $username = $_POST['username'];
+//     $password = $_POST['password'];
+
+//     if ($username == 'admin' && $password == 'admin123') {
+//         $_SESSION['admin_logged_in'] = true;
+//         header('Location: admin.php');
+//         exit();
+//     } else {
+//         echo "Invalid login details.";
+//     }
+// }
 ?>
 <?php
-// $host = 'localhost';
-// $username = 'root'; 
-// $password = 'MYSQL70@pug';    
-// $database = 'enquiries_mi'; 
+session_start();
 
-// $conn = new mysqli($host, $username, $password, $database);
+include 'db.php';
+// Check if the request method is POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $conn->real_escape_string($_POST['username']);
+    $password = $conn->real_escape_string($_POST['password']);
 
-
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
-//     $username = mysqli_real_escape_string($conn, $_POST['username']);
-//     $password = mysqli_real_escape_string($conn, $_POST['password']);
-    
-    
-//     echo "Entered Username: $username<br>";
-//     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);  
-//     $sql = "INSERT INTO admin_users (username, password) VALUES ('$username', '$hashedPassword')";
-    
-//     $result = $conn->query($sql);
-
-//     if (!$result) {
-//         die("Error executing query: " . $conn->error); 
-//     }
-
-    
-//     if ($result->num_rows > 0) {
-//         $row = $result->fetch_assoc();  
-
-//         if (password_verify($password, $row['misoft123'])) {
-//            echo "Login successful!";
-//             header("Location: admin.php");
-//             exit();
-//         } else {
-//             echo "Invalid password.";
-//         }
-//     } else {
-//        echo "Username not found.";
-//     }
-// }
+    // Fetch the admin record from the database
+    $query = "SELECT id FROM admin_users WHERE username = '$username' AND password = '$password' AND id = 1 LIMIT 1";
+    $result = $conn->query($query);
 
 
+if (!$result) {
+    // Debugging output: Display the SQL error
+    die("Query failed: " . $conn->error);
+}
 
-// $conn->close();
+if ($result->num_rows == 1) {
+    echo "Login successful!";
+    $_SESSION['admin_logged_in'] = true;
+    header('Location: admin.php');
+    exit();
+} else {
+    echo "Invalid login details. Debug info:<br>";
+    echo "Username: $username<br>";
+    echo "Password: $password<br>";
+}
+}
+
+
+$conn->close();
 ?>
 
 <!doctype html>
@@ -111,7 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
+<!-- Bootstrap cdn -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- stylesheet  -->
     <style>
         /* Custom Styling for the Login Form */
         .login-container {
@@ -168,8 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control" required>
                 </div>
-
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
         </div>
     </div>

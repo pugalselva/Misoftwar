@@ -96,6 +96,17 @@ if (file_exists($file)) {
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
+<!-- stylesheet  icon-->
+<style>
+        .author-thumb {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            clip-path: circle(50%);
+        }
+    </style>
   
 </head>
 
@@ -893,6 +904,7 @@ if (file_exists($file)) {
     
     <!--====== TEACHERS PART START ======-->
     
+    
     <section id="teachers-part" class="pt-65 pb-120 gray-bg">
         <div class="container">
             <div class="row">
@@ -905,8 +917,8 @@ if (file_exists($file)) {
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
+                                    <div class="author-thumb ">
+                                        <img src="images/teachers/teacher-2/icon1.png" alt="Teacher">
                                     </div>
                                     <div class="cont">
                                         <a href="teachers-singel.html"><h5>Dr. Anjali Rao</h5></a>
@@ -917,8 +929,8 @@ if (file_exists($file)) {
                             </div>
                             <div class="col-md-6">
                                 <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-2.jpg" alt="Teacher">
+                                    <div class="author-thumb ">
+                                        <img src="images/teachers/teacher-2/boyicon2.png" alt="Teacher">
                                     </div>
                                     <div class="cont">
                                         <a href="teachers-singel.html"><h5>Mr. Ravi </h5></a>
@@ -929,8 +941,8 @@ if (file_exists($file)) {
                             </div>
                             <div class="col-md-6">
                                 <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-2.jpg" alt="Teacher">
+                                    <div class="author-thumb ">
+                                        <img src="images/teachers/teacher-2/icongirl1.png" alt="Teacher">
                                     </div>
                                     <div class="cont">
                                         <a href="teachers-singel.html"><h5>Ms. Priya Sharma</h5></a>
@@ -941,8 +953,8 @@ if (file_exists($file)) {
                             </div>
                             <div class="col-md-6">
                                 <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
+                                    <div class="author-thumb ">
+                                        <img src="images/teachers/teacher-2/icon2.jpeg" alt="Teacher">
                                     </div>
                                     <div class="cont">
                                         <a href="teachers-singel.html"><h5>Mr. Arjun Mehta</h5></a>

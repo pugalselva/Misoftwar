@@ -723,7 +723,7 @@
     
                 courses.forEach(course => {
                     const courseName = course.querySelector('h4').textContent.toLowerCase();
-                    if (courseName.includes(searchTerm)) {
+                    if (courseName.includes(searchTerm)) {  
                         course.parentElement.style.display = 'block';
                     } else {
                         course.parentElement.style.display = 'none'; 
