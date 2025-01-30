@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert data into the database
-    $sql = "INSERT INTO enquiries (name, email, phone, course, message) 
+    $sql = "INSERT INTO enquiries_table (name, email, phone, course, message) 
             VALUES ('$name', '$email', '$phone', '$course', '$message')";
 
     if ($conn->query($sql) === TRUE) {
@@ -106,8 +106,7 @@ if (file_exists($file)) {
             border: 2px solid #ddd;
             clip-path: circle(50%);
         }
-    </style>
-  
+</style>  
 </head>
 
 <body>

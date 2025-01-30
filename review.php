@@ -96,6 +96,7 @@ if (file_exists($reviewsFile)) {
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
     <style>
+        /* mi icon */
         .author-thumb {
             width: 50px;
             height: 50px;
@@ -103,6 +104,115 @@ if (file_exists($reviewsFile)) {
             object-fit: cover;
             border: 2px solid #ddd;
         }
+        /* General Styling for the Form Container */
+        #review-form-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .reviews-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .form-singel {
+            margin-bottom: 20px;
+        }
+
+        .form-singel input, .form-singel textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the Rating Section */
+        .rate-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .rate-label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .rate {
+            display: flex;
+            gap: 5px;
+        }
+
+        .rate-item {
+            font-size: 20px;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .rate-item.selected {
+            color: gold; /* Color for selected stars */
+        }
+
+        .rate-item:hover {
+            color: #f39c12; /* Hover effect for stars */
+        }
+
+        /* Styling for the Submit Button */
+        .main-btn {
+            padding: 12px 20px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .main-btn:hover {
+            background-color: #4cae4c;
+            
+        }
+
+        /* Styling for the Submit Input Button */
+        .submit-btn {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .reviews-form {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .rate-item {
+                font-size: 18px;
+            }
+
+            .main-btn, .submit-btn {
+                width: 100%;
+            }
+        }     
     </style>
 </head>
 
@@ -150,12 +260,15 @@ if (file_exists($reviewsFile)) {
                         </li>
                         <?php endforeach; ?>
                     </ul>
+                <div class="form-group">
+                    <input class="col-md-12 " type="submit" value="Commend Review" id="review-button">
                 </div>
             </div>
-            <div class="title pt-15">
+            <!-- Review Form (Initially Hidden) -->
+            <div class="title pt-15" id="review-form-container" style="display:none;">
                 <h6>Leave A Comment</h6>
             </div>
-            <div class="reviews-form">
+            <div class="reviews-form" id="review-form" style="display:none;">
                 <form action="net.php" method="POST">
                     <div class="row">
                         <div class="col-md-12">
@@ -270,6 +383,32 @@ if (file_exists($reviewsFile)) {
                 }
             });
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+    // When the 'Commend Review' button is clicked
+    $('#review-button').click(function(e) {
+        e.preventDefault(); // Prevent default form submit (if any)
+        
+        // Toggle visibility of the review form
+        $('#review-form-container').toggle();
+        $('#review-form').toggle();
+    });
+    
+    // Handle rating stars interaction
+    $('.rate-item').click(function() {
+        var ratingValue = $(this).data('value');
+        $('#rating-value').val(ratingValue); // Set the hidden input's value to the selected rating
+        $('.rate-item').each(function() {
+            if ($(this).data('value') <= ratingValue) {
+                $(this).addClass('selected');
+            } else {
+                $(this).removeClass('selected');
+            }
+        });
+    });
+});
+
     </script>
 </body>
 
