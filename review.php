@@ -385,29 +385,29 @@ if (file_exists($reviewsFile)) {
         });
     </script>
     <script>
-        $(document).ready(function() {
-    // When the 'Commend Review' button is clicked
-    $('#review-button').click(function(e) {
-        e.preventDefault(); // Prevent default form submit (if any)
-        
-        // Toggle visibility of the review form
-        $('#review-form-container').toggle();
-        $('#review-form').toggle();
-    });
-    
-    // Handle rating stars interaction
-    $('.rate-item').click(function() {
-        var ratingValue = $(this).data('value');
-        $('#rating-value').val(ratingValue); // Set the hidden input's value to the selected rating
-        $('.rate-item').each(function() {
-            if ($(this).data('value') <= ratingValue) {
-                $(this).addClass('selected');
-            } else {
-                $(this).removeClass('selected');
-            }
+                $(document).ready(function() {
+            // When the 'Commend Review' button is clicked
+            $('#review-button').click(function(e) {
+                e.preventDefault(); // Prevent default form submit (if any)
+                
+                // Toggle visibility of the review form
+                $('#review-form-container').toggle();
+                $('#review-form').toggle();
+            });
+            
+            // Handle rating stars interaction
+            $('.rate-item').click(function() {
+                var ratingValue = $(this).data('value');
+                $('#rating-value').val(ratingValue); // Set the hidden input's value to the selected rating
+                $('.rate-item').each(function() {
+                    if ($(this).data('value') <= ratingValue) {
+                        $(this).addClass('selected');
+                    } else {
+                        $(this).removeClass('selected');
+                    }
+                });
+            });
         });
-    });
-});
 
     </script>
 </body>

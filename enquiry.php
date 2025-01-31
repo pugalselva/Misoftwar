@@ -45,9 +45,15 @@
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
 <style>
-    .form-body {
-             overflow-y: auto; 
-        }
+     .form-body {
+        overflow-y: scroll; 
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+    }
+
+    .form-body::-webkit-scrollbar {
+        display: none; 
+    }
 </style>
 
 </head>
