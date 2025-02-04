@@ -1,6 +1,6 @@
 <?php
 
-include 'db.php';  // Assuming db.php is in the same directory as react.php
+include 'db.php';
 
 
 // Check if the request is POST

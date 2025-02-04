@@ -283,7 +283,7 @@ if (file_exists($reviewsFile)) {
                         </div>
                         <div class="col-md-12">
                             <div class="form-singel">
-                                <input type="text" name="title" placeholder="Enter Title" required />
+                                <input type="text" name="title" placeholder="Enter Course Name" required />
                             </div>
                         </div>
                         <div class="col-lg-12">

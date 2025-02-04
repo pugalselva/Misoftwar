@@ -2,12 +2,58 @@
 <?php
 include 'db.php';  // Assuming db.php is in the same directory as react.php
 
-$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$sql = "SELECT * FROM courses_details WHERE id = 1"; 
 $result = $conn->query($sql);
 
 $course = $result->fetch_assoc();
 
 $conn->close();
+?>
+<?php
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $title = htmlspecialchars($_POST['title']);
+    $rating = intval($_POST['rating']);
+    $comment = htmlspecialchars($_POST['comment']);
+    $date = date('Y-m-d');
+
+    // Prepare the review data
+    $review = [
+        'name' => $name,
+        'email' => $email,
+        'title' => $title,
+        'rating' => $rating,
+        'comment' => $comment,
+        'date' => $date,
+    ];
+
+    // Save the review to a file
+    $reviewsFile = 'reviews.json';
+
+    if (file_exists($reviewsFile)) {
+        $reviews = json_decode(file_get_contents($reviewsFile), true);
+    } else {
+        $reviews = [];
+    }
+
+    $reviews[] = $review;
+    file_put_contents($reviewsFile, json_encode($reviews));
+
+    // Redirect back to the reviews page
+    header('Location: net.php');
+    exit();
+}
+?>
+<?php
+// Load reviews from file
+$reviewsFile = 'reviews.json';
+$reviews = [];
+
+if (file_exists($reviewsFile)) {
+    $reviews = json_decode(file_get_contents($reviewsFile), true);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -402,54 +448,61 @@ $conn->close();
                                         <div class="title">
                                             <h6>Student Reviews</h6>
                                         </div>
-                                        <ul>
-                                            <li>
-                                                <div class="singel-reviews">
-                                                    <div class="reviews-author">
-                                                        <div class="author-thum">
-                                                            <img src="images/review/r-1.jpg" alt="Reviews" />
+                                        <div class="scroll-review">
+                                            <ul>
+                                                <?php foreach ($reviews as $review): ?>
+                                                <li>
+                                                    <div class="singel-reviews">
+                                                        <div class="reviews-author">
+                                                            <div class="author-thumb">
+                                                                <img src="images/MI logo.png" alt="Reviews" />
+                                                            </div>
+                                                            <div class="author-name">
+                                                                <h6><?= htmlspecialchars($review['name']) ?></h6>
+                                                                <span><?= htmlspecialchars($review['date']) ?></span>
+                                                            </div>
                                                         </div>
-                                                        <div class="author-name">
-                                                            <h6>Bobby Aktar</h6>
-                                                            <span>April 03, 2019</span>
+                                                        <div class="reviews-description pt-20">
+                                                            <h4><?= htmlspecialchars($review['title']) ?></h4>
+                                                            <p><?= htmlspecialchars($review['email']) ?></p>
+                                                            <p><?= htmlspecialchars($review['comment']) ?></p>
+                                                            <div class="rating">
+                                                                <ul>
+                                                                    <?php for ($i = 0; $i < $review['rating']; $i++): ?>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <?php endfor; ?>
+                                                                </ul>
+                                                                <span>/ <?= $review['rating'] ?>
+                                                                    Star<?= $review['rating'] > 1 ? 's' : '' ?></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="reviews-description pt-20">
-                                                        <p>
-                                                            There are many variations of passages of Lorem
-                                                            Ipsum available, but the majority have suffered
-                                                            alteration in some form, by injected humour, or
-                                                            randomised words which.
-                                                        </p>
-                                                        <div class="rating">
-                                                            <ul>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                            </ul>
-                                                            <span>/ 5 Star</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- singel reviews -->
-                                            </li>
-                                        </ul>
+                                                </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
                                         <div class="title pt-15">
                                             <h6>Leave A Comment</h6>
                                         </div>
                                         <div class="reviews-form">
-                                            <form action="#">
+                                            <form action="net.php" method="POST">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-singel">
-                                                            <input type="text" placeholder="Fast name" />
+                                                            <input type="text" name="name"
+                                                                placeholder="Fast name" required />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-singel">
-                                                            <input type="text" placeholder="Last Name" />
+                                                            <input type="email" name="email"
+                                                                placeholder="Enter Gmail" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-singel">
+                                                            <input type="text" name="title"
+                                                                placeholder="Enter Title" required />
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
@@ -457,19 +510,21 @@ $conn->close();
                                                             <div class="rate-wrapper">
                                                                 <div class="rate-label">Your Rating:</div>
                                                                 <div class="rate">
-                                                                    <div class="rate-item">
+                                                                    <input type="hidden" name="rating"
+                                                                        id="rating-value" value="0" />
+                                                                    <div class="rate-item" data-value="1">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="2">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="3">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="4">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
-                                                                    <div class="rate-item">
+                                                                    <div class="rate-item" data-value="5">
                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                     </div>
                                                                 </div>
@@ -478,18 +533,16 @@ $conn->close();
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-singel">
-                                                            <textarea placeholder="Comment"></textarea>
+                                                            <textarea name="comment" placeholder="Comment" required></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-singel">
-                                                            <button type="button" class="main-btn">
-                                                                Post Comment
-                                                            </button>
+                                                            <button type="submit" class="main-btn">Post
+                                                                Comment</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- row -->
                                             </form>
                                         </div>
                                     </div>
@@ -503,20 +556,25 @@ $conn->close();
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
-                        <div class="col-lg-12 col-md-6">
+                    <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features</h4>
                                 <ul>
                                     <li>
                                         <i class="fa fa-clock-o"></i>Duration:
-                                        <span>2 Month</span>
+                                        <span><?php echo htmlspecialchars($course['duration']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-clone"></i>Training mode: <span>Online and offline </span>
+                                        <i class="fa fa-clone"></i>Training mode:
+                                        <span><?php echo htmlspecialchars($course['training_mode']); ?></span>
                                     </li>
-                                    <li><i class="fa fa-beer"></i> Class Time: <span>1:30 Hours</span></li>
                                     <li>
-                                        <i class="fa fa-user-o"></i>Students: <span>100</span>
+                                        <i class="fa fa-beer"></i> Class Time:
+                                        <span><?php echo htmlspecialchars($course['class_time']); ?></span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-user-o"></i>Students:
+                                        <span><?php echo htmlspecialchars($course['students']); ?></span>
                                     </li>
                                 </ul>
                                 <div class="price-button pt-10">

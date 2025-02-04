@@ -1093,14 +1093,7 @@ if (file_exists($file)) {
         </div>
     </section>
 
-    <!--====== NEWS PART ENDS ======-->
-
-    <!--====== PATNAR LOGO PART START ======-->
-
-
-
-
-    <!--====== PATNAR LOGO PART ENDS ======-->
+    <!--====== NEWS PART ENDS ======-->c
 
     <!--====== FOOTER PART START ======-->
 
@@ -1141,6 +1134,7 @@ if (file_exists($file)) {
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
                                 <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="review.php"><i class="fa fa-angle-right"></i>Review</a></li>
                             </ul>
                         </div>
                     </div>

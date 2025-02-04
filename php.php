@@ -1,7 +1,6 @@
 
 <?php
-include 'db.php';  // Assuming db.php is in the same directory as react.php
-
+include 'db.php';  
 
 // Fetch course details from the database
 $sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
@@ -106,13 +105,24 @@ if (file_exists($reviewsFile)) {
 
 <!-- stylesheet -->
 <style>
-     .author-thumb {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    }
+    .author-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        .scroll-review {
+            width: auto;
+            height: 100vh;
+            /* border: 1px solid; */
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* scrollbar-color: red orange; */
+            /* scrollbar-width: thin; */
+
+        }
  </style>
 </head>
 

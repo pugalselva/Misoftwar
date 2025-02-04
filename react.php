@@ -1,12 +1,58 @@
 <?php
 include 'db.php';
 
-$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$sql = "SELECT * FROM courses_details WHERE id = 1"; 
 $result = $conn->query($sql);
 
 $course = $result->fetch_assoc();
 
 $conn->close();
+?>
+<?php
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $title = htmlspecialchars($_POST['title']);
+    $rating = intval($_POST['rating']);
+    $comment = htmlspecialchars($_POST['comment']);
+    $date = date('Y-m-d');
+
+    // Prepare the review data
+    $review = [
+        'name' => $name,
+        'email' => $email,
+        'title' => $title,
+        'rating' => $rating,
+        'comment' => $comment,
+        'date' => $date,
+    ];
+
+    // Save the review to a file
+    $reviewsFile = 'reviews.json';
+
+    if (file_exists($reviewsFile)) {
+        $reviews = json_decode(file_get_contents($reviewsFile), true);
+    } else {
+        $reviews = [];
+    }
+
+    $reviews[] = $review;
+    file_put_contents($reviewsFile, json_encode($reviews));
+
+    // Redirect back to the reviews page
+    header('Location: net.php');
+    exit();
+}
+?>
+<?php
+// Load reviews from file
+$reviewsFile = 'reviews.json';
+$reviews = [];
+
+if (file_exists($reviewsFile)) {
+    $reviews = json_decode(file_get_contents($reviewsFile), true);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +99,28 @@ $conn->close();
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
+
+<!-- styleSheet -->
+<style>
+    .author-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        .scroll-review {
+            width: auto;
+            height: 100vh;
+            /* border: 1px solid; */
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* scrollbar-color: red orange; */
+            /* scrollbar-width: thin; */
+
+        }
+ </style>
 
 </head>
 

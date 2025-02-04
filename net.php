@@ -110,6 +110,21 @@ if (file_exists($reviewsFile)) {
             object-fit: cover;
             border: 2px solid #ddd;
         }
+
+        .scroll-review {
+            width: auto;
+            height: 100vh;
+            /* border: 1px solid; */
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* scrollbar-color: red orange; */
+            /* scrollbar-width: thin; */
+
+        }
+
+        /* .poem::-webkit-scrollbar {
+        display: none;
+    } */
     </style>
 
 </head>
@@ -443,8 +458,6 @@ if (file_exists($reviewsFile)) {
                                     </div>
                                     <!-- curriculam cont -->
                                 </div>
-
-
                                 <!-- <div class="tab-pane fade" id="instructor" role="tabpanel"
                                     aria-labelledby="instructor-tab">
                                     <div class="instructor-cont">
@@ -473,43 +486,47 @@ if (file_exists($reviewsFile)) {
                                         </div>
                                     </div>
                                 </div> -->
+
+
                                 <div class="tab-pane fade show active" id="reviews" role="tabpanel"
                                     aria-labelledby="reviews-tab">
                                     <div class="reviews-cont">
                                         <div class="title">
                                             <h6>Student Reviews</h6>
                                         </div>
-                                        <ul>
-                                            <?php foreach ($reviews as $review): ?>
-                                            <li>
-                                                <div class="singel-reviews">
-                                                    <div class="reviews-author">
-                                                        <div class="author-thumb">
-                                                            <img src="images/MI logo.png" alt="Reviews" />
+                                        <div class="scroll-review">
+                                            <ul>
+                                                <?php foreach ($reviews as $review): ?>
+                                                <li>
+                                                    <div class="singel-reviews">
+                                                        <div class="reviews-author">
+                                                            <div class="author-thumb">
+                                                                <img src="images/MI logo.png" alt="Reviews" />
+                                                            </div>
+                                                            <div class="author-name">
+                                                                <h6><?= htmlspecialchars($review['name']) ?></h6>
+                                                                <span><?= htmlspecialchars($review['date']) ?></span>
+                                                            </div>
                                                         </div>
-                                                        <div class="author-name">
-                                                            <h6><?= htmlspecialchars($review['name']) ?></h6>
-                                                            <span><?= htmlspecialchars($review['date']) ?></span>
+                                                        <div class="reviews-description pt-20">
+                                                            <h4><?= htmlspecialchars($review['title']) ?></h4>
+                                                            <p><?= htmlspecialchars($review['email']) ?></p>
+                                                            <p><?= htmlspecialchars($review['comment']) ?></p>
+                                                            <div class="rating">
+                                                                <ul>
+                                                                    <?php for ($i = 0; $i < $review['rating']; $i++): ?>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <?php endfor; ?>
+                                                                </ul>
+                                                                <span>/ <?= $review['rating'] ?>
+                                                                    Star<?= $review['rating'] > 1 ? 's' : '' ?></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="reviews-description pt-20">
-                                                        <h4><?= htmlspecialchars($review['title']) ?></h4>
-                                                        <p><?= htmlspecialchars($review['email']) ?></p>
-                                                        <p><?= htmlspecialchars($review['comment']) ?></p>
-                                                        <div class="rating">
-                                                            <ul>
-                                                                <?php for ($i = 0; $i < $review['rating']; $i++): ?>
-                                                                <li><i class="fa fa-star"></i></li>
-                                                                <?php endfor; ?>
-                                                            </ul>
-                                                            <span>/ <?= $review['rating'] ?>
-                                                                Star<?= $review['rating'] > 1 ? 's' : '' ?></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <?php endforeach; ?>
-                                        </ul>
+                                                </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
                                         <div class="title pt-15">
                                             <h6>Leave A Comment</h6>
                                         </div>
@@ -585,7 +602,7 @@ if (file_exists($reviewsFile)) {
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
-                    <div class="col-lg-12 col-md-6">
+                        <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features</h4>
                                 <ul>
@@ -594,15 +611,15 @@ if (file_exists($reviewsFile)) {
                                         <span><?php echo htmlspecialchars($course['duration']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-clone"></i>Training mode: 
+                                        <i class="fa fa-clone"></i>Training mode:
                                         <span><?php echo htmlspecialchars($course['training_mode']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-beer"></i> Class Time: 
+                                        <i class="fa fa-beer"></i> Class Time:
                                         <span><?php echo htmlspecialchars($course['class_time']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-user-o"></i>Students: 
+                                        <i class="fa fa-user-o"></i>Students:
                                         <span><?php echo htmlspecialchars($course['students']); ?></span>
                                     </li>
                                 </ul>

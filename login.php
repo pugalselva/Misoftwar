@@ -1,55 +1,21 @@
 <?php
 // Include necessary files, start the session
-// session_start();
-
-// include 'db.php';
-
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $username = $_POST['username'];
-//     $password = $_POST['password'];
-
-//     if ($username == 'admin' && $password == 'admin123') {
-//         $_SESSION['admin_logged_in'] = true;
-//         header('Location: admin.php');
-//         exit();
-//     } else {
-//         echo "Invalid login details.";
-//     }
-// }
-?>
-<?php
 session_start();
 
 include 'db.php';
-// Check if the request method is POST
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $conn->real_escape_string($_POST['username']);
-    $password = $conn->real_escape_string($_POST['password']);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    // Fetch the admin record from the database
-    $query = "SELECT id FROM admin_users WHERE username = '$username' AND password = '$password' AND id = 1 LIMIT 1";
-    $result = $conn->query($query);
-
-
-if (!$result) {
-    // Debugging output: Display the SQL error
-    die("Query failed: " . $conn->error);
+    if ($username == 'admin' && $password == 'admin123') {
+        $_SESSION['admin_logged_in'] = true;
+        header('Location: admin.php');
+        exit();
+    } else {
+        echo "Invalid login details.";
+    }
 }
-
-if ($result->num_rows == 1) {
-    echo "Login successful!";
-    $_SESSION['admin_logged_in'] = true;
-    header('Location: admin.php');
-    exit();
-} else {
-    echo "Invalid login details. Debug info:<br>";
-    echo "Username: $username<br>";
-    echo "Password: $password<br>";
-}
-}
-
-
-$conn->close();
 ?>
 
 <!doctype html>
