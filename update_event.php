@@ -256,13 +256,13 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.php">Home</a>
+                                        <a class="active" href="admin_dashboard.php">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.php">Courses</a>
+                                        <a href="courses.php">Update-Courses</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="events.php">Events</a>
+                                        <a href="update_event.php">Update-Events</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="project.php">Project</a>

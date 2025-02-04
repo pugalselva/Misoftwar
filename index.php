@@ -25,13 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'Error: ' . $sql . '<br>' . $conn->error;
     }
     // Close connection
-    $conn->close();
-} else {
-    // if the form is not submitted, redirect to the form page
-    header('Location: enquiry.php');
-    exit();
-}
-
+    
+} 
+$conn->close();
 ?>
 <?php
 // Define the path to the events.json file
