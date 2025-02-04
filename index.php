@@ -3,13 +3,12 @@
 include 'db.php';
 
 // Check if form data POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Get form data
-    $name = $conn->real_escape_string($_POST['name']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $phone = $conn->real_escape_string($_POST['phone']);
-    $course = $conn->real_escape_string($_POST['course']);
-    $message = $conn->real_escape_string($_POST['message']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $course = $_POST['course'];
+    $message = $_POST['message'];
     // Validate required fields
     if (empty($name) || empty($email) || empty($phone) || empty($course) || empty($message)) {
         echo 'All fields are required!';
@@ -21,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             VALUES ('$name', '$email', '$phone', '$course', '$message')";
 
     if ($conn->query($sql) === true) {
-        // echo "Thank you! Your enquiry has been submitted.";
+        echo "Thank you! Your enquiry has been submitted.";
     } else {
         echo 'Error: ' . $sql . '<br>' . $conn->error;
     }
