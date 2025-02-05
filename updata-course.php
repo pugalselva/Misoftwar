@@ -53,7 +53,6 @@ exit;
 ?>
 
 <!-- Update Course Form -->
-<!-- Update Course Form -->
 <form method="POST" enctype="multipart/form-data">
     <label>Course Title:</label>
     <input type="text" name="title" value="<?= htmlspecialchars($course['title']); ?>" required><br>

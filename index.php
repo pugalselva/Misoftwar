@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'db.php';
 
 // Check if form data POST
@@ -9,25 +9,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $course = $_POST['course'];
     $message = $_POST['message'];
-    // Validate required fields
+    
     if (empty($name) || empty($email) || empty($phone) || empty($course) || empty($message)) {
         echo 'All fields are required!';
-        exit();
+        
     }
 
-    // Insert data into the database
+  
     $sql = "INSERT INTO enquiries_table (name, email, phone, course, message) 
             VALUES ('$name', '$email', '$phone', '$course', '$message')";
 
     if ($conn->query($sql) === true) {
-        echo "Thank you! Your enquiry has been submitted.";
+        // echo "Thank you! Your enquiry has been submitted.";
     } else {
         echo 'Error: ' . $sql . '<br>' . $conn->error;
+        $conn->close();
     }
-    // Close connection
-    
-} 
-$conn->close();
+    }else{
+        header('Location: enquiry.php');
+    exit();
+    }
 ?>
 <?php
 // Define the path to the events.json file
@@ -57,7 +58,7 @@ if (file_exists($file)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>pugal</title>
+    <title>Misoftwar</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
@@ -87,7 +88,7 @@ if (file_exists($file)) {
     <link rel="stylesheet" href="css/default.css">
 
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
@@ -211,77 +212,6 @@ if (file_exists($file)) {
     <!--====== SEARCH BOX PART ENDS ======-->
 
     <!--====== SLIDER PART START ======-->
-    <!-- <section id="slider-part-3" class="bg_cover"  style="background-image: url(images/slider/s-3.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="slider-cont-3 text-center">
-                        <h2>Search for Preferred Courses</h2>
-                        <span>More than courses for you</span>
-                        <div class="slider-search mt-45">
-                           <form action="#">
-                                <div class="row no-gutters">
-                                <div class="col-12 col-sm-6 col-md-4 mb-3">
-                                        <select class="form-control" id="course-select">
-                                            <option value="">Select Course</option>
-                                            <option value="html.html">HTML</option>
-                                            <option value="css.html">CSS</option>
-                                            <option value="javascript.html">JavaScript</option>
-                                            <option value="php.html">PHP</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-6">
-                                    <input type="text" id="search-keyword" class="form-control" placeholder="Search keyword">
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <button type="button" class="main-btn" class="btn btn-primary main-btn" id="search-button">Search Now</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-feature pt-30 d-none d-md-block">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singel-slider-feature justify-content-center mt-30">
-                            <div class="icon">
-                                <img src="images/all-icon/man.png" alt="icon">
-                            </div>
-                            <div class="cont">
-                                <h3>4000+</h3>
-                                <span>Worldwide Students</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singel-slider-feature justify-content-center mt-30">
-                            <div class="icon">
-                                <img src="images/all-icon/book.png" alt="icon">
-                            </div>
-                            <div class="cont">
-                                <h3>10+</h3>
-                                <span>Available Courses</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singel-slider-feature justify-content-center mt-30">
-                            <div class="icon">
-                                <img src="images/all-icon/expert.png" alt="icon">
-                            </div>
-                            <div class="cont">
-                                <h3>Expert Instructor</h3>
-                                <span>Expert Instructors</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section id="slider-part-3" class="bg_cover" style="background-image: url(images/slider/sw-1.jpg)">
         <div class="container">
             <div class="row justify-content-center">
@@ -753,6 +683,7 @@ if (file_exists($file)) {
         </div> <!-- container -->
     </section>
     <!--====== COUNT DOWN PART START ENQUIRY PAGE ======-->
+    <!-- hidden enquiry -->
 
     <section id="count-down-part" class="bg_cover pt-70 pb-120" data-overlay="8"
         style="background-image: url(images/bg-2.jpg)">
@@ -804,7 +735,7 @@ if (file_exists($file)) {
                                     <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button class="submit-btn" type="submit">Get it Now</button>
+                                    <button class="submit-btn" type="submit" >Get it Now</button>
                                 </div>
                             </form>
                         </div>
@@ -834,29 +765,11 @@ if (file_exists($file)) {
                             <div class="event-title">
                                 <h3>Upcoming events</h3>
                             </div>
-
-
                             <ul>
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
                                         <a href="events-singel.php"><h4>Campus clean workshop</h4></a>
-                                        <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                        <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="singel-event">
-                                        <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php"><h4>Tech Summit</h4></a>
-                                        <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                        <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="singel-event">
-                                        <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php"><h4>Enviroement conference</h4></a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
@@ -1221,83 +1134,12 @@ if (file_exists($file)) {
     <script src="js/ajax-contact.js"></script>
 
     <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
 
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
-    <!-- validation -->
-    <script>
-        function validateForm() {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const phonePattern = /^[0-9]+$/;
-
-            if (!name) {
-                alert("Please enter your name.");
-                return false;
-            }
-
-            if (!email || !emailPattern.test(email)) {
-                alert("Please enter a valid email address.");
-                return false;
-            }
-
-            if (!phone || !phonePattern.test(phone)) {
-                alert("Please enter a valid phone number with digits only.");
-                return false;
-            }
-
-            alert("Form submitted successfully!");
-            return true;
-        }
-    </script>
-    <!-- select course -->
-    <script>
-        document.getElementById('search-button').addEventListener('click', function() {
-            var selectedCourse = document.getElementById('course-select').value;
-            var searchKeyword = document.getElementById('search-keyword').value;
-
-            if (selectedCourse) {
-                // Redirect to the selected course page
-                window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
-            } else {
-                alert('Please select a course.');
-            }
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Show additional info when a course is selected
-            $('#course-select').change(function() {
-                if ($(this).val()) {
-                    $('#additional-info').show(); // Show the additional info div
-                } else {
-                    $('#additional-info').hide(); // Hide the additional info div if no course is selected
-                }
-            });
-
-            // Handle search button click
-            $('#search-button').click(function() {
-                var selectedCourse = $('#course-select').val();
-                var searchKeyword = $('#search-keyword').val();
-
-                if (selectedCourse) {
-                    // Redirect to the selected course page with the search keyword
-                    window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
-                } else {
-                    // Redirect to home page if no course is selected
-                    window.location.href = 'index.php'; // Change 'index.html' to your home page URL
-                }
-            });
-        });
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
 
 </body>
 

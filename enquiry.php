@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+// Check if enquiry page has already been shown
+// if (isset($_SESSION['enquiry_shown'])) {
+//     header('Location: index.php'); // Redirect if already visited
+//     exit();
+// }
+
+// Set session to mark that the enquiry page was visited
+// $_SESSION['enquiry_shown'] = false;
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -40,7 +55,7 @@
 <link rel="stylesheet" href="css/default.css">
 
 <!--====== Style css ======-->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/stylesheet.css">
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
@@ -80,18 +95,18 @@
                                     <form id="enquiryForm" method="POST" action="index.php">
                                         <div class="form-group">
                                             <input type="text" id="name" name="name" placeholder="Your Name"
-                                                required>
+                                                >
                                         </div>
                                         <div class="form-group">
                                             <input type="email" id="email" name="email" placeholder="Your Email"
-                                                required>
+                                                >
                                         </div>
                                         <div class="form-group">
                                             <input type="text" id="phone" name="phone" placeholder="Your Phone"
-                                                required>
+                                                >
                                         </div>
                                         <div class="form-group">
-                                            <select id="course" name="course" required>
+                                            <select id="course" name="course" >
                                                 <option value="">Select Course</option>
                                                 <option value="web.php">HTML</option>
                                                 <option value="web.php">CSS</option>
@@ -106,7 +121,7 @@
                                             </select>
                                         </div> 
                                         <div class="form-group" >
-                                            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                                            <textarea id="message" name="message" placeholder="Your Message" rows="4" ></textarea>
                                         </div>
                                         <div class="form-group">
                                             <button class="submit-btn" type="submit">Get it Now</button>
@@ -120,7 +135,6 @@
             </div>
         </div>
     </section>
-
 
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
@@ -155,109 +169,35 @@
     <script src="js/ajax-contact.js"></script>
 
     <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
 
     <!--====== Map js ======-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
-    <!-- <script>
-        function validateForm() {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const phonePattern = /^[0-9]+$/;
-
-            if (!name) {
-                alert("Please enter your name.");
-                return false;
-            }
-
-            if (!email || !emailPattern.test(email)) {
-                alert("Please enter a valid email address.");
-                return false;
-            }
-
-            if (!phone || !phonePattern.test(phone)) {
-                alert("Please enter a valid phone number with digits only.");
-                return false;
-            }
-
-            // alert("Form submitted successfully!");
-            Swal.fire({
-                title: "Good job!",
-                text: "Signed Up Successfully !",
-                icon: "success"
-            });
-            // Add your form submission logic here
-            window.location.href = "index.php";
-            //return true;
-        }
-    </script> -->
     <script>
-        async function validateForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
 
-            if (name && email && phone) {
-                // Prepare form data
-                const formData = new FormData();
-                formData.append('name', name);
-                formData.append('email', email);
-                formData.append('phone', phone);
+        // function closePopup() {
+        //     document.getElementById('popupWrapper').style.display = 'none';
+        // }
 
-                try {
-                    const response = await fetch('', { // PHP file to handle data
-                        method: 'POST',
-                        body: formData,
-                    });
-
-                    const result = await response.text();
-
-                    if (response.ok) {
-                        alert(result);
-                        closePopup();
-                        window.location.href = 'index.php'; // Redirect to a thank-you page
-                    } else {
-                        alert('Submission failed. Please try again.');
-                    }
-                } catch (error) {
-                    console.error('Error submitting form:', error);
-                    alert('An error occurred. Please try again.');
-                }
-            } else {
-                alert('Please fill in all fields.');
-            }
-        }
-
+        // window.onload = function() {
+        //     document.getElementById('popupWrapper').style.display = 'flex';
+        // };
+    </script>
+    <script>
         function closePopup() {
             document.getElementById('popupWrapper').style.display = 'none';
+            window.location.href = 'index.php'; // Redirect after closing
         }
-
-        window.onload = function() {
-            document.getElementById('popupWrapper').style.display = 'flex';
-        };
     </script>
 
     <!-- function showHostname() {
         let currentURL = window.location.hostname;
         alert("The hostname of the current URL is: " + currentURL);
     } -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        $(document).ready(function () {
-            // Smooth scrolling when filling out the form
-            $('input, select, textarea').on('focus', function () {
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top - 50
-                }, 500);
-            });
-
-            // Prevent dropdown from being too long
-            $('#course').css('max-height', '40px');
-        });
-    </script>   
+    
 </body>
 
 </html>

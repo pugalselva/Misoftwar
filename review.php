@@ -104,6 +104,7 @@ if (file_exists($reviewsFile)) {
             object-fit: cover;
             border: 2px solid #ddd;
         }
+
         /* General Styling for the Form Container */
         #review-form-container {
             text-align: center;
@@ -123,7 +124,8 @@ if (file_exists($reviewsFile)) {
             margin-bottom: 20px;
         }
 
-        .form-singel input, .form-singel textarea {
+        .form-singel input,
+        .form-singel textarea {
             width: 100%;
             padding: 12px;
             margin: 8px 0;
@@ -131,6 +133,12 @@ if (file_exists($reviewsFile)) {
             border-radius: 4px;
             font-size: 14px;
             box-sizing: border-box;
+        }
+
+        /* icon */
+        .rate-item i.selected {
+            color: gold;
+            /* Color for selected stars */
         }
 
         /* Styling for the Rating Section */
@@ -157,11 +165,13 @@ if (file_exists($reviewsFile)) {
         }
 
         .rate-item.selected {
-            color: gold; /* Color for selected stars */
+            color: gold;
+            /* Color for selected stars */
         }
 
         .rate-item:hover {
-            color: #f39c12; /* Hover effect for stars */
+            color: #f39c12;
+            /* Hover effect for stars */
         }
 
         /* Styling for the Submit Button */
@@ -179,7 +189,7 @@ if (file_exists($reviewsFile)) {
 
         .main-btn:hover {
             background-color: #4cae4c;
-            
+
         }
 
         /* Styling for the Submit Input Button */
@@ -209,10 +219,11 @@ if (file_exists($reviewsFile)) {
                 font-size: 18px;
             }
 
-            .main-btn, .submit-btn {
+            .main-btn,
+            .submit-btn {
                 width: 100%;
             }
-        }     
+        }
     </style>
 </head>
 
@@ -260,72 +271,72 @@ if (file_exists($reviewsFile)) {
                         </li>
                         <?php endforeach; ?>
                     </ul>
-                <div class="form-group">
-                    <input class="col-md-12 " type="submit" value="Commend Review" id="review-button">
+                    <div class="form-group">
+                        <input class="col-md-12 " type="submit" value="Commend Review" id="review-button">
+                    </div>
                 </div>
-            </div>
-            <!-- Review Form (Initially Hidden) -->
-            <div class="title pt-15" id="review-form-container" style="display:none;">
-                <h6>Leave A Comment</h6>
-            </div>
-            <div class="reviews-form" id="review-form" style="display:none;">
-                <form action="net.php" method="POST">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-singel">
-                                <input type="text" name="name" placeholder="Enter Name" required />
+                <!-- Review Form (Initially Hidden) -->
+                <div class="title pt-15" id="review-form-container" style="display:none;">
+                    <h6>Leave A Comment</h6>
+                </div>
+                <div class="reviews-form" id="review-form" style="display:none;">
+                    <form action="net.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-singel">
+                                    <input type="text" name="name" placeholder="Enter Name" required />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-singel">
-                                <input type="email" name="email" placeholder="Enter Gmail" required />
+                            <div class="col-md-12">
+                                <div class="form-singel">
+                                    <input type="email" name="email" placeholder="Enter Gmail" required />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-singel">
-                                <input type="text" name="title" placeholder="Enter Course Name" required />
+                            <div class="col-md-12">
+                                <div class="form-singel">
+                                    <input type="text" name="title" placeholder="Enter Course Name" required />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-singel">
-                                <div class="rate-wrapper">
-                                    <div class="rate-label">Your Rating:</div>
-                                    <div class="rate">
-                                        <input type="hidden" name="rating" id="rating-value" value="0" />
-                                        <div class="rate-item" data-value="1">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="rate-item" data-value="2">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="rate-item" data-value="3">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="rate-item" data-value="4">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="rate-item" data-value="5">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <div class="col-lg-12">
+                                <div class="form-singel">
+                                    <div class="rate-wrapper">
+                                        <div class="rate-label">Your Rating:</div>
+                                        <div class="rate">
+                                            <input type="hidden" name="rating" id="rating-value" value="0" />
+                                            <div class="rate-item" data-value="1">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="rate-item" data-value="2">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="rate-item" data-value="3">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="rate-item" data-value="4">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="rate-item" data-value="5">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-singel">
-                                <textarea name="comment" placeholder="Comment" required></textarea>
+                            <div class="col-lg-12">
+                                <div class="form-singel">
+                                    <textarea name="comment" placeholder="Comment" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-singel">
+                                    <button type="submit" class="main-btn">Post Comment</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="form-singel">
-                                <button type="submit" class="main-btn">Post Comment</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- tab content -->
     </div>
@@ -370,11 +381,11 @@ if (file_exists($reviewsFile)) {
     <script>
         document.querySelectorAll('.rate-item').forEach(item => {
             item.addEventListener('click', function() {
-                
+
                 const ratingValue = this.getAttribute('data-value');
-                
+
                 document.getElementById('rating-value').value = ratingValue;
-                
+
                 document.querySelectorAll('.rate-item').forEach(star => {
                     star.querySelector('i').classList.remove('selected');
                 });
@@ -385,16 +396,16 @@ if (file_exists($reviewsFile)) {
         });
     </script>
     <script>
-                $(document).ready(function() {
+        $(document).ready(function() {
             // When the 'Commend Review' button is clicked
             $('#review-button').click(function(e) {
                 e.preventDefault(); // Prevent default form submit (if any)
-                
+
                 // Toggle visibility of the review form
                 $('#review-form-container').toggle();
                 $('#review-form').toggle();
             });
-            
+
             // Handle rating stars interaction
             $('.rate-item').click(function() {
                 var ratingValue = $(this).data('value');
@@ -408,7 +419,6 @@ if (file_exists($reviewsFile)) {
                 });
             });
         });
-
     </script>
 </body>
 

@@ -96,7 +96,7 @@ if (file_exists($reviewsFile)) {
 <link rel="stylesheet" href="css/default.css">
 
 <!--====== Style css ======-->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/stylesheet.css">
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
@@ -688,6 +688,8 @@ if (file_exists($reviewsFile)) {
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
                                 <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="review.php"><i class="fa fa-angle-right"></i>Review</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -777,7 +779,7 @@ if (file_exists($reviewsFile)) {
     <script src="js/ajax-contact.js"></script>
 
     <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
 
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>

@@ -40,177 +40,11 @@
     <link rel="stylesheet" href="css/default.css">
 
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-    
-#page-banner {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    padding-top: 105px;
-    padding-bottom: 110px;
-    color: #fff; 
-}
-
-.popup-contents {
-    background: rgba(255, 255, 255, 0.9); 
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Form Wrapper Styling */
-.form-wrappers {
-    padding: 30px;
-}
-
-/* Form Header Styling */
-.form-headers h2 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 25px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 600;
-}
-
-/* Form Body Styling */
-.form-bodys {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Form Group Styling */
-.form-groups {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Form Label Styling */
-.form-groups label {
-    /* font-size: 14px; */
-    color: #555;
-    font-weight: 500;
-    margin-bottom: 6px;
-}
-
-/* Input Fields Styling */
-.form-groups input[type="date"],
-.form-groups input[type="text"] {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background-color: #f9f9f9;
-}
-
-.form-groups input[type="date"]:focus,
-.form-groups input[type="text"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
-    outline: none;
-}
-
-/* Button Styling */
-.form-groups button {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-groups button:hover {
-    background-color: #0056b3;
-}
-
-/* Premium Hover Effect */
-.form-groups input[type="text"]:hover,
-.form-groups input[type="date"]:hover {
-    border-color: #0056b3;
-}
-
-.form-group button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Responsive Design for Different Screen Sizes */
-@media (max-width: 768px) {
-    #page-banner {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .popup-contents {
-        padding: 30px;
-    }
-
-    .form-headers h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    .form-bodys {
-        gap: 15px;
-    }
-
-    .form-groups input[type="date"],
-    .form-groups input[type="text"] {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    .form-groups button {
-        font-size: 15px;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    #page-banner {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    .popup-contents {
-        padding: 20px;
-    }
-
-    .form-headers h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
-    .form-bodys {
-        gap: 12px;
-    }
-
-    .form-groups input[type="date"],
-    .form-groups input[type="text"] {
-        font-size: 13px;
-        padding: 10px;
-    }
-
-    .form-groups button {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-}
-
-</style>
-
-
+ 
 </head>
 
 <body>
@@ -256,7 +90,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="admin_dashboard.php">Home</a>
+                                        <a class="active" href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="courses.php">Update-Courses</a>
@@ -404,6 +238,8 @@
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
                                 <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="review.php"><i class="fa fa-angle-right"></i>Review</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -500,7 +336,7 @@
     <script src="js/ajax-contact.js"></script>
 
     <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
 
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>

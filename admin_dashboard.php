@@ -5,13 +5,13 @@ include 'db.php';
 $records_per_page = 10;
 
 // Get the current page from the URL, default to 1
-$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int) $_GET['page'] : 1;
 
 // Calculate the starting point for records
 $offset = ($page - 1) * $records_per_page;
 
 // Fetch total number of enquiries
-$enquiries_result = $conn->query("SELECT COUNT(*) AS total FROM enquiries_table");
+$enquiries_result = $conn->query('SELECT COUNT(*) AS total FROM enquiries_table');
 $enquiries_count = $enquiries_result->fetch_assoc()['total'];
 
 // Calculate total pages
@@ -23,8 +23,9 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -62,63 +63,25 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     <link rel="stylesheet" href="css/default.css">
 
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Boostrap cdn -->
     <style>
-            body {
-                background: linear-gradient(135deg,#000000,#2a5298);
-                min-height: 100vh;
-                color: white;
-            }
-        .container-admin {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .card {
-            border-radius: 12px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .table {
-            background: rgba(255, 255, 255, 0.2);
+        body {
+            background: linear-gradient(135deg, #000000, #2a5298);
+            min-height: 100vh;
             color: white;
-            border-radius: 8px;
-        }
-        .table-hover tbody tr:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        .pagination .page-item .page-link {
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-            border: none;
-        }
-        .pagination .page-item.active .page-link {
-            background: #ffcc00;
-            color: black;
-        }
-        .pagination .page-item .page-link:hover {
-            background: #ffcc00;
-            color: black;
-        }
-        .calendar {
-            text-align: center;
-            font-size: 18px;
-            padding: 8px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            margin-top: 10px;
         }
     </style>
 </head>
-<body>
-     <!--====== PRELOADER PART START ======-->
 
-     <div class="preloader">
+<body>
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
         <div class="loader rubix-cube">
             <div>
                 <img src="images/mi logo1.png" alt="Logo" class="logo-reload">
@@ -144,7 +107,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index.php" class="logo-container">
+                            <a href="#" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
                                 <h2 class="logo-text">Misoftwar</h2>
                             </a>
@@ -157,7 +120,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="admin_dashboard.php">Home</a>
+                                        <a class="active" href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="update-course.php">Update-Courses</a>
@@ -179,10 +142,10 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                 <li><a href="index.php"><i class="fa fa-sign-out"></i><span></span></a></li>
 
                             </ul>
-                        </div> 
+                        </div>
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
         </div>
     </header>
     <!--====== HEADER PART ENDS ======-->
@@ -204,88 +167,92 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
 
     <!--====== SEARCH BOX PART ENDS ======-->
     <div class="container-admin mt-5">
-    <h2 class="mb-4 text-center" style="color: white;">Admin Dashboard</h2>
+        <h2 class="mb-4 text-center" style="color: white;">Admin Dashboard</h2>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card text-white bg-success mb-3">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><i class="fa fa-envelope"></i> Total Enquiries</h5>
-                    <h2><?= $enquiries_count; ?></h2> 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><i class="fa fa-envelope"></i> Total Enquiries</h5>
+                        <h2><?= $enquiries_count ?></h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- <div class="col-md-4">
+            <!-- <div class="col-md-4">
             <div class="card text-white bg-warning mb-3">
                 <div class="card-body text-center">
                     <h5 class="card-title"><i class="fa fa-users"></i> Student Logins Today</h5>
-                    <h2><?= $student_logins; ?></h2>
+                    <h2><?= $student_logins ?></h2>
                 </div>
             </div>
         </div> -->
-        <div class="col-md-6">
-            <div class="card text-white bg-primary mb-3">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><i class="fa fa-calendar"></i> Calendar</h5>
-                    <div class="calendar"><?= date('l, F j, Y'); ?></div>
+            <div class="col-md-6">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><i class="fa fa-calendar"></i> Calendar</h5>
+                        <div class="calendar">
+                            <span class="blur"><?= date('l, F j, Y') ?></span>
+                            <a href="update_event.php" class="btn btn-warning">Add Event</a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </div>
 
-    <h4 class="mt-4" style="color: white;">Recent Enquiries</h4>
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Course</th>
-                    <th>Message</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($enquiry = $enquiries->fetch_assoc()): ?>
+        <h4 class="mt-4" style="color: white;">Recent Enquiries</h4>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="table-dark">
                     <tr>
-                        <td><?= htmlspecialchars($enquiry['name']); ?></td>
-                        <td><?= htmlspecialchars($enquiry['email']); ?></td>
-                        <td><?= htmlspecialchars($enquiry['phone']); ?></td>
-                        <td><?= htmlspecialchars($enquiry['course']); ?></td>
-                        <td><?= htmlspecialchars($enquiry['message']); ?></td>
-                        <td><?= htmlspecialchars($enquiry['created_at']); ?></td>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Course</th>
+                        <th>Message</th>
+                        <th>Date</th>
                     </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php while ($enquiry = $enquiries->fetch_assoc()): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($enquiry['name']) ?></td>
+                        <td><?= htmlspecialchars($enquiry['email']) ?></td>
+                        <td><?= htmlspecialchars($enquiry['phone']) ?></td>
+                        <td><?= htmlspecialchars($enquiry['course']) ?></td>
+                        <td><?= htmlspecialchars($enquiry['message']) ?></td>
+                        <td><?= htmlspecialchars($enquiry['created_at']) ?></td>
+                    </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <nav>
+            <ul class="pagination justify-content-center">
+                <?php if ($page > 1): ?>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<?= $page - 1 ?>">Previous</a>
+                </li>
+                <?php endif; ?>
+
+                <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                </li>
+                <?php endfor; ?>
+
+                <?php if ($page < $total_pages): ?>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<?= $page + 1 ?>">Next</a>
+                </li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+
     </div>
 
-    <!-- Pagination -->
-    <nav>
-        <ul class="pagination justify-content-center">
-            <?php if ($page > 1): ?>
-                <li class="page-item">
-                    <a class="page-link" href="?page=<?= $page - 1; ?>">Previous</a>
-                </li>
-            <?php endif; ?>
-
-            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                <li class="page-item <?= $i == $page ? 'active' : ''; ?>">
-                    <a class="page-link" href="?page=<?= $i; ?>"><?= $i; ?></a>
-                </li>
-            <?php endfor; ?>
-
-            <?php if ($page < $total_pages): ?>
-                <li class="page-item">
-                    <a class="page-link" href="?page=<?= $page + 1; ?>">Next</a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </nav>
-
-</div>
-    
 
     <!--====== FOOTER PART START ======-->
 
@@ -326,6 +293,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                 <li><a href="courses.php"><i class="fa fa-angle-right"></i>Course</a></li>
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
                                 <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
+                                <li><a href="review.php"><i class="fa fa-angle-right"></i>Review</a></li>
                             </ul>
                         </div>
                     </div>
@@ -422,12 +390,13 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     <script src="js/ajax-contact.js"></script>
 
     <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
 
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
 </body>
+
 </html>

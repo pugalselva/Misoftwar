@@ -14,7 +14,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!--====== Title ======-->
-    <title>Edubin - LMS Education HTML Template</title>
+    <title>Misoftwar</title>
     
      <!--====== Favicon Icon ======-->
      <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
@@ -44,7 +44,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 <link rel="stylesheet" href="css/default.css">
 
 <!--====== Style css ======-->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/stylesheet.css">
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">

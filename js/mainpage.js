@@ -394,22 +394,187 @@ $(function() {
       }
     });
     
-    
 
-
-
-    
-  
+    // index.php
 
     
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^[0-9]+$/;
+
+            if (!name) {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!email || !emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!phone || !phonePattern.test(phone)) {
+                alert("Please enter a valid phone number with digits only.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    
+    // <!-- select course -->
+    
+        document.getElementById('search-button').addEventListener('click', function() {
+            var selectedCourse = document.getElementById('course-select').value;
+            var searchKeyword = document.getElementById('search-keyword').value;
+
+            if (selectedCourse) {
+                // Redirect to the selected course page
+                window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
+            } else {
+                alert('Please select a course.');
+            }
+        });
     
     
+        $(document).ready(function() {
+            // Show additional info when a course is selected
+            $('#course-select').change(function() {
+                if ($(this).val()) {
+                    $('#additional-info').show(); // Show the additional info div
+                } else {
+                    $('#additional-info').hide(); // Hide the additional info div if no course is selected
+                }
+            });
+
+            // Handle search button click
+            $('#search-button').click(function() {
+                var selectedCourse = $('#course-select').val();
+                var searchKeyword = $('#search-keyword').val();
+
+                if (selectedCourse) {
+                    // Redirect to the selected course page with the search keyword
+                    window.location.href = selectedCourse + '?search=' + encodeURIComponent(searchKeyword);
+                } else {
+                    // Redirect to home page if no course is selected
+                    window.location.href = 'index.php'; // Change 'index.html' to your home page URL
+                }
+            });
+        });
+
+
+        // Enquiry page
+
+        $(document).ready(function () {
+          // Check if the popup should be displayed
+          if (!sessionStorage.getItem("enquiry_shown")) {
+              $("#popupWrapper").fadeIn();
+          } else {
+              $("#popupWrapper").hide();
+          }
+      
+          // Close popup and set session storage
+          $(".popup-close-btn").click(function () {
+              $("#popupWrapper").fadeOut();
+              sessionStorage.setItem("enquiry_shown", "true");
+              window.location.href = "index.php"; // Redirect after closing
+          });
+      
+          // Handle form submission
+          $("#enquiryForm").submit(function (event) {
+              event.preventDefault(); // Prevent default form submission
+      
+              // Get form data
+              var formData = $(this).serialize();
+      
+              $.ajax({
+                  type: "POST",
+                  url: "submit_enquiry.php", // Change to your PHP file handling form submission
+                  data: formData,
+                  success: function (response) {
+                      if (response.trim() === "success") {
+                          sessionStorage.setItem("enquiry_shown", "true"); // Store session data
+                          Swal.fire({
+                              title: "Success!",
+                              text: "Your enquiry has been submitted successfully!",
+                              icon: "success"
+                          }).then(() => {
+                              window.location.href = "thank_you.php"; // Redirect after submission
+                          });
+                      } else {
+                          Swal.fire({
+                              title: "Error!",
+                              text: response,
+                              icon: "error"
+                          });
+                      }
+                  },
+                  error: function () {
+                      Swal.fire({
+                          title: "Error!",
+                          text: "Something went wrong. Please try again.",
+                          icon: "error"
+                      });
+                  }
+              });
+          });
+      });
+      // enquiry validation
+      async function validateForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        if (name && email && phone) {
+            // Prepare form data
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+
+            try {
+                const response = await fetch('', { // PHP file to handle data
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.text();
+
+                if (response.ok) {
+                    alert(result);
+                    closePopup();
+                    window.location.href = 'index.php'; // Redirect to a thank-you page
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('An error occurred. Please try again.');
+            }
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+    // scrolling page 
+    $(document).ready(function () {
+      // Smooth scrolling when filling out the form
+      $('input, select, textarea').on('focus', function () {
+          $('html, body').animate({
+              scrollTop: $(this).offset().top - 50
+          }, 500);
+      });
+
+      // Prevent dropdown from being too long
+      $('#course').css('max-height', '40px');
+  });
+  // redirect fun
+
+  function closePopup() {
+    document.getElementById('popupWrapper').style.display = 'none';
+    window.location.href = 'index.php'; // Redirect after closing
+}
     
-    
-    
-    
-    
-    
-    
-    
+   
 });

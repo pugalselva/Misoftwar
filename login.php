@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Invalid login details.";
     }
+    
 }
 ?>
 
@@ -60,51 +61,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="css/default.css">
 
 <!--====== Style css ======-->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/stylesheet.css">
 
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
 <!-- Bootstrap cdn -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<!-- stylesheet  -->
-    <style>
-        /* Custom Styling for the Login Form */
-        .login-container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
 
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form-group label {
-            font-weight: 600;
-        }
-
-        .form-group input {
-            padding: 12px;
-            font-size: 16px;
-        }
-
-        .btn-primary {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 8px;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 
 <body>
@@ -165,6 +128,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="js/ajax-contact.js"></script>
     
     <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
 </body>
 </html>
