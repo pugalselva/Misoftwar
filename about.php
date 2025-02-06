@@ -44,10 +44,22 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 <!--====== Style css ======-->
 <link rel="stylesheet" href="css/stylesheet.css">
 
+<!-- newstyle -->
+<link rel="stylesheet" href="css/newstyle.css">
+
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
 
-  
+  <style>
+        .testimonial-thum {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;  
+            /* border: 2px solid #ddd;       */
+            /* clip-path: circle(50%);   */
+        }
+    </style>
 </head>
 
 <body>

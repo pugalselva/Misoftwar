@@ -45,6 +45,9 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 <!--====== Style css ======-->
 <link rel="stylesheet" href="css/stylesheet.css">
 
+<!-- newstyle -->
+<link rel="stylesheet" href="css/newstyle.css">
+
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
   
@@ -207,7 +210,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                                 </div>
                                 <div class="cont text-center mt-3">
                                     <div class="name">
-                                        <a href="shop-singel.php"><h6 class="font-weight-bold">A2 Consulting</h6></a>
+                                        <a href="#"><h6 class="font-weight-bold">A2 Consulting</h6></a>
                                     </div>
                                 </div>
                             </div>
@@ -356,111 +359,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                         </div>
                     </div> <!-- row -->
                 </div>
-                <div class="tab-pane fade" id="shop-list" role="tabpanel" aria-labelledby="shop-list-tab">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="singel-publication mt-30">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="image">
-                                            <img src="images/publication/p-1.jpg" alt="Publication">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="cont">
-                                            <div class="name">
-                                                <a href="shop-singel.php"><h6>Set for life </h6></a>
-                                                <span>$50.00</span>
-                                            </div>
-                                            <div class="description pt-10">
-                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-                                            </div>
-                                            <div class="button">
-                                                <a href="#" class="main-btn">Buy Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- singel publication -->
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="singel-publication mt-30">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="image">
-                                            <img src="images/publication/p-2.jpg" alt="Publication">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="cont">
-                                            <div class="name">
-                                                <a href="shop-singel.php"><h6>Set for life </h6></a>
-                                                <span>$50.00</span>
-                                            </div>
-                                            <div class="description pt-10">
-                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-                                            </div>
-                                            <div class="button">
-                                                <a href="#" class="main-btn">Buy Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- singel publication -->
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="singel-publication mt-30">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="image">
-                                            <img src="images/publication/p-3.jpg" alt="Publication">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="cont">
-                                            <div class="name">
-                                                <a href="shop-singel.php"><h6>Set for life </h6></a>
-                                                <span>$50.00</span>
-                                            </div>
-                                            <div class="description pt-10">
-                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-                                            </div>
-                                            <div class="button">
-                                                <a href="#" class="main-btn">Buy Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- singel publication -->
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="singel-publication mt-30">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="image">
-                                            <img src="images/publication/p-4.jpg" alt="Publication">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="cont">
-                                            <div class="name">
-                                                <a href="shop-singel.php"><h6>Set for life </h6></a>
-                                                <span>$50.00</span>
-                                            </div>
-                                            <div class="description pt-10">
-                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-                                            </div>
-                                            <div class="button">
-                                                <a href="#" class="main-btn">Buy Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- singel publication -->
-                        </div>
-                    </div> <!-- row -->
-                </div>
-            </div> <!-- tab content -->
+                
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="courses-pagination mt-50">

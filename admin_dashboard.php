@@ -64,6 +64,9 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="css/stylesheet.css">
+    
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/newstyle.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
@@ -71,7 +74,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     <!-- Boostrap cdn -->
     <style>
         body {
-            background: linear-gradient(135deg, #000000, #2a5298);
+            /* background: linear-gradient(135deg,#00416A,#E4E5E6); */
             min-height: 100vh;
             color: white;
         }
@@ -123,10 +126,10 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                         <a class="active" href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="update-course.php">Update-Courses</a>
+                                        <a href="update-course.php">Courses</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="update_event.php">Update-Events</a>
+                                        <a href="update_event.php">Events</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="project.php">Project</a>
@@ -166,15 +169,17 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     </div>
 
     <!--====== SEARCH BOX PART ENDS ======-->
-    <div class="container-admin mt-5">
-        <h2 class="mb-4 text-center" style="color: white;">Admin Dashboard</h2>
+    <div class="container-admin" style="margin-top: 10px;">
+        <h2 class="mb-4 text-center" style="color: block;">Admin Dashboard</h2>
 
         <div class="row">
             <div class="col-md-6">
                 <div class="card text-white bg-success mb-3">
                     <div class="card-body text-center">
                         <h5 class="card-title"><i class="fa fa-envelope"></i> Total Enquiries</h5>
+                        <div class="calendar">
                         <h2><?= $enquiries_count ?></h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,7 +205,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
             </div>
         </div>
 
-        <h4 class="mt-4" style="color: white;">Recent Enquiries</h4>
+        <h4 class="mt-4" style="color: block;">Recent Enquiries</h4>
         <div class="table-responsive">
             <table class="table table-hover table-bordered">
                 <thead class="table-dark">

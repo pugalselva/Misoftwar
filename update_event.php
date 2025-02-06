@@ -42,9 +42,12 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="css/stylesheet.css">
 
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/newstyle.css">
+
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
- 
+
 </head>
 
 <body>
@@ -93,10 +96,10 @@
                                         <a class="active" href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.php">Update-Courses</a>
+                                        <a href="update-course.php">Courses</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="update_event.php">Update-Events</a>
+                                        <a href="update_event.php">Events</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="project.php">Project</a>
@@ -112,10 +115,10 @@
                                 <li><a href="index.php"><i class="fa fa-sign-out"></i><span></span></a></li>
 
                             </ul>
-                        </div> 
+                        </div>
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
         </div>
     </header>
 
@@ -137,10 +140,9 @@
     </div>
 
     <!--====== SEARCH BOX PART ENDS ======-->
-
     <!--====== PAGE BANNER PART START ======-->
-<section id="page-banner" class="pt-105 pb-110 bg_cover"  style="background-image: url(images/event/singel-event/se-1.jpg)">
-
+    <section id="page-banner" class="pt-105 pb-110 bg_cover"
+        style="background-image: url(images/event/singel-event/se-1.jpg)">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-5 offset-lg-0 col-md-10">
@@ -183,15 +185,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
         </div>
-
-
-
     </section>
 
     <!--====== PAGE BANNER PART ENDS ======-->
@@ -296,14 +291,7 @@
 
     <!--====== BACK TO TP PART ENDS ======-->
 
-
-
-
-
-
-
-
-    <!--====== jquery js ======-->
+<!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 

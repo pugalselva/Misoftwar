@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     }
 
-  
+
     $sql = "INSERT INTO enquiries_table (name, email, phone, course, message) 
             VALUES ('$name', '$email', '$phone', '$course', '$message')";
 
@@ -25,9 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'Error: ' . $sql . '<br>' . $conn->error;
         $conn->close();
     }
-    }else{
-        header('Location: enquiry.php');
-    exit();
     }
 ?>
 <?php
@@ -44,7 +41,6 @@ if (file_exists($file)) {
     $events = []; // If the file doesn't exist, initialize as an empty array
 }
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -89,6 +85,9 @@ if (file_exists($file)) {
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="css/stylesheet.css">
+    
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/newstyle.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">

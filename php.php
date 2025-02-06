@@ -100,6 +100,9 @@ if (file_exists($reviewsFile)) {
 <!--====== Style css ======-->
 <link rel="stylesheet" href="css/stylesheet.css">
 
+<!-- newstyle -->
+<link rel="stylesheet" href="css/newstyle.css">
+
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
 

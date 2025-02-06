@@ -89,22 +89,16 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="active" href="index.php">Home</a>
+                                            <a class="active" href="admin_dashboard.php">Dashboard</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="about.php">About us</a>
+                                            <a href="update-course.php">Courses</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="courses.php">Courses</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="events.php">Events</a>
+                                            <a href="update_event.php">Events</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="project.php">Project</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="contact.php">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -114,7 +108,7 @@
                             <div class="right-icon text-right">
                                 <ul>
                                     <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <li><a href="index.php"><i class="fa fa-sign-out"></i><span></span></a></li>
                                     
                                 </ul>
                             </div> <!-- right icon -->

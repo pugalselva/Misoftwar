@@ -99,6 +99,9 @@ if (file_exists($reviewsFile)) {
 <!--====== Style css ======-->
 <link rel="stylesheet" href="css/stylesheet.css">
 
+<!-- newstyle -->
+<link rel="stylesheet" href="css/newstyle.css">
+
 <!--====== Responsive css ======-->
 <link rel="stylesheet" href="css/responsive.css">
 
@@ -243,7 +246,7 @@ if (file_exists($reviewsFile)) {
                                 <li>
                                     <div class="teacher-name">
                                         <div class="thum">
-                                            <img src="images/course/teacher/t-1.jpg" alt="Teacher" />
+                                            <img src="images/testimonial/icon1.png" alt="Teacher" />
                                         </div>
                                         <div class="name">
                                             <span>Trainer</span>
