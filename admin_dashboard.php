@@ -21,6 +21,11 @@ $total_pages = ceil($enquiries_count / $records_per_page);
 $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DESC LIMIT $records_per_page OFFSET $offset");
 ?>
 
+<?php
+// Include the project_count.php file
+// $project_count = include 'path/to/project.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -173,7 +178,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
         <h2 class="mb-4 text-center" style="color: block;">Admin Dashboard</h2>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card text-white bg-success mb-3">
                     <div class="card-body text-center">
                         <h5 class="card-title"><i class="fa fa-envelope"></i> Total Enquiries</h5>
@@ -183,15 +188,17 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4">
-            <div class="card text-white bg-warning mb-3">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><i class="fa fa-users"></i> Student Logins Today</h5>
-                    <h2><?= $student_logins ?></h2>
+            <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body text-center">
+                <h5 class="card-title"><i class="fa fa-users"></i> Project Count</h5>
+                <div class="calendar">
+                <h2>40</h2>
                 </div>
             </div>
-        </div> -->
-            <div class="col-md-6">
+        </div>
+    </div>
+            <div class="col-md-4">
                 <div class="card text-white bg-primary mb-3">
                     <div class="card-body text-center">
                         <h5 class="card-title"><i class="fa fa-calendar"></i> Calendar</h5>

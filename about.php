@@ -240,8 +240,8 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                     <div class="row">
                         <div class="col-lg-4 col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">4000</span>+</span>
-                                <p>Students enrolled</p>
+                                <span><span class="counter">1500</span>+</span>
+                                <p>Trained Students</p>
                             </div> <!-- singel counter -->
                         </div>
                         <div class="col-lg-4 col-sm-6">
@@ -252,7 +252,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">4000</span>+</span>
+                                <span><span class="counter">2000</span>+</span>
                                 <p>People certifie</p>
                             </div> <!-- singel counter -->
                         </div>

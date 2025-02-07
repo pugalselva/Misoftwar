@@ -181,7 +181,7 @@ if (file_exists($file)) {
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" id="search" ><i class="fa fa-search"></i></a></li>
                                 <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                             </ul>
                         </div> <!-- right icon -->
@@ -1099,7 +1099,22 @@ if (file_exists($file)) {
     <!--====== BACK TO TP PART ENDS ======-->
 
 
+<script>
+    document.getElementById('view-course-btn').addEventListener('click', function() {
+    // Get the selected value from the dropdown
+    var selectedCourse = document.getElementById('course-select').value;
 
+    // Check if a course is selected
+    if (selectedCourse) {
+        // Redirect to the selected course's page
+        window.location.href = selectedCourse;
+    } else {
+        // Alert the user to select a course
+        alert('Please select a course.');
+    }
+});
+
+</script>
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>

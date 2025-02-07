@@ -1,6 +1,35 @@
 <?php
 include 'db.php';  // Assuming db.php is in the same directory as react.php
 ?>
+<?php
+// // Load your HTML content
+// $html = file_get_contents('path/to/your/html/file.html'); // Update with the actual path
+
+// // Create a new DOMDocument instance
+// $dom = new DOMDocument;
+
+// // Suppress errors due to malformed HTML
+// libxml_use_internal_errors(true);
+
+// // Load the HTML into the DOMDocument
+// $dom->loadHTML($html);
+
+// // Restore error handling
+// libxml_clear_errors();
+
+// // Create a DOMXPath instance for querying
+// $xpath = new DOMXPath($dom);
+
+// // Query for all div elements with the class 'singel-publication'
+// $nodes = $xpath->query("//div[contains(@class, 'singel-publication')]");
+
+// // Get the count of matched nodes
+// $project_count = $nodes->length;
+
+// // Return the count
+// return $project_count;
+?>
+
 <!doctype html>
 <html lang="en">
 

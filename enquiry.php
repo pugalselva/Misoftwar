@@ -67,7 +67,7 @@ session_start();
         overflow-y: scroll; 
         scrollbar-width: none; 
         -ms-overflow-style: none; 
-    }
+    }c
 
     .form-body::-webkit-scrollbar {
         display: none; 
