@@ -181,7 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!--====== SEARCH BOX PART ENDS ======-->
     <!--====== PAGE BANNER PART START ======-->
     
-    <div class="container">
+<div class="container">
     <div class="col-md-4 offset-md-4 mt-5">
         <div class="card p-4">
             <h2 class="text-center">Admin Login</h2>
@@ -198,7 +198,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
         </div>
-    </div>
+    </div>
 </div>
 
     <!--====== PAGE BANNER PART ENDS ======-->

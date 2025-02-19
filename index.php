@@ -3,18 +3,16 @@ session_start();
 include 'db.php';
 
 // Check if form data POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $course = $_POST['course'];
     $message = $_POST['message'];
-    
+
     if (empty($name) || empty($email) || empty($phone) || empty($course) || empty($message)) {
         echo 'All fields are required!';
-        
     }
-
 
     $sql = "INSERT INTO enquiries_table (name, email, phone, course, message) 
             VALUES ('$name', '$email', '$phone', '$course', '$message')";
@@ -25,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'Error: ' . $sql . '<br>' . $conn->error;
         $conn->close();
     }
-    }
+}
+
 ?>
 <?php
 // Define the path to the events.json file
@@ -85,12 +84,19 @@ if (file_exists($file)) {
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="css/stylesheet.css">
-    
+
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/newstyless.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!--icon cdn fas fa  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">     -->
+    
+    <!--icon cdn fa fa  -->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
     <!-- stylesheet  icon-->
     <style>
         .author-thumb {
@@ -110,6 +116,44 @@ if (file_exists($file)) {
 
         .form-body::-webkit-scrollbar {
             display: none;
+        }
+
+        .popup-wrapper1 {
+            /* display: flex; */
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            height: 100%;
+            /* background: rgba(0, 0, 0, 0.9); */
+            z-index: 1000;
+            /* justify-content: center; */
+            /* align-items: center; */
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .popup-wrapper1 .popup-content {
+            background: #fff;
+            padding: 0px;
+            border-radius: 0;
+            width: 100%;
+            /* max-width: 500px; */
+            position: relative;
+            /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); */
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 999;
+        }
+
+        .popup-wrapper1 .popup-content .form-header {
+            border-radius: 0px !important;
         }
     </style>
 </head>
@@ -178,11 +222,21 @@ if (file_exists($file)) {
                             </div>
                         </nav> <!-- nav -->
                     </div>
+                    <style>
+                       
+                    </style>
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search" ><i class="fa fa-search"></i></a></li>
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>  -->
+                               <!-- <li><a href="adminlogin.php">login</a></li> -->
+                               <li class="dropdown">
+                                    <a href="#"><i class="fa fa-user-circle-o"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="login.php"><i class="fas fa-sign-in-alt"></i> User Login</a>
+                                        <a href="adminlogin.php"><i class="fas fa-user-shield"></i> Admin Login</a>
+                                    </div>
+                                </li>
                             </ul>
                         </div> <!-- right icon -->
                     </div>
@@ -684,6 +738,8 @@ if (file_exists($file)) {
     <!--====== COUNT DOWN PART START ENQUIRY PAGE ======-->
     <!-- hidden enquiry -->
 
+
+
     <section id="count-down-part" class="bg_cover pt-70 pb-120" data-overlay="8"
         style="background-image: url(images/bg-2.jpg)">
         <div class="container">
@@ -702,7 +758,7 @@ if (file_exists($file)) {
                             <span>Sign up now </span>
                         </div>
                         <div class="main-form">
-                            <form id="enquiryForm" method="POST" action="index.php" class="form-body">
+                            <form id="enquiryForm1" class="form-body">
                                 <div class="form-group">
                                     <input type="text" id="name" name="name" placeholder="Your Name"
                                         required>
@@ -734,13 +790,13 @@ if (file_exists($file)) {
                                     <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button class="submit-btn" type="submit" >Get it Now</button>
+                                    <button class="submit-btn" type="submit">Get it Now</button>
                                 </div>
                             </form>
                         </div>
-                    </div> <!-- category form -->
+                    </div>
                 </div>
-            </div> <!-- row -->
+            </div>
         </div> <!-- container -->
     </section>
 
@@ -1021,13 +1077,13 @@ if (file_exists($file)) {
                                 guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
                                 <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i
-                                            class="fa fa-facebook-f"></i></a></li>
+                                            class="fas fa-facebook-f"></i></a></li>
                                 <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i
-                                            class="fa fa-linkedin"></i></a></li>
+                                            class="fas fa-linkedin"></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i
-                                            class="fa fa-youtube"></i></a></li>
+                                            class="fas fa-youtube"></i></a></li>
                                 <li><a href="https://www.instagram.com/misoftwar_official/"><i
-                                            class="fa fa-instagram"></i></a></li>
+                                            class="fas fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1089,7 +1145,6 @@ if (file_exists($file)) {
             </div>
         </div>
     </footer>
-
     <!--====== FOOTER PART ENDS ======-->
 
     <!--====== BACK TO TP PART START ======-->
@@ -1098,26 +1153,72 @@ if (file_exists($file)) {
 
     <!--====== BACK TO TP PART ENDS ======-->
 
+    <div class="modal fade" id="autoPopup" tabindex="-1" role="dialog" aria-labelledby="autoPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-body"> -->
+                <div class="popup-wrapper1">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="popup-content">
+                        <!-- <div class="popup-close-btn" onclick="closePopup()">&times;</div> -->
+                        <div class="form-wrapper">
+                            <div class="form-header text-center">
+                                <h3>Free Enquiry!</h3>
+                                <span>Sign up now</span>
+                            </div>
+                            <div class="form-body">
+                                <form id="enquiryForm">
+                                    <div class="form-group">
+                                        <input type="text" id="name" name="name" placeholder="Your Name"
+                                            require>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" placeholder="Your Email"
+                                            require>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="phone" name="phone" placeholder="Your Phone"
+                                            require>
+                                    </div>
+                                    <div class="form-group">
+                                        <select id="course" name="course" require>
+                                            <option value="">Select Course</option>
+                                            <option value="web.php">HTML</option>
+                                            <option value="web.php">CSS</option>
+                                            <option value="web.php">JavaScript</option>
+                                            <option value="react.php">Reactjs</option>
+                                            <option value="angular.php">Angularjs</option>
+                                            <option value="php.php">PHP</option>
+                                            <option value="sql.php">MYSQL</option>
+                                            <option value="net.php">.Net Framework</option>
+                                            <option value="core-java.php">Core-Java</option>
+                                            <option value="spring.php">Spring Framework</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="submit-btn" type="submit">Get it Now!</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
 
-<script>
-    document.getElementById('view-course-btn').addEventListener('click', function() {
-    // Get the selected value from the dropdown
-    var selectedCourse = document.getElementById('course-select').value;
 
-    // Check if a course is selected
-    if (selectedCourse) {
-        // Redirect to the selected course's page
-        window.location.href = selectedCourse;
-    } else {
-        // Alert the user to select a course
-        alert('Please select a course.');
-    }
-});
-
-</script>
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- <script src="js/vendor/jquery-1.12.4.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!--====== Bootstrap js ======-->
     <script src="js/bootstrap.min.js"></script>
@@ -1154,6 +1255,93 @@ if (file_exists($file)) {
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#autoPopup").modal('show');
+            
+            // Handle form submission with AJAX
+            $("#enquiryForm").submit(function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                var formData = $(this).serialize(); // Get form data
+
+                $.ajax({
+                    type: "POST",
+                    url: "submit_enquiry.php", // Change to your PHP file handling form submission
+                    data: formData,
+                    success: function(response) {
+                        $("#autoPopup").modal('hide');
+                        if (response.trim() === "success") {
+                            sessionStorage.setItem("enquiry_shown",
+                            "true"); // Store session data
+                            // Show success alert first
+                            Swal.fire({
+                                title: "Success!",
+                                text: "Your enquiry has been submitted successfully!",
+                                icon: "success",
+                                confirmButtonText: "OK"
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    // Hide modal after user clicks "OK"
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Success!",
+                                text: response,
+                                icon: "success"
+                            });
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("AJAX Error:", xhr.responseText);
+                        Swal.fire({
+                            title: "Error!",
+                            text: "Something went wrong. Please try again.",
+                            icon: "error"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Ensure jQuery is loaded before running
+            if (typeof $ === "undefined") {
+                console.error("jQuery not loaded!");
+                return;
+            }
+
+            // Automatically open the modal if it exists
+            if ($("#autoPopup").length) {
+                $("#autoPopup").modal("show");
+            } else {
+                console.warn("Modal element #autoPopup not found.");
+            }
+        });
+
+        // Ensure the button exists before adding event listener
+        document.addEventListener("DOMContentLoaded", function() {
+            var viewCourseBtn = document.getElementById("view-course-btn");
+            var courseSelect = document.getElementById("course-select");
+
+            if (viewCourseBtn && courseSelect) {
+                viewCourseBtn.addEventListener("click", function() {
+                    var selectedCourse = courseSelect.value; // Get the selected value
+
+                    if (selectedCourse) {
+                        window.location.href = selectedCourse; // Redirect if selected
+                    } else {
+                        alert("Please select a course."); // Show alert if no course selected
+                    }
+                });
+            } else {
+                console.warn("#view-course-btn or #course-select not found.");
+            }
+        });
+    </script>
 
 </body>
 

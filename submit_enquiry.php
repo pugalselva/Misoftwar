@@ -1,34 +1,32 @@
 <?php
 session_start();
-include 'db.php'; // Include database connection
+include 'db.php';
 
+// Check if request is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $course = $_POST['course'];
-    $message = $_POST['message'];
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $phone = trim($_POST['phone']);
+    $course = trim($_POST['course']);
+    $message = trim($_POST['message']);
 
+    // Validate inputs
     if (empty($name) || empty($email) || empty($phone) || empty($course) || empty($message)) {
-        echo 'All fields are required!';
-        exit();
+        echo "All fields are required!";
+        exit;
     }
 
-    // Use prepared statement to prevent SQL injection
+    // Prepare and execute SQL query
     $stmt = $conn->prepare("INSERT INTO enquiries_table (name, email, phone, course, message) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $phone, $course, $message);
 
     if ($stmt->execute()) {
-        echo "<script> window.location.href='index.php';</script>";
+        echo "Thank you! Your enquiry has been submitted.";
     } else {
-        echo 'Error: ' . $stmt->error;
+        echo "Error: " . $stmt->error;
     }
 
     $stmt->close();
     $conn->close();
-} else {
-    header('Location: enquiry.php');
-    exit();
-    
 }
 ?>

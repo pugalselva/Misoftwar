@@ -4275,6 +4275,7 @@ h6.text-primary {
     padding: 20px;
 }
 
+
 .popup-content {
     background: #fff;
     padding: 25px;
@@ -4498,6 +4499,41 @@ body, h2, label, input, button {
     font-size: 52px;
     color: #fff;
     padding-bottom: 15px;
+}
+
+/* enquiry form load   */
+.popup-wrapper1 {
+    /* display: flex; */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.9); */
+    z-index: 1000;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 0px;
+    box-sizing: border-box;
+}
+.popup-wrapper1 .popup-content {
+    background: #fff;
+    padding: 0px;
+    border-radius: 0;
+    width: 100%;
+    /* max-width: 500px; */
+    position: relative;
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); */
+    animation: fadeIn 0.4s ease-in-out;
+}
+.close{
+    position: absolute;
+    right:10px; top:10px;
+    z-index:999 ;
+}
+.popup-wrapper1 .popup-content .form-header{
+    border-radius:0px !important;
 }
 
 /* Form Styling */

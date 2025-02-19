@@ -73,6 +73,14 @@ session_start();
         display: none; 
     }
 </style>
+<style>
+    .error {
+        color: red;
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+    }
+</style>
 
 </head>
 
@@ -81,11 +89,6 @@ session_start();
 
     <!--====== COUNT DOWN PART START ======-->
 
-    <section id="count-down-part" class="bg_cover" data-overlay="8"
-        style="background-image: url(images/bg-2.jpg);height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-5 offset-lg-0 col-md-10">
                     <div class="popup-wrapper" id="popupWrapper">
                         <div class="popup-content">
                             <div class="popup-close-btn" onclick="closePopup()">&times;</div>
@@ -134,10 +137,6 @@ session_start();
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
@@ -189,18 +188,90 @@ session_start();
         //     document.getElementById('popupWrapper').style.display = 'flex';
         // };
     </script>
-    <script>
-        function closePopup() {
-            document.getElementById('popupWrapper').style.display = 'none';
-            window.location.href = 'index.php'; // Redirect after closing
-        }
-    </script>
+        <script>
+            // function closePopup() {
+            //     window.location.href = "index.php"; // Redirects to index.php when close button is clicked
+            // }
+        </script>
 
-    <!-- function showHostname() {
-        let currentURL = window.location.hostname;
-        alert("The hostname of the current URL is: " + currentURL);
-    } -->
-    
+        <!-- JavaScript for Validation -->
+<script>
+    function validateForm() {
+        let valid = true;
+
+        // Get form elements
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let course = document.getElementById("course").value;
+        let message = document.getElementById("message").value.trim();
+
+        // Reset error messages
+        document.getElementById("nameError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("phoneError").innerText = "";
+        document.getElementById("courseError").innerText = "";
+        document.getElementById("messageError").innerText = "";
+
+        // Name validation
+        if (name === "") {
+            document.getElementById("nameError").innerText = "Please enter your name.";
+            valid = false;
+        }
+
+        // Email validation
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (email === "") {
+            document.getElementById("emailError").innerText = "Please enter your email.";
+            valid = false;
+        } else if (!emailPattern.test(email)) {
+            document.getElementById("emailError").innerText = "Invalid email format.";
+            valid = false;
+        }
+
+        // Phone validation (10-digit number)
+        let phonePattern = /^[0-9]{10}$/;
+        if (phone === "") {
+            document.getElementById("phoneError").innerText = "Please enter your phone number.";
+            valid = false;
+        } else if (!phonePattern.test(phone)) {
+            document.getElementById("phoneError").innerText = "Phone number must be 10 digits.";
+            valid = false;
+        }
+
+        // Course validation
+        if (course === "") {
+            document.getElementById("courseError").innerText = "Please select a course.";
+            valid = false;
+        }
+
+        // Message validation
+        if (message === "") {
+            document.getElementById("messageError").innerText = "Please enter a message.";
+            valid = false;
+        }
+
+        return valid;
+    }
+
+   
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Show popup only if it was not closed before
+        if (!sessionStorage.getItem("popupClosed")) {
+            document.getElementById("popupWrapper").style.display = "block";
+        }
+    });
+
+    // Close popup and redirect to index.php
+    function closePopup() {
+        document.getElementById("popupWrapper").style.display = "none";
+        sessionStorage.setItem("popupClosed", "true"); // Store popup closed state
+      //  window.location.href = 'index.php'; // Redirect to index.php
+    }
+</script>
+        
 </body>
 
 </html>

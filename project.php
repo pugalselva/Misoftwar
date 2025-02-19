@@ -1,35 +1,6 @@
 <?php
 include 'db.php';  // Assuming db.php is in the same directory as react.php
 ?>
-<?php
-// // Load your HTML content
-// $html = file_get_contents('path/to/your/html/file.html'); // Update with the actual path
-
-// // Create a new DOMDocument instance
-// $dom = new DOMDocument;
-
-// // Suppress errors due to malformed HTML
-// libxml_use_internal_errors(true);
-
-// // Load the HTML into the DOMDocument
-// $dom->loadHTML($html);
-
-// // Restore error handling
-// libxml_clear_errors();
-
-// // Create a DOMXPath instance for querying
-// $xpath = new DOMXPath($dom);
-
-// // Query for all div elements with the class 'singel-publication'
-// $nodes = $xpath->query("//div[contains(@class, 'singel-publication')]");
-
-// // Get the count of matched nodes
-// $project_count = $nodes->length;
-
-// // Return the count
-// return $project_count;
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -146,7 +117,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                         <div class="right-icon text-right">
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                                 
                             </ul>
                         </div> <!-- right icon -->
@@ -212,10 +183,10 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                                 <li class="nav-item">
                                     <a id="shop-list-tab" data-toggle="tab" href="#shop-list" role="tab" aria-controls="shop-list" aria-selected="false"><i class="fa fa-th-list"></i></a>
                                 </li>
-                                <li class="nav-item">Showning 4 0f 24 Results</li>
+                                <li class="nav-item">Showning 4 0f 24 Project</li>
                             </ul> <!-- nav -->
                         </div><!-- shop bar -->
-                        <div class="shop-select">
+                        <!-- <div class="shop-select">
                            <select>
                                 <option value="1">Sort by</option>
                                 <option value="1">Sort by 01</option>
@@ -224,7 +195,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                                 <option value="4">Sort by 04</option>
                                 <option value="5">Sort by 05</option>
                             </select>
-                        </div> <!-- shop select -->
+                        </div> -->
                     </div> <!-- shop top search -->
                 </div>
             </div> <!-- row -->

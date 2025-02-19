@@ -479,47 +479,11 @@ $(function() {
           $(".popup-close-btn").click(function () {
               $("#popupWrapper").fadeOut();
               sessionStorage.setItem("enquiry_shown", "true");
-              window.location.href = "index.php"; // Redirect after closing
+           //   window.location.href = "index.php"; // Redirect after closing
           });
       
           // Handle form submission
-          $("#enquiryForm").submit(function (event) {
-              event.preventDefault(); // Prevent default form submission
-      
-              // Get form data
-              var formData = $(this).serialize();
-      
-              $.ajax({
-                  type: "POST",
-                  url: "submit_enquiry.php", // Change to your PHP file handling form submission
-                  data: formData,
-                  success: function (response) {
-                      if (response.trim() === "success") {
-                          sessionStorage.setItem("enquiry_shown", "true"); // Store session data
-                          Swal.fire({
-                              title: "Success!",
-                              text: "Your enquiry has been submitted successfully!",
-                              icon: "success"
-                          }).then(() => {
-                              window.location.href = "thank_you.php"; // Redirect after submission
-                          });
-                      } else {
-                          Swal.fire({
-                              title: "Error!",
-                              text: response,
-                              icon: "error"
-                          });
-                      }
-                  },
-                  error: function () {
-                      Swal.fire({
-                          title: "Error!",
-                          text: "Something went wrong. Please try again.",
-                          icon: "error"
-                      });
-                  }
-              });
-          });
+        
       });
       // enquiry validation
       async function validateForm() {
@@ -545,6 +509,7 @@ $(function() {
                 if (response.ok) {
                     alert(result);
                     closePopup();
+                    $('#autoPopup').modal('hide'); 
                     window.location.href = 'index.php'; // Redirect to a thank-you page
                 } else {
                     alert('Submission failed. Please try again.');

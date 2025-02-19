@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="right-icon text-right">
                                 <ul>
                                     <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                                     
                                 </ul>
                             </div> <!-- right icon -->
@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h2>Keep in touch</h2>
                 </div>
                 <div class="main-form pt-45">
-                    <form id="contact-form" action="contact-conn.php" method="post" data-toggle="validator">
+                    <form id="contact-form" >
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="singel-form form-group">
@@ -441,6 +441,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
+
+
+
+    // $("#contact-form").submit(function (event) {
+    //     event.preventDefault(); // Prevent default form submission
+
+    //     var formData = $(this).serialize(); // Get form data
+
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "contact-conn.php",
+    //         data: formData,
+    //         success: function (response) {
+    //             // $("#autoPopup").modal('hide');
+    //             if (response.trim() === "success") {
+    //                 sessionStorage.setItem("enquiry_shown", "true"); // Store session data
+    //                 // Show success alert first
+    //                 Swal.fire({
+    //                     title: "Success!",
+    //                     text: "Your enquiry has been submitted successfully!",
+    //                     icon: "success",
+    //                     confirmButtonText: "OK"
+    //                 }).then((result) => {
+    //                     if (result.isConfirmed) {
+    //                         // Hide modal after user clicks "OK"
+    //                     }
+    //                 });
+    //             } else {
+    //                 Swal.fire({
+    //                     title: "Error!",
+    //                     text: response,
+    //                     icon: "success"
+    //                 });
+    //             }
+    //         },
+    //         error: function () {
+    //             Swal.fire({
+    //                 title: "Error!",
+    //                 text: "Something went wrong. Please try again.",
+    //                 icon: "error"
+    //             });
+    //         }
+    //     });
+    // });
+    //end contact
+
+
+
   $(document).ready(function () {
     $('#contact-form').on('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission

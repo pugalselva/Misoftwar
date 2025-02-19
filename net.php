@@ -172,7 +172,7 @@ if (file_exists($reviewsFile)) {
                         <div class="right-icon text-right">
                             <ul>
                                 <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <!-- <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li> -->
 
                             </ul>
                         </div> <!-- right icon -->
