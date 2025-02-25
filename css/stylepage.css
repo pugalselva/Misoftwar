@@ -6,6 +6,19 @@
     object-fit: cover;
     border: 2px solid #ddd;
 }
+/* admin login */
+
+/* end admin */
+
+/* About page */
+.testimonial-thum {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;  
+    /* border: 2px solid #ddd;       */
+    /* clip-path: circle(50%);   */
+}
 
 .scroll-review {
     width: auto;
@@ -38,7 +51,6 @@
 .right-icon ul li a {
     text-decoration: none;
     color: #4267b2;
-    padding: 10px;
     display: block;
 }
 
@@ -283,6 +295,9 @@
             outline: none;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
+
+        /* review page  */
+       
         
         /* Responsive Design for Different Screen Sizes */
         @media (max-width: 768px) {

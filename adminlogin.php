@@ -1,9 +1,7 @@
-
-
 <?php
 session_start(); // Start the session
 include 'db.php';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if username and password fields are set
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = trim($_POST['username']);
@@ -21,8 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
 
 
 <!doctype html>
@@ -70,117 +66,128 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/stylepage.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-    body {
-            background: linear-gradient(135deg,#abbaab, #ffffff);
-            min-height: 100vh;
-            /* display: flex;
-            justify-content: center; */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-section {
+            position: relative;
+            height: 100vh;
+            background: url('images/slider/sw-1.jpg') no-repeat center center/cover;
+            display: flex;
             align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .login-card {
+            position: relative;
+            z-index: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-card h2 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input-group-text {
+            background-color: #007bff;
             color: white;
-        
-}</style>
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .form-control {
+            height: 45px;
+            font-size: 16px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .btn-primary {
+            width: 100%;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <!-- stylesheet -->
+
 
 </head>
 
 <body>
 
-    <!--====== PRELOADER PART START ======-->
 
-    <div class="preloader">
-        <div class="loader rubix-cube">
-            <div>
-                <img src="images/mi logo1.png" alt="Logo" class="logo-reload">
-            </div>
-        </div>
-    </div>
+    <!--====== PAGE BANNER PART START ======-->
+    <section class="login-section">
+        <div class="overlay"></div>
+        <div class="login-card">
+            <h2>Admin Login</h2>
+            <form method="POST" action="">
 
-
-    <!--====== PRELOADER PART START ======-->
-
-    <!--====== HEADER PART START ======-->
-
-    <header id="header-part">
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-11 col-md-10 col-sm-9 col-9">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a href="#" class="logo-container">
-                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item">
-                                        <a class="active" href="#">Dashboard</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#">Courses</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#">Events</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#">Project</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav> <!-- nav -->
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-sm-3 col-3">
-                        <div class="right-icon text-right">
-                            <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-sign-out"></i><span></span></a></li>
-
-                            </ul>
-                        </div>
+                <!-- Username Field with Icon -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <input type="text" id="username" name="username" class="form-control" required>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
 
-    <!--====== HEADER PART ENDS ======-->
+                <!-- Password Field with Icon -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                </div>
 
-    <!--====== SEARCH BOX PART START ======-->
-
-    <div class="search-box">
-        <div class="serach-form">
-            <div class="closebtn">
-                <span></span>
-                <span></span>
-            </div>
-            <form action="#">
-                <input type="text" placeholder="Search by keyword">
-                <button><i class="fa fa-search"></i></button>
+                <button type="submit" class="btn btn-primary">Login</button>
             </form>
-        </div> <!-- serach form -->
-    </div>
-
-    <!--====== SEARCH BOX PART ENDS ======-->
-    <!--====== PAGE BANNER PART START ======-->
-    
+        </div>
+    </section>
+    <!--
 <div class="container">
     <div class="col-md-4 offset-md-4 mt-5">
         <div class="card p-4">
@@ -199,111 +206,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </div>
-</div>
+</div> -->
 
     <!--====== PAGE BANNER PART ENDS ======-->
 
 
-    <!--====== EVENTS PART ENDS ======-->
 
-    <!--====== FOOTER PART START ======-->
-
-    <footer id="footer-part">
-        <div class="footer-top pt-40 pb-70">
-            <div class="container">
-                <div class="row">
-                    <!-- About Section -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer-about mt-40">
-                            <div class="logo">
-                                <a href="#" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
-                                </a>
-                            </div>
-                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
-                                guides, and resources to help you master the tools and features of our software.</p>
-                            <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i
-                                            class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i
-                                            class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i
-                                            class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i
-                                            class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Support -->
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer-link support mt-40">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>HOME</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>About us</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Course</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Events</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Contact</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Review</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-address mt-40">
-                            <div class="footer-title pb-25">
-                                <h6>Contact Us</h6>
-                            </div>
-                            <ul>
-                                <li class="d-flex mb-3">
-                                    <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Misoftwar
-                                        No.78, Kudi Street,
-                                        Umayalpuram,
-                                        P.N. Palayam(T.K),
-                                        Salem(D.T)-636119</p>
-                                </li>
-                                <li class="d-flex mb-3">
-                                    <i class="fa fa-phone"></i>
-                                    <p class="Con ml-3">+91 04447781715</p>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright Section -->
-        <div class="footer-copyright pt-10 pb-25">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
-                        <p>© Copyright PearlSys. All Rights Reserved</p>
-                    </div>
-                    <div class="col-md-4 text-md-right text-center">
-                        <p>Designed by PearlSys</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!--====== FOOTER PART ENDS ======-->
-
-    <!--====== BACK TO TP PART START ======-->
-
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-    <!--====== BACK TO TP PART ENDS ======-->
-
-<!--====== jquery js ======-->
+    <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 

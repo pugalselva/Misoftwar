@@ -13,52 +13,52 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
     
     <!--====== Title ======-->
     <title>Misoftwar</title>
-    
-     <!--====== Favicon Icon ======-->
-     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/stylesheet.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!-- newstyle -->
-<link rel="stylesheet" href="css/newstyle.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/stylepage.css">
+
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
 
   <style>
-        .testimonial-thum {
+        /* .testimonial-thum {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             object-fit: cover;  
-            /* border: 2px solid #ddd;       */
-            /* clip-path: circle(50%);   */
-        }
+            border: 2px solid #ddd;      
+            clip-path: circle(50%);  
+        } */
     </style>
 </head>
 
@@ -386,10 +386,14 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
+                                            class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
+                                            class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
+                                            class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/" target="_blank"><i
+                                            class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

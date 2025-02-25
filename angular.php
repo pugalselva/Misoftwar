@@ -1,8 +1,8 @@
 <?php
-include 'db.php';  
+include 'db.php';
 
 // Fetch course details from the database
-$sql = "SELECT * FROM courses_details WHERE id = 1"; // Change the condition as needed
+$sql = 'SELECT * FROM courses_details WHERE id = 1'; // Change the condition as needed
 $result = $conn->query($sql);
 
 $course = $result->fetch_assoc();
@@ -69,41 +69,41 @@ if (file_exists($reviewsFile)) {
     <!--====== Title ======-->
     <title>Misoftwar</title>
 
-     <!--====== Favicon Icon ======-->
-     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/stylesheet.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-<!-- newstyle -->
-<link rel="stylesheet" href="css/newstyle.css">
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/stylepage.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -123,7 +123,7 @@ if (file_exists($reviewsFile)) {
     <!--====== HEADER PART START ======-->
 
     <header id="header-part">
-        <div class="navigation">    
+        <div class="navigation">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-11 col-md-10 col-sm-9 col-9">
@@ -172,7 +172,7 @@ if (file_exists($reviewsFile)) {
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                                 <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
 
                             </ul>
@@ -239,66 +239,66 @@ if (file_exists($reviewsFile)) {
             <div class="row">
                 <div class="col-lg-8">
                     <div class="corses-singel-left mt-30">
-                    <div class="title">
-                        <h3>Angular.js Training Course</h3>
-                        <div class="course-terms">
-                            <ul>
-                                <li>
-                                    <div class="teacher-name">
-                                        <div class="thum">
-                                            <img src="images/course/teacher/t-1.jpg" alt="Teacher" />
+                        <div class="title">
+                            <h3>Angular.js Training Course</h3>
+                            <div class="course-terms">
+                                <ul>
+                                    <li>
+                                        <div class="teacher-name">
+                                            <div class="thum">
+                                                <img src="images/course/teacher/t-1.jpg" alt="Teacher" />
+                                            </div>
+                                            <div class="name">
+                                                <span>Trainer</span>
+                                                <h6>Ram Kumar</h6>
+                                            </div>
                                         </div>
-                                        <div class="name">
-                                            <span>Trainer</span>
-                                            <h6>Ram Kumar</h6>
+                                    </li>
+                                    <li>
+                                        <div class="course-category">
+                                            <span>Category</span>
+                                            <h6>Programming</h6>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="course-category">
-                                        <span>Category</span>
-                                        <h6>Programming</h6>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review">
-                                        <span>Review</span>
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li class="rating">(20 Reviews)</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li>
+                                        <div class="review">
+                                            <span>Review</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                </li>
+                                                <li class="rating">(20 Reviews)</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>
+                                Angular.js Online Training will make you an expert in Angular.js
+                                Programming to become a Professional Frontend Developer with
+                                real-world projects. Learn Angular.js from scratch to build dynamic
+                                and responsive web applications with Hands-on Demo Sessions.
+                                This course will help you master Angular.js concepts like
+                                components, directives, and data binding, along with practical
+                                implementation of Angular Router and NgRx. Gain in-depth knowledge
+                                in creating interactive UIs and deploying web applications using
+                                Angular.js with certified trainers and an updated syllabus. You will
+                                become proficient in building modern web applications with our
+                                Angular.js Online Training Course.
+                            </p>
                         </div>
-                        <p>
-                            Angular.js Online Training will make you an expert in Angular.js
-                            Programming to become a Professional Frontend Developer with
-                            real-world projects. Learn Angular.js from scratch to build dynamic
-                            and responsive web applications with Hands-on Demo Sessions.
-                            This course will help you master Angular.js concepts like
-                            components, directives, and data binding, along with practical
-                            implementation of Angular Router and NgRx. Gain in-depth knowledge
-                            in creating interactive UIs and deploying web applications using
-                            Angular.js with certified trainers and an updated syllabus. You will
-                            become proficient in building modern web applications with our
-                            Angular.js Online Training Course.
-                        </p>
-                    </div>
 
 
                         <!-- title -->
@@ -330,27 +330,36 @@ if (file_exists($reviewsFile)) {
                             </ul>
 
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                                    aria-labelledby="overview-tab">
                                     <div class="overview-description container">
                                         <div class="singel-description pt-4">
                                             <h6 class="text-primary">Angular.js Training Course Overview</h6>
                                             <p class="text-justify">
-                                                This Comprehensive Online Angular.js Training will make you a Professional Frontend Developer, enabling
-                                                you to build dynamic and responsive web applications. You will gain hands-on experience in creating
-                                                Angular components, managing state, and leveraging the Angular ecosystem to deliver robust applications.
-                                                The course also covers integration with APIs and tools to streamline development workflows.
+                                                This Comprehensive Online Angular.js Training will make you a
+                                                Professional Frontend Developer, enabling
+                                                you to build dynamic and responsive web applications. You will gain
+                                                hands-on experience in creating
+                                                Angular components, managing state, and leveraging the Angular ecosystem
+                                                to deliver robust applications.
+                                                The course also covers integration with APIs and tools to streamline
+                                                development workflows.
                                             </p>
                                             <p class="text-justify">
-                                                Learn how to develop interactive UIs, use Angular Router for navigation, and manage application state
-                                                efficiently with tools like NgRx. This training is designed for beginners and professionals who want to
-                                                enhance their skills in frontend development. Taught by industry experts, this course includes real-time
+                                                Learn how to develop interactive UIs, use Angular Router for navigation,
+                                                and manage application state
+                                                efficiently with tools like NgRx. This training is designed for
+                                                beginners and professionals who want to
+                                                enhance their skills in frontend development. Taught by industry
+                                                experts, this course includes real-time
                                                 assignments and placement assistance.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="curriculam" role="tabpanel" aria-labelledby="curriculam-tab">
+                                <div class="tab-pane fade" id="curriculam" role="tabpanel"
+                                    aria-labelledby="curriculam-tab">
                                     <div class="curriculam-cont">
                                         <div class="title">
                                             <h6>Angular.js Course Content</h6>
@@ -563,7 +572,7 @@ if (file_exists($reviewsFile)) {
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
-                    <div class="col-lg-12 col-md-6">
+                        <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features</h4>
                                 <ul>
@@ -674,13 +683,13 @@ if (file_exists($reviewsFile)) {
                                 guides, and resources to help you master the tools and features of our software.</p>
 
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
                                             class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i
+                                <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i
+                                <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
                                             class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i
+                                <li><a href="https://www.instagram.com/misoftwar_official/" target="_blank"><i
                                             class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
@@ -711,10 +720,10 @@ if (file_exists($reviewsFile)) {
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
                                     <p class="Con ml-3">Misoftwar
-                                            No.78, Kudi Street,
-                                            Umayalpuram,
-                                            P.N. Palayam(T.K),
-                                            Salem(D.T)-636119</p>
+                                        No.78, Kudi Street,
+                                        Umayalpuram,
+                                        P.N. Palayam(T.K),
+                                        Salem(D.T)-636119</p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>

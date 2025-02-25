@@ -33,42 +33,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     <!--====== Title ======-->
     <title>Misoftwar</title>
-    
+
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/stylesheet.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-<!-- newstyle -->
-<link rel="stylesheet" href="css/newstyle.css">
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/stylepage.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                             <div class="right-icon text-right">
                                 <ul>
-                                    <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                    <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                                 <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                                     
                                 </ul>
@@ -175,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h2>Contact</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Contact</li>
                             </ol>
                         </nav>
@@ -316,10 +316,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
+                                            class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
+                                            class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
+                                            class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/" target="_blank"><i
+                                            class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -435,59 +439,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
-    <script src="js/map-script.js"></script>
+    <script src="js/map-scripts.js"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-
-
-
-    // $("#contact-form").submit(function (event) {
-    //     event.preventDefault(); // Prevent default form submission
-
-    //     var formData = $(this).serialize(); // Get form data
-
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "contact-conn.php",
-    //         data: formData,
-    //         success: function (response) {
-    //             // $("#autoPopup").modal('hide');
-    //             if (response.trim() === "success") {
-    //                 sessionStorage.setItem("enquiry_shown", "true"); // Store session data
-    //                 // Show success alert first
-    //                 Swal.fire({
-    //                     title: "Success!",
-    //                     text: "Your enquiry has been submitted successfully!",
-    //                     icon: "success",
-    //                     confirmButtonText: "OK"
-    //                 }).then((result) => {
-    //                     if (result.isConfirmed) {
-    //                         // Hide modal after user clicks "OK"
-    //                     }
-    //                 });
-    //             } else {
-    //                 Swal.fire({
-    //                     title: "Error!",
-    //                     text: response,
-    //                     icon: "success"
-    //                 });
-    //             }
-    //         },
-    //         error: function () {
-    //             Swal.fire({
-    //                 title: "Error!",
-    //                 text: "Something went wrong. Please try again.",
-    //                 icon: "error"
-    //             });
-    //         }
-    //     });
-    // });
-    //end contact
-
-
 
   $(document).ready(function () {
     $('#contact-form').on('submit', function (event) {

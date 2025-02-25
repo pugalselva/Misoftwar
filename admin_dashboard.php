@@ -69,9 +69,9 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="css/stylesheet.css">
-    
+
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/stylepage.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
@@ -81,7 +81,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
         body {
             /* background: linear-gradient(135deg,#00416A,#E4E5E6); */
             min-height: 100vh;
-            color: white;
+            color: block;
         }
     </style>
 </head>
@@ -146,7 +146,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                                 <li><a href="index.php"><i class="fa fa-sign-out"></i><span></span></a></li>
 
                             </ul>
@@ -283,14 +283,14 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
-                            <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i
+                                <ul class="mt-20 d-flex">
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
                                             class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i
+                                <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i
+                                <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
                                             class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i
+                                <li><a href="https://www.instagram.com/misoftwar_official/" target="_blank"><i
                                             class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>

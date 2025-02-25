@@ -1,32 +1,6 @@
 <?php
 session_start();
 include 'db.php';
-
-// Check if form data POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $course = $_POST['course'];
-    $message = $_POST['message'];
-
-    if (empty($name) || empty($email) || empty($phone) || empty($course) || empty($message)) {
-        echo 'All fields are required!';
-    }
-
-    $sql = "INSERT INTO enquiries_table (name, email, phone, course, message) 
-            VALUES ('$name', '$email', '$phone', '$course', '$message')";
-
-    if ($conn->query($sql) === true) {
-        // echo "Thank you! Your enquiry has been submitted.";
-    } else {
-        echo 'Error: ' . $sql . '<br>' . $conn->error;
-        $conn->close();
-    }
-}
-
-?>
-<?php
 // Define the path to the events.json file
 $file = 'events.json';
 
@@ -86,7 +60,7 @@ if (file_exists($file)) {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/newstyless.css">
+    <link rel="stylesheet" href="css/stylepage.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
@@ -228,15 +202,16 @@ if (file_exists($file)) {
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>  -->
-                               <!-- <li><a href="adminlogin.php">login</a></li> -->
-                               <li class="dropdown">
+                            
+                            <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
+                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                               <!-- <li class="dropdown">
                                     <a href="#"><i class="fa fa-user-circle-o"></i></a>
                                     <div class="dropdown-content">
                                         <a href="login.php"><i class="fas fa-sign-in-alt"></i> User Login</a>
                                         <a href="adminlogin.php"><i class="fas fa-user-shield"></i> Admin Login</a>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div> <!-- right icon -->
                     </div>
@@ -755,7 +730,6 @@ if (file_exists($file)) {
                     <div class="category-form category-form-3 pt-50">
                         <div class="form-title text-center">
                             <h3>Free Enquiry!</h3>
-                            <span>Sign up now </span>
                         </div>
                         <div class="main-form">
                             <form id="enquiryForm1" class="form-body">
@@ -1056,7 +1030,7 @@ if (file_exists($file)) {
         </div>
     </section>
 
-    <!--====== NEWS PART ENDS ======-->c
+    <!--====== NEWS PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->
 
@@ -1075,15 +1049,16 @@ if (file_exists($file)) {
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
+
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i
-                                            class="fas fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i
-                                            class="fas fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i
-                                            class="fas fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i
-                                            class="fas fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
+                                            class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
+                                            class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
+                                            class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/misoftwar_official/" target="_blank"><i
+                                            class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1098,6 +1073,7 @@ if (file_exists($file)) {
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
                                 <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                                 <li><a href="review.php"><i class="fa fa-angle-right"></i>Review</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1167,7 +1143,6 @@ if (file_exists($file)) {
                         <div class="form-wrapper">
                             <div class="form-header text-center">
                                 <h3>Free Enquiry!</h3>
-                                <span>Sign up now</span>
                             </div>
                             <div class="form-body">
                                 <form id="enquiryForm">
@@ -1202,7 +1177,7 @@ if (file_exists($file)) {
                                         <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button class="submit-btn" type="submit">Get it Now!</button>
+                                        <button class="submit-btn" type="submit" >Get it Now!</button>
                                     </div>
                                 </form>
                             </div>

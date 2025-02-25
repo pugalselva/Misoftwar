@@ -1,14 +1,15 @@
 <?php
 include 'db.php';
-
+// $obj= new DB();
 $sql = 'SELECT * FROM courses_details WHERE id = 1'; // Change the condition as needed
 $result = $conn->query($sql);
+// $result = $obj->conn->query($sql);
 
 $course = $result->fetch_assoc();
 
 $conn->close();
 ?>
-<!--  -->
+
 <?php
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -100,7 +101,7 @@ if (file_exists($reviewsFile)) {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/stylepage.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
@@ -171,9 +172,8 @@ if (file_exists($reviewsFile)) {
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <!-- <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li> -->
-
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
+                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                             </ul>
                         </div> <!-- right icon -->
                     </div>

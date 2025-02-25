@@ -13,42 +13,42 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
     
     <!--====== Title ======-->
     <title>Misoftwar</title>
-    
-     <!--====== Favicon Icon ======-->
-     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/stylesheet.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!-- newstyle -->
-<link rel="stylesheet" href="css/newstyle.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/stylepage.css">
+
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -114,7 +114,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                         <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                             <div class="right-icon text-right">
                                 <ul>
-                                    <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                    <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                                 <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                                     
                                 </ul>

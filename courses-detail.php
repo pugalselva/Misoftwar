@@ -74,38 +74,38 @@ if (file_exists($reviewsFile)) {
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/stylesheet.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-<!-- newstyle -->
-<link rel="stylesheet" href="css/newstyle.css">
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/stylepage.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
@@ -174,7 +174,7 @@ if (file_exists($reviewsFile)) {
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                                 <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
                                 
                             </ul>
@@ -562,20 +562,25 @@ if (file_exists($reviewsFile)) {
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
-                        <div class="col-lg-12 col-md-6">
+                    <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features</h4>
                                 <ul>
                                     <li>
                                         <i class="fa fa-clock-o"></i>Duration:
-                                        <span>2 Month</span>
+                                        <span><?php echo htmlspecialchars($course['duration']); ?></span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-clone"></i>Training mode: <span>Online and offline </span>
+                                        <i class="fa fa-clone"></i>Training mode:
+                                        <span><?php echo htmlspecialchars($course['training_mode']); ?></span>
                                     </li>
-                                    <li><i class="fa fa-beer"></i> Class Time: <span>1:30 Hours</span></li>
                                     <li>
-                                        <i class="fa fa-user-o"></i>Students: <span>100</span>
+                                        <i class="fa fa-beer"></i> Class Time:
+                                        <span><?php echo htmlspecialchars($course['class_time']); ?></span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-user-o"></i>Students:
+                                        <span><?php echo htmlspecialchars($course['students']); ?></span>
                                     </li>
                                 </ul>
                                 <div class="price-button pt-10">
