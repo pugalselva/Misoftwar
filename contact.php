@@ -1,5 +1,5 @@
 <?php
-include 'db.php';  // Assuming db.php is in the same directory as react.php
+include 'db.php'; // Assuming db.php is in the same directory as react.php
 ?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,10 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
     $subject = trim($_POST['subject']);
     $message = trim($_POST['message']);
-    
+
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         echo json_encode(['status' => 'error', 'message' => 'All fields are required.']);
-        exit;
+        exit();
     }
 
     // Simulating successful email sending
@@ -23,16 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!doctype html>
 <html lang="en">
+
 <head>
-   
+
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!--====== Title ======-->
-    <title>Misoftwar</title>
+    <title>Misoftware Solutions LLP</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
@@ -65,91 +66,96 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/stylepages.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
 
+
 </head>
 
 <body>
-   
+
     <!--====== PRELOADER PART START ======-->
-    
+
     <div class="preloader">
         <div class="loader rubix-cube">
             <div>
-                <img src="images/mi logo1.png" alt="Logo" class="logo-reload">
+                <img src="images/misolution.png" alt="Logo" class="logo-reload">
             </div>
         </div>
     </div>
-    
-        
-        <!--====== PRELOADER PART START ======-->
-    
-        <!--====== HEADER PART START ======-->
-        
-        <header id="header-part"> 
-            <div class="navigation">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-11 col-md-10 col-sm-9 col-9">
-                            <nav class="navbar navbar-expand-lg">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a href="index.php" class="logo-container">
-                                    <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                    <h2 class="logo-text">Misoftwar</h2>
-                                </a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                        
-                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item">
-                                            <a class="active" href="index.php">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="about.php">About us</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="courses.php">Courses</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="events.php">Events</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="project.php">Project</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="contact.php">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav> <!-- nav -->
-                        </div>
-                        <div class="col-lg-1 col-md-2 col-sm-3 col-3">
-                            <div class="right-icon text-right">
-                                <ul>
-                                    <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
-                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
-                                    
+
+
+    <!--====== PRELOADER PART START ======-->
+
+    <!--====== HEADER PART START ======-->
+    <header id="header-part">
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="index.php" class="logo-container">
+                                <img class="logo-image" src="images/misolution.png" alt="Logo">
+                                <!-- <h2 class="logo-text">Misoftware</h2> -->
+                                <h2 class="logo-text ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span></h2>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="active" href="index.php">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about.php">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="courses.php">Courses</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="events.php">Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="project.php">Project</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contact.php">Contact</a>
+                                    </li>
                                 </ul>
-                            </div> <!-- right icon -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div>
-        </header>
-    
+                            </div>
+                        </nav> <!-- nav -->
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-sm-3 col-3">
+                        <div class="right-icon text-right">
+                            <ul>
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
+                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+
+                            </ul>
+                        </div> <!-- right icon -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div>
+    </header>
+
     <!--====== HEADER PART ENDS ======-->
-   
+
     <!--====== SEARCH BOX PART START ======-->
-    
+
     <div class="search-box">
         <div class="serach-form">
             <div class="closebtn">
@@ -162,12 +168,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div> <!-- serach form -->
     </div>
-    
+
     <!--====== SEARCH BOX PART ENDS ======-->
-   
+
     <!--====== PAGE BANNER PART START ======-->
-    
-    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-6.jpg)">
+
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8"
+        style="background-image: url(images/page-banner-6.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -175,77 +182,83 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h2>Contact</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Contact</li>
                             </ol>
                         </nav>
-                    </div>  <!-- page banner cont -->
+                    </div> <!-- page banner cont -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== PAGE BANNER PART ENDS ======-->
-    
+
     <!--====== CONTACT PART START ======-->
-    
+
     <section id="contact-page" class="pt-90 pb-120 gray-bg">
         <div class="container">
             <div class="row">
                 <!-- Contact Form Section -->
-        <div class="col-lg-7 col-md-12">
-            <div class="contact-from mt-30">
-                <div class="section-title">
-                    <h5>Contact Us</h5>
-                    <h2>Keep in touch</h2>
-                </div>
-                <div class="main-form pt-45">
-                    <form id="contact-form" >
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <div class="singel-form form-group">
-                                    <input name="name" type="text" placeholder="Your name" data-error="Name is required." required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="singel-form form-group">
-                                    <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="singel-form form-group">
-                                    <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="singel-form form-group">
-                                    <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="singel-form form-group">
-                                    <textarea name="message" placeholder="Message" data-error="Please leave us a message." required></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-12">
-                                <div class="singel-form">
-                                    <button type="submit" class="main-btn">Send</button>
-                                </div>
-                                    <!-- <p id="messages"></p> -->
-                                
-                            </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="contact-from mt-30">
+                        <div class="section-title">
+                            <h5>Contact Us</h5>
+                            <h2>Keep in touch</h2>
                         </div>
-                    </form>
+                        <div class="main-form pt-45">
+                            <form id="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="singel-form form-group">
+                                            <input name="name" type="text" placeholder="Your name"
+                                                data-error="Name is required." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="singel-form form-group">
+                                            <input name="email" type="email" placeholder="Email"
+                                                data-error="Valid email is required." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="singel-form form-group">
+                                            <input name="subject" type="text" placeholder="Subject"
+                                                data-error="Subject is required." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="singel-form form-group">
+                                            <input name="phone" type="text" placeholder="Phone"
+                                                data-error="Phone is required." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="singel-form form-group">
+                                            <textarea name="message" placeholder="Message" data-error="Please leave us a message." required></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="singel-form">
+                                            <button type="submit" class="main-btn">Send</button>
+                                        </div>
+                                        <!-- <p id="messages"></p> -->
+
+
+                                    </div>
+                                </div>
+                            </form>
+                            <p id="response-message"></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-   
+
                 <!-- Contact Address Section -->
                 <div class="col-lg-5 col-md-12">
                     <div class="contact-address mt-30">
@@ -256,16 +269,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <i class="fa fa-map-marker"></i>
                                     </div>
                                     <div class="cont">
-                                        <h2>Salem:</h2>
-                                        <p>Misoftwar
-                                            No.78, Kudi Street,
-                                            Umayalpuram,
-                                            P.N. Palayam(T.K),
-                                            Salem(D.T)-636119</p>
+                                        <h2>Chennai:</h2>
+                                        <p>MISOFTWARE SOLUTIONS LLP,<br>
+                                            3rd Floor, North Face,
+                                            No.5, Perumal Kovil Street,
+                                            Urapakkam,
+                                            Chengalpattu-District,
+                                            Tamil Nadu-603210.</p>
                                     </div>
                                 </div>
                             </li>
-                            
+
                             <li>
                                 <div class="singel-address">
                                     <div class="icon">
@@ -282,7 +296,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>muthusoftware22@gmail.com</p>
+                                        <p>admin@misoftwaresolutionsllp.com</p>
                                     </div>
                                 </div>
                             </li>
@@ -295,10 +309,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </section>
-    
-    
+
+
     <!--====== CONTACT PART ENDS ======-->
-   
+
     <!--====== FOOTER PART START ======-->
     
     <footer id="footer-part">
@@ -310,14 +324,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="footer-about mt-40">
                             <div class="logo">
                                 <a href="index.php" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
+                                    <img class="logo-images" src="images/misolution.png" alt="Logo">
+                                    <h2 class="logo-texts ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span>
+                                    </h2>
+
                                 </a>
                             </div>
-                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials, guides, and resources to help you master the tools and features of our software.</p>
+                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
+                                guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
-                                            class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
+                                        target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
@@ -327,7 +344,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Support -->
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-link support mt-40">
@@ -342,9 +359,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Contact Us</h6>
@@ -352,11 +369,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Misoftwar
-                                            No.78, Kudi Street,
-                                            Umayalpuram,
-                                            P.N. Palayam(T.K),
-                                            Salem(D.T)-636119</p>
+                                    <p class="Con ml-3">
+                                        3rd Floor, North Face, No.5, Perumal Kovil Street, Urapakkam,
+                                        Chengalpattu-District, Tamil Nadu-603210.
+                                    </p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -364,79 +380,81 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthu22@gmail.com</p>
+                                    <p class="Con ml-3">admin@misoftwaresolutionsllp.com</p>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Copyright Section -->
         <div class="footer-copyright pt-10 pb-25">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
+                    <div class="col-md-8 text-md-left text-center footer-text ">
                         <p>© Copyright PearlSys. All Rights Reserved</p>
                     </div>
-                    <div class="col-md-4 text-md-right text-center">
+                    <div class="col-md-4 text-md-right text-center footer-text">
                         <p>Designed by PearlSys</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
-    
+
+
     <!--====== FOOTER PART ENDS ======-->
-   
+
     <!--====== BACK TO TOP PART START ======-->
-    
+
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-    
+
     <!--====== BACK TO TOP PART ENDS ======-->
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     <!--====== jquery js ======-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 
     <!--====== Bootstrap js ======-->
     <script src="js/bootstrap.min.js"></script>
-    
+
     <!--====== Slick js ======-->
     <script src="js/slick.min.js"></script>
-    
+
     <!--====== Magnific Popup js ======-->
     <script src="js/jquery.magnific-popup.min.js"></script>
-    
+
     <!--====== Counter Up js ======-->
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    
+
     <!--====== Nice Select js ======-->
     <script src="js/jquery.nice-select.min.js"></script>
-    
+
     <!--====== Nice Number js ======-->
     <script src="js/jquery.nice-number.min.js"></script>
-    
+
     <!--====== Count Down js ======-->
     <script src="js/jquery.countdown.min.js"></script>
-    
+
     <!--====== Validator js ======-->
     <script src="js/validator.min.js"></script>
-    
+
     <!--====== Ajax Contact js ======-->
     <script src="js/ajax-contact.js"></script>
-    
+
     <!--====== Main js ======-->
     <script src="js/mainpage.js"></script>
-    
+
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-scripts.js"></script>
@@ -444,56 +462,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<script>
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
 
-  $(document).ready(function () {
-    $('#contact-form').on('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
+                const $form = $(this);
+                const $submitButton = $form.find('button[type="submit"]');
+                const $messages = $('#messages');
 
-        const $form = $(this);
-        const $submitButton = $form.find('button[type="submit"]');
-        const $messages = $('#messages');
+                // Disable the send button to prevent multiple submissions
+                $submitButton.prop('disabled', true).text('Sending...');
 
-        // Disable the send button to prevent multiple submissions
-        $submitButton.prop('disabled', true).text('Sending...');
+                $.ajax({
+                    url: $form.attr('action'),
+                    type: $form.attr('method') || 'POST',
+                    data: $form.serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        console.log('Response:', response); // Log response for debugging
 
-        $.ajax({
-            url: $form.attr('action'), 
-            type: $form.attr('method') || 'POST', 
-            data: $form.serialize(), 
-            dataType: 'json', 
-            success: function (response) {
-                console.log('Response:', response); // Log response for debugging
+                        if (response.status !== 'success') {
+                            // Display error message if the status is not success
+                            $messages
+                                .text(response.message ||
+                                    'There was an issue with your submission.')
+                                .css('color', 'red');
+                        }
 
-                if (response.status !== 'success') {
-                    // Display error message if the status is not success
-                    $messages
-                        .text(response.message || 'There was an issue with your submission.')
-                        .css('color', 'red');
-                }
+                        // Optionally reset the form even on success
+                        $form[0].reset();
+                    },
+                    error: function(xhr) {
+                        console.error('Error:', xhr); // Log error for debugging
 
-                // Optionally reset the form even on success
-                $form[0].reset();
-            },
-            error: function (xhr) {
-                console.error('Error:', xhr); // Log error for debugging
-
-                // Handle server errors or unexpected issues
-                const errorMessage = xhr.responseJSON?.message || 'An error occurred. Please try again later.';
-                $messages
-                    .text(errorMessage)
-                    .css('color', 'red');
-            },
-            complete: function () {
-                // Enable and reset the button text in all cases
-                $submitButton.prop('disabled', false).text('Send');
-            }
+                        // Handle server errors or unexpected issues
+                        const errorMessage = xhr.responseJSON?.message ||
+                            'An error occurred. Please try again later.';
+                        $messages
+                            .text(errorMessage)
+                            .css('color', 'red');
+                    },
+                    complete: function() {
+                        // Enable and reset the button text in all cases
+                        $submitButton.prop('disabled', false).text('Send');
+                    }
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 
-    
+
 
 </body>
+
 </html>

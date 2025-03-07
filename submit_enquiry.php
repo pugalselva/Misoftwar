@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "All fields are required!";
         exit;
     }
+    
 
     // Prepare and execute SQL query
     $stmt = $conn->prepare("INSERT INTO enquiries_table (name, email, phone, course, message) VALUES (?, ?, ?, ?, ?)");

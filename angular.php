@@ -60,14 +60,15 @@ if (file_exists($reviewsFile)) {
 <html lang="en">
 
 <head>
+
     <!--====== Required meta tags ======-->
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Misoftwar</title>
+    <title>Misoftware Solutions LLP</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
@@ -100,28 +101,30 @@ if (file_exists($reviewsFile)) {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/stylepages.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
 
+
 </head>
 
 <body>
+
     <!--====== PRELOADER PART START ======-->
 
     <div class="preloader">
         <div class="loader rubix-cube">
             <div>
-                <img src="images/mi logo1.png" alt="Logo" class="logo-reload" />
+                <img src="images/misolution.png" alt="Logo" class="logo-reload">
             </div>
         </div>
     </div>
 
+
     <!--====== PRELOADER PART START ======-->
 
     <!--====== HEADER PART START ======-->
-
     <header id="header-part">
         <div class="navigation">
             <div class="container">
@@ -136,8 +139,9 @@ if (file_exists($reviewsFile)) {
                                 <span class="icon-bar"></span>
                             </button>
                             <a href="index.php" class="logo-container">
-                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
+                                <img class="logo-image" src="images/misolution.png" alt="Logo">
+                                <!-- <h2 class="logo-text">Misoftware</h2> -->
+                                <h2 class="logo-text ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span></h2>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -173,7 +177,7 @@ if (file_exists($reviewsFile)) {
                         <div class="right-icon text-right">
                             <ul>
                                 <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
-                                <li><a href="login.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
+                                <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
 
                             </ul>
                         </div> <!-- right icon -->
@@ -675,16 +679,17 @@ if (file_exists($reviewsFile)) {
                         <div class="footer-about mt-40">
                             <div class="logo">
                                 <a href="index.php" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
+                                    <img class="logo-images" src="images/misolution.png" alt="Logo">
+                                    <h2 class="logo-texts ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span>
+                                    </h2>
+
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
-
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
-                                            class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
+                                        target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
@@ -711,7 +716,7 @@ if (file_exists($reviewsFile)) {
                     </div>
 
                     <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Contact Us</h6>
@@ -719,11 +724,10 @@ if (file_exists($reviewsFile)) {
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Misoftwar
-                                        No.78, Kudi Street,
-                                        Umayalpuram,
-                                        P.N. Palayam(T.K),
-                                        Salem(D.T)-636119</p>
+                                    <p class="Con ml-3">
+                                        3rd Floor, North Face, No.5, Perumal Kovil Street, Urapakkam,
+                                        Chengalpattu-District, Tamil Nadu-603210.
+                                    </p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -731,22 +735,24 @@ if (file_exists($reviewsFile)) {
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
+                                    <p class="Con ml-3">admin@misoftwaresolutionsllp.com</p>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Copyright Section -->
         <div class="footer-copyright pt-10 pb-25">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
+                    <div class="col-md-8 text-md-left text-center footer-text ">
                         <p>© Copyright PearlSys. All Rights Reserved</p>
                     </div>
-                    <div class="col-md-4 text-md-right text-center">
+                    <div class="col-md-4 text-md-right text-center footer-text">
                         <p>Designed by PearlSys</p>
                     </div>
                 </div>

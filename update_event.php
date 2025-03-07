@@ -10,48 +10,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Misoftwar</title>
+    <title>Misoftware Solutions LLP</title>
 
-<!--====== Favicon Icon ======-->
-<link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
 
-<!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
-<!--====== Animate css ======-->
-<link rel="stylesheet" href="css/animate.css">
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
 
-<!--====== Nice Select css ======-->
-<link rel="stylesheet" href="css/nice-selects.css">
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-selects.css">
 
-<!--====== Nice Number css ======-->
-<link rel="stylesheet" href="css/jquery.nice-number.min.css">
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
 
-<!--====== Magnific Popup css ======-->
-<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-<!--====== Bootstrap css ======-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!--====== Fontawesome css ======-->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
-<!--====== Default css ======-->
-<link rel="stylesheet" href="css/default.css">
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
 
-<!--====== Style css ======-->
-<link rel="stylesheet" href="css/stylesheet.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-<!-- newstyle -->
-<link rel="stylesheet" href="css/stylepage.css">
+    <!-- newstyle -->
+    <link rel="stylesheet" href="css/stylepages.css">
 
-<!--====== Responsive css ======-->
-<link rel="stylesheet" href="css/responsive.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 
+    <!-- Boostrap cdn -->
+    <style>
+        body {
+            /* background: linear-gradient(135deg,#00416A,#E4E5E6); */
+            min-height: 100vh;
+            color: block;
+        }
+        .dropdown-menu{
+            padding:10px
+            /* margin:0px */
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-header h2 {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-
     <!--====== PRELOADER PART START ======-->
 
     <div class="preloader">
@@ -80,9 +140,10 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="index.php" class="logo-container">
+                            <a href="#" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
+                                <!-- <h2 class="logo-text">Misoftwar</h2> -->
+                                <h2 class="logo-text ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span></h2>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -96,13 +157,18 @@
                                         <a class="active" href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="update-course.php">Courses</a>
+                                        <a href="studentform.php">Student Registration</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="update_event.php">Events</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="project.php">Project</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
+                                            Student Report
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="./viewstudent.php">View Student Details</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -121,7 +187,6 @@
             </div>
         </div>
     </header>
-
     <!--====== HEADER PART ENDS ======-->
 
     <!--====== SEARCH BOX PART START ======-->
@@ -143,50 +208,37 @@
     <!--====== PAGE BANNER PART START ======-->
     <section id="page-banner" class="pt-105 pb-110 bg_cover"
         style="background-image: url(images/event/singel-event/se-1.jpg)">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-5 offset-lg-0 col-md-10">
-                    <div class="popup-content">
-                        <div class="form-wrapper">
-                            <div class="form-header text-center">
-                                <h2>Update Events</h2>
-                            </div>
-                            <div class="form-bodys">
-
-                                <form id="enquiryForm" action="process_event.php" method="post">
-                                    <div class="form-groups">
-                                        <label for="event-date">Event Date</label>
-                                        <input type="date" id="event-date" name="event_date" required>
-                                    </div>
-                                    <div class="form-groups">
-                                        <label for="event-title">Event Title</label>
-                                        <input type="text" id="event-title" name="event_title"
-                                            placeholder="Enter event title" required>
-
-                                    </div>
-                                    <div class="form-groups">
-                                        <label for="event-time">Event Time</label>
-                                        <input type="text" id="event-time" name="event_time"
-                                            placeholder="e.g., 10:00 AM - 3:00 PM" required>
-
-                                    </div>
-                                    <div class="form-groups">
-                                        <label for="event-location">Event Location</label>
-                                        <input type="text" id="event-location" name="event_location"
-                                            placeholder="Enter event location" required>
-
-                                    </div>
-                                    <div class="form-groups">
-                                        <button type="submit">Update Event</button>
-                                    </div>
-
-                                </form> <!-- row -->
-                            </div><!-- container -->
-                        </div>
-                    </div>
-                </div>
+        <div class="container mt-4">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Update Event</h2>
             </div>
+            <form id="enquiryForm" action="process_event.php" method="post">
+                <div class="form-group">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" id="event-date" name="event_date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-title">Event Title</label>
+                    <input type="text" id="event-title" name="event_title" class="form-control"
+                        placeholder="Enter event title" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-time">Event Time</label>
+                    <input type="text" id="event-time" name="event_time" class="form-control"
+                        placeholder="e.g., 10:00 AM - 3:00 PM" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-location">Event Location</label>
+                    <input type="text" id="event-location" name="event_location" class="form-control"
+                        placeholder="Enter event location" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Update Event</button>
+                </div>
+            </form>
         </div>
+    </div>
     </section>
 
     <!--====== PAGE BANNER PART ENDS ======-->
@@ -204,21 +256,23 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.php" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
+                                <a href="index.php" class="logo-container d-flex align-items-center">
+                                    <img class="logo-images" src="images/misolution.png" alt="Logo">
+                                    <h2 class="logo-texts ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span>
+                                    </h2>
+
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"><i
-                                            class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="http://www.linkedin.com/in/misoftwar-aa7b87342"><i
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
+                                        target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCDp-Yi1G5pNbYOGozc4rt_w"><i
+                                <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
                                             class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.instagram.com/misoftwar_official/"><i
+                                <li><a href="https://www.instagram.com/misoftwar_official/" target="_blank"><i
                                             class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
@@ -240,7 +294,7 @@
                     </div>
 
                     <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Contact Us</h6>
@@ -248,11 +302,10 @@
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Misoftwar
-                                        No.78, Kudi Street,
-                                        Umayalpuram,
-                                        P.N. Palayam(T.K),
-                                        Salem(D.T)-636119</p>
+                                    <p class="Con ml-3">
+                                        3rd Floor, North Face, No.5, Perumal Kovil Street, Urapakkam,
+                                        Chengalpattu-District, Tamil Nadu-603210.
+                                    </p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -260,22 +313,24 @@
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
+                                    <p class="Con ml-3">admin@misoftwaresolutionsllp.com</p>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Copyright Section -->
         <div class="footer-copyright pt-10 pb-25">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
+                    <div class="col-md-8 text-md-left text-center footer-text ">
                         <p>© Copyright PearlSys. All Rights Reserved</p>
                     </div>
-                    <div class="col-md-4 text-md-right text-center">
+                    <div class="col-md-4 text-md-right text-center footer-text">
                         <p>Designed by PearlSys</p>
                     </div>
                 </div>
@@ -329,6 +384,7 @@
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

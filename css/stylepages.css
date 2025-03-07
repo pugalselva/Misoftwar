@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
 /* review page img size */
 .author-thumb {
     width: 50px;
@@ -296,7 +300,35 @@
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
 
-        /* review page  */
+        /* footer page  */
+        .logo-text span {
+            font-size: 15px;
+            white-space: nowrap;
+            font-family: Arial, sans-serif;
+            color: #4267b2;
+        }
+
+        .footer-text p {
+            color: white;
+        }
+
+        .logo-texts span {
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        .logo-images {
+            width: 70px;
+            /* Adjust size as needed */
+            height: 70px;
+            /* Ensure it's a perfect square */
+            border-radius: 50%;
+            /* Makes it circular */
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+            /* Soft shadow */
+            object-fit: cover;
+            /* Ensures the image fills the circle properly */
+        }
        
         
         /* Responsive Design for Different Screen Sizes */

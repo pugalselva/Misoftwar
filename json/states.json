@@ -1,0 +1,148 @@
+[
+    {"name": "select state", "state": "select state"}, 
+ 
+    {
+    "key": "AN",
+    "state": "Andaman and Nicobar Islands"
+    },
+    {
+    "key": "AP",
+    "state": "Andhra Pradesh"
+    },
+    {
+    "key": "AR",
+    "state": "Arunachal Pradesh"
+    },
+    {
+    "key": "AS",
+    "state": "Assam"
+    },
+    {
+    "key": "BR",
+    "state": "Bihar"
+    },
+    {
+    "key": "CG",
+    "state": "Chandigarh"
+    },
+    {
+    "key": "CH",
+    "state": "Chhattisgarh"
+    },
+    {
+    "key": "DH",
+    "state": "Dadra and Nagar Haveli"
+    },
+    {
+    "key": "DD",
+    "state": "Daman and Diu"
+    },
+    {
+    "key": "DL",
+    "state": "Delhi"
+    },
+    {
+    "key": "GA",
+    "state": "Goa"
+    },
+    {
+    "key": "GJ",
+    "state": "Gujarat"
+    },
+    {
+    "key": "HR",
+    "state": "Haryana"
+    },
+    {
+    "key": "HP",
+    "state": "Himachal Pradesh"
+    },
+    {
+    "key": "JK",
+    "state": "Jammu and Kashmir"
+    },
+    {
+    "key": "JH",
+    "state": "Jharkhand"
+    },
+    {
+    "key": "KA",
+    "state": "Karnataka"
+    },
+    {
+    "key": "KL",
+    "state": "Kerala"
+    },
+    {
+    "key": "LD",
+    "state": "Lakshadweep"
+    },
+    {
+    "key": "MP",
+    "state": "Madhya Pradesh"
+    },
+    {
+    "key": "MH",
+    "state": "Maharashtra"
+    },
+    {
+    "key": "MN",
+    "state": "Manipur"
+    },
+    {
+    "key": "ML",
+    "state": "Meghalaya"
+    },
+    {
+    "key": "MZ",
+    "state": "Mizoram"
+    },
+    {
+    "key": "NL",
+    "state": "Nagaland"
+    },
+    {
+    "key": "OR",
+    "state": "Odisha"
+    },
+    {
+    "key": "PY",
+    "state": "Puducherry"
+    },
+    {
+    "key": "PB",
+    "state": "Punjab"
+    },
+    {
+    "key": "RJ",
+    "state": "Rajasthan"
+    },
+    {
+    "key": "SK",
+    "state": "Sikkim"
+    },
+    {
+    "key": "TN",
+    "state": "Tamil Nadu"
+    },
+    {
+    "key": "TS",
+    "state": "Telangana"
+    },
+    {
+    "key": "TR",
+    "state": "Tripura"
+    },
+    {
+    "key": "UK",
+    "state": "Uttar Pradesh"
+    },
+    {
+    "key": "UP",
+    "state": "Uttarakhand"
+    },
+    {
+    "key": "WB",
+    "state": "West Bengal"
+    }
+ ]

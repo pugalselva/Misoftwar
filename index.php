@@ -27,7 +27,7 @@ if (file_exists($file)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Misoftwar</title>
+    <title>Misoftwar Solutions LLP</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
@@ -60,16 +60,10 @@ if (file_exists($file)) {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/stylepages.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
-
-    <!--icon cdn fas fa  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">     -->
-    
-    <!--icon cdn fa fa  -->
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <!-- stylesheet  icon-->
     <style>
@@ -163,8 +157,9 @@ if (file_exists($file)) {
                                 <span class="icon-bar"></span>
                             </button>
                             <a href="index.php" class="logo-container">
-                                <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
+                                <img class="logo-image" src="images/misolution.png" alt="Logo">
+                                <!-- <h2 class="logo-text">Misoftware</h2> -->
+                                <h2 class="logo-text ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span></h2>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -196,22 +191,12 @@ if (file_exists($file)) {
                             </div>
                         </nav> <!-- nav -->
                     </div>
-                    <style>
-                       
-                    </style>
                     <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                         <div class="right-icon text-right">
                             <ul>
-                            
-                            <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
+                                <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                                 <li><a href="adminlogin.php"><i class="fa fa-user-circle-o"></i><span></span></a></li>
-                               <!-- <li class="dropdown">
-                                    <a href="#"><i class="fa fa-user-circle-o"></i></a>
-                                    <div class="dropdown-content">
-                                        <a href="login.php"><i class="fas fa-sign-in-alt"></i> User Login</a>
-                                        <a href="adminlogin.php"><i class="fas fa-user-shield"></i> Admin Login</a>
-                                    </div>
-                                </li> -->
+
                             </ul>
                         </div> <!-- right icon -->
                     </div>
@@ -531,7 +516,7 @@ if (file_exists($file)) {
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#">
+                            <a href="angular.php">
                                 <h4>AngularJS</h4>
                             </a>
                         </div>
@@ -1043,16 +1028,17 @@ if (file_exists($file)) {
                         <div class="footer-about mt-40">
                             <div class="logo">
                                 <a href="index.php" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
+                                    <img class="logo-images" src="images/misolution.png" alt="Logo">
+                                    <h2 class="logo-texts ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span>
+                                    </h2>
+
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
-
                             <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
-                                            class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
+                                        target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
@@ -1079,7 +1065,7 @@ if (file_exists($file)) {
                     </div>
 
                     <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Contact Us</h6>
@@ -1087,11 +1073,10 @@ if (file_exists($file)) {
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Misoftwar
-                                        No.78, Kudi Street,
-                                        Umayalpuram,
-                                        P.N. Palayam(T.K),
-                                        Salem(D.T)-636119</p>
+                                    <p class="Con ml-3">
+                                        3rd Floor, North Face, No.5, Perumal Kovil Street, Urapakkam,
+                                        Chengalpattu-District, Tamil Nadu-603210.
+                                    </p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -1099,22 +1084,24 @@ if (file_exists($file)) {
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
+                                    <p class="Con ml-3">admin@misoftwaresolutionsllp.com</p>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Copyright Section -->
         <div class="footer-copyright pt-10 pb-25">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
+                    <div class="col-md-8 text-md-left text-center footer-text ">
                         <p>© Copyright PearlSys. All Rights Reserved</p>
                     </div>
-                    <div class="col-md-4 text-md-right text-center">
+                    <div class="col-md-4 text-md-right text-center footer-text">
                         <p>Designed by PearlSys</p>
                     </div>
                 </div>
@@ -1148,18 +1135,18 @@ if (file_exists($file)) {
                                 <form id="enquiryForm">
                                     <div class="form-group">
                                         <input type="text" id="name" name="name" placeholder="Your Name"
-                                            require>
+                                        required>
                                     </div>
                                     <div class="form-group">
                                         <input type="email" id="email" name="email" placeholder="Your Email"
-                                            require>
+                                        required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" id="phone" name="phone" placeholder="Your Phone"
-                                            require>
+                                        required>
                                     </div>
                                     <div class="form-group">
-                                        <select id="course" name="course" require>
+                                        <select id="course" name="course" required>
                                             <option value="">Select Course</option>
                                             <option value="web.php">HTML</option>
                                             <option value="web.php">CSS</option>
@@ -1174,7 +1161,7 @@ if (file_exists($file)) {
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+                                        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
                                     </div>
                                     <div class="form-group">
                                         <button class="submit-btn" type="submit" >Get it Now!</button>
@@ -1317,6 +1304,7 @@ if (file_exists($file)) {
             }
         });
     </script>
+    
 
 </body>
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 /*
   Theme Name: Edubin - LMS Education HTML Template
   Author: ZeTheme
@@ -205,6 +207,11 @@ img {
     color: #4267b2; /* Adjust text color */
     margin:5px ; /* Removes default margin */
     font-family: Arial, sans-serif; /* Choose your preferred font */
+}
+.logo-text span {
+    font-size: 15px;
+    white-space: nowrap;
+    color:#4267b2;
 }
 
 

@@ -2,7 +2,9 @@
 // include "./session.php";
 
 
-include_once "./db.php";
+// include_once "./db.php";
+include "database.php";
+
 $obj = new DB();
 
 if(isset($_GET['studentid']))

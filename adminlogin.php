@@ -66,10 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/stylepages.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- adminlogin. css -->
+    <link rel="stylesheet" href="css/adminlogin.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -77,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        body {
+        /* body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
@@ -148,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         .btn-primary:hover {
             background-color: #0056b3;
-        }
+        } */
     </style>
     <!-- stylesheet -->
 

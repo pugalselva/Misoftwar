@@ -21,10 +21,6 @@ $total_pages = ceil($enquiries_count / $records_per_page);
 $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DESC LIMIT $records_per_page OFFSET $offset");
 ?>
 
-<?php
-// Include the project_count.php file
-// $project_count = include 'path/to/project.php'; 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +34,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Misoftwar</title>
+    <title>Misoftware Solutions LLP</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/mi logo1.png" type="image/png">
@@ -71,7 +67,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <!-- newstyle -->
-    <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/stylepages.css">
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
@@ -83,6 +79,11 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
             min-height: 100vh;
             color: block;
         }
+        .dropdown-menu{
+            padding:10px
+            /* margin:0px */
+        }
+
     </style>
 </head>
 
@@ -117,7 +118,8 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                             </button>
                             <a href="#" class="logo-container">
                                 <img class="logo-image" src="images/mi logo1.png" alt="Logo">
-                                <h2 class="logo-text">Misoftwar</h2>
+                                <!-- <h2 class="logo-text">Misoftwar</h2> -->
+                                <h2 class="logo-text ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span></h2>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -131,13 +133,18 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                         <a class="active" href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="update-course.php">Courses</a>
+                                        <a href="studentform.php">Student Registration</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="update_event.php">Events</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="project.php">Project</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
+                                            Student Report
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="./viewstudent.php">View Student Details</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -276,16 +283,18 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="index-2.php" class="logo-container d-flex align-items-center">
-                                    <img class="logo-image" src="images/MI logo.png" alt="Logo">
-                                    <h2 class="logo-texts ml-3">Misoftwar</h2>
+                                <a href="index.php" class="logo-container d-flex align-items-center">
+                                    <img class="logo-images" src="images/misolution.png" alt="Logo">
+                                    <h2 class="logo-texts ml-3 d-flex flex-column">Misoftware<span>Solutions LLP</span>
+                                    </h2>
+
                                 </a>
                             </div>
                             <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
-                                <ul class="mt-20 d-flex">
-                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777" target="_blank"><i
-                                            class="fa fa-facebook-f"></i></a></li>
+                            <ul class="mt-20 d-flex">
+                                <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
+                                        target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/misoftwar/" target="_blank"><i
                                             class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://www.youtube.com/@Misoftwar" target="_blank"><i
@@ -306,12 +315,13 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                 <li><a href="events.php"><i class="fa fa-angle-right"></i>Events</a></li>
                                 <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                                 <li><a href="review.php"><i class="fa fa-angle-right"></i>Review</a></li>
+
                             </ul>
                         </div>
                     </div>
 
                     <!-- Contact -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
                                 <h6>Contact Us</h6>
@@ -319,11 +329,10 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                             <ul>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-map-marker"></i>
-                                    <p class="Con ml-3">Misoftwar
-                                        No.78, Kudi Street,
-                                        Umayalpuram,
-                                        P.N. Palayam(T.K),
-                                        Salem(D.T)-636119</p>
+                                    <p class="Con ml-3">
+                                        3rd Floor, North Face, No.5, Perumal Kovil Street, Urapakkam,
+                                        Chengalpattu-District, Tamil Nadu-603210.
+                                    </p>
                                 </li>
                                 <li class="d-flex mb-3">
                                     <i class="fa fa-phone"></i>
@@ -331,22 +340,24 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa fa-envelope-o"></i>
-                                    <p class="Con ml-3">muthusoftware22@gmail.com</p>
+                                    <p class="Con ml-3">admin@misoftwaresolutionsllp.com</p>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Copyright Section -->
         <div class="footer-copyright pt-10 pb-25">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 text-md-left text-center">
+                    <div class="col-md-8 text-md-left text-center footer-text ">
                         <p>© Copyright PearlSys. All Rights Reserved</p>
                     </div>
-                    <div class="col-md-4 text-md-right text-center">
+                    <div class="col-md-4 text-md-right text-center footer-text">
                         <p>Designed by PearlSys</p>
                     </div>
                 </div>
@@ -407,7 +418,7 @@ $enquiries = $conn->query("SELECT * FROM enquiries_table ORDER BY created_at DES
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
