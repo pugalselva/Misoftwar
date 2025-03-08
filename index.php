@@ -899,12 +899,12 @@ if (file_exists($file)) {
                 <div class="col-lg-6">
                     <div class="happy-student mt-55">
                         <div class="happy-title">
-                            <h3>Happy Graduates from Misoftwar</h3>
+                            <h3>Happy Graduates from Mi-Software Solutions LLP</h3>
                         </div>
                         <div class="student-slied">
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>“The Misoftwar program provided me with invaluable hands-on experience and practical
+                                <p>“The Mi-Software Solutions LLP program provided me with invaluable hands-on experience and practical
                                     skills that helped me secure a position as a Junior Developer. I couldn't be
                                     happier!”</p>
                                 <h6>Riya Singh</h6>
@@ -913,7 +913,7 @@ if (file_exists($file)) {
 
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>“The mentorship and networking opportunities at Misoftwar were instrumental in my
+                                <p>“The mentorship and networking opportunities at Mi-Software Solutions LLP were instrumental in my
                                     career. I connected with industry leaders and landed a role as a Full Stack
                                     Developer.”</p>
                                 <h6>Vikram Patel</h6>
@@ -922,7 +922,7 @@ if (file_exists($file)) {
 
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>“Completing the Misoftwar course equipped me with the skills and confidence to excel
+                                <p>“Completing theMi-Software Solutions LLP course equipped me with the skills and confidence to excel
                                     in the tech industry. I am now a proud Software Engineer!”</p>
                                 <h6>Neha Joshi</h6>
                                 <span>Software Engineer, Future Tech</span>
@@ -1034,7 +1034,7 @@ if (file_exists($file)) {
 
                                 </a>
                             </div>
-                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
+                            <p>Welcome to Mi-Software Solutions LLP Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
                                 <li><a href="https://www.facebook.com/profile.php?id=61571215133777"

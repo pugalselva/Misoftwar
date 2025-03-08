@@ -675,7 +675,7 @@ if (file_exists($reviewsFile)) {
 
                                 </a>
                             </div>
-                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
+                            <p>Welcome to Mi-Software Solutions LLP Software Training. Our platform provides comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
                                 <li><a href="https://www.facebook.com/profile.php?id=61571215133777"

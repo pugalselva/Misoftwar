@@ -1,8 +1,9 @@
 <?php
-include 'db.php';  // Assuming db.php is in the same directory as react.php
+include 'db.php'; // Assuming db.php is in the same directory as react.php
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
 
     <!--====== Required meta tags ======-->
@@ -49,6 +50,71 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- CSS Styling -->
+    <style>
+        .about-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-single-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .about-single-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .item-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .mission-list {
+            text-align: left;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .mission-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .mission-list li strong {
+            margin-left: 5px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .about-single-item {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 
 
 </head>
@@ -130,11 +196,11 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
             </div> <!-- container -->
         </div>
     </header>
-    
+
     <!--====== HEADER PART ENDS ======-->
-   
+
     <!--====== SEARCH BOX PART START ======-->
-    
+
     <div class="search-box">
         <div class="serach-form">
             <div class="closebtn">
@@ -147,12 +213,13 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
             </form>
         </div> <!-- serach form -->
     </div>
-    
+
     <!--====== SEARCH BOX PART ENDS ======-->
-   
+
     <!--====== PAGE BANNER PART START ======-->
-    
-    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-1.jpg)">
+
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
+        style="background-image: url(images/page-banner-1.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -164,106 +231,149 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
                             </ol>
                         </nav>
-                    </div>  <!-- page banner cont -->
+                    </div> <!-- page banner cont -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== PAGE BANNER PART ENDS ======-->
-   
+
     <!--====== ABOUT PART START ======-->
-    
+
     <section id="about-page" class="pt-70 pb-110">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
                         <h5>About Us</h5>
-                        <h2>Welcome to Misoftwar</h2>
+                        <h3>Mi-Software Solutions LLP</h3>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Misoftwar is a leading software development company dedicated to delivering innovative solutions that empower businesses to thrive in the digital age. Our team of experienced professionals is committed to providing high-quality software products tailored to meet the unique needs of our clients. <br><br> With a focus on cutting-edge technology and customer satisfaction, we strive to create software that not only meets but exceeds expectations. Join us on our journey to transform the way businesses operate through technology.</p>
+                        <p>Mi-Software Solutions LLP is a leading software development company dedicated to delivering
+                            innovative
+                            solutions that empower businesses to thrive in the digital age. Our team of experienced
+                            professionals is committed to providing high-quality software products tailored to meet the
+                            unique needs of our clients. <br><br> With a focus on cutting-edge technology and customer
+                            satisfaction, we strive to create software that not only meets but exceeds expectations.
+                            Join us on our journey to transform the way businesses operate through technology.</p>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/event/Event-1.jpeg" alt="About Misoftwar">
-                    </div>  <!-- about image -->
-                </div> 
+                        <img src="images/event/Event-1.jpeg" alt="About Mi-Software Solutions LLP">
+                    </div> <!-- about image -->
+                </div>
             </div> <!-- row -->
             <div class="about-items pt-60">
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="about-singel-items mt-30">
-                            <span>01</span>
-                            <h4>Why Choose Us</h4>
-                            <p>At Misoftwar, we prioritize our clients' needs and work closely with them to deliver customized solutions. Our agile development process ensures flexibility and quick adaptation to changes, making us a reliable partner for your software needs.</p>
-                        </div> <!-- about single -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="about-single-item">
+                            <span class="item-number">01</span>
+                            <h4>Our Mission – Innovation with Impact</h4>
+                            <p>At Mi-Software Solutions LLP, we don’t just develop software—we build possibilities. We
+                                are driven by:</p>
+                            <ul class="mission-list">
+                                <li>🌍 <strong>Equality in Access</strong> – Technology should serve all, not just the
+                                    privileged.</li>
+                                <li>📌 <strong>Customer-Centric Innovation</strong> – Your needs define our solutions.
+                                </li>
+                                <li>🚀 <strong>Bridging the Digital Divide</strong> – Making complex technology simple,
+                                    seamless, and smart.</li>
+                                <li>💡 <strong>A Future Without Limits</strong> – Where every business, every
+                                    entrepreneur, and every dreamer can thrive.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="about-singel-items mt-30">
-                            <span>02</span>
-                            <h4>Our Mission</h4>
-                            <p>Our mission is to empower businesses through innovative software solutions that enhance productivity and drive growth. We aim to leverage technology to solve real-world problems and create value for our clients.</p>
-                        </div> <!-- about single -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="about-single-item">
+                            <span class="item-number">02</span>
+                            <h4>What We Do – Turning Vision into Reality</h4>
+                            <p>We craft intelligent, intuitive, and impact-driven solutions tailored for every industry:
+                            </p>
+                            <ul class="mission-list">
+                                <li>✔ <strong>E-Commerce Platforms</strong> – Bringing businesses online with ease.</li>
+                                <li>✔ <strong>POS Systems</strong> – Revolutionizing transactions with speed and
+                                    simplicity.</li>
+                                <li>✔ <strong>Industrial Software</strong> – Powering precision, efficiency, and
+                                    automation.</li>
+                                <li>✔ <strong>HR & Payroll Solutions</strong> – Streamlining workforce management with
+                                    innovation.</li>
+                                <li>✔ <strong>Supermarket Software</strong> – Enhancing retail experiences through
+                                    technology.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="about-singel-items mt-30">
-                            <span>03</span>
-                            <h4>Our Vision</h4>
-                            <p>We envision a world where technology seamlessly integrates into everyday business operations, enabling organizations to achieve their full potential. Our goal is to be at the forefront of this transformation, leading the way in software innovation.</p>
-                        </div> <!-- about single -->
+                    <!-- Our Vision -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="about-single-item">
+                            <span class="item-number">03</span>
+                            <h4>Our Vision – Technology Without Limits</h4>
+                            <p>We believe that technology should be a force of empowerment, not a barrier. That’s why we
+                                are building software that is:</p>
+                            <ul class="mission-list">
+                                <li>✨ <strong>Effortless & Inclusive</strong> – No technical expertise required—anyone
+                                    can use it.</li>
+                                <li>✨ <strong>Adaptable & Scalable</strong> – From small businesses to global
+                                    enterprises, our solutions grow with you.</li>
+                                <li>✨ <strong>Affordable & Powerful</strong> – High performance without high
+                                    costs—excellence within reach.</li>
+                                <li>✨ <strong>Designed for Everyone</strong> – Whether you run a tea shop or a
+                                    multinational corporation, technology should work for you.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- about items -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== ABOUT PART ENDS ======-->
 
     <!--====== COUNTER PART START ======-->
-    
-    
-    
+
+
+
     <!--====== COUNTER PART ENDS ======-->
-   
+
     <!--====== TEACHERS PART START ======-->
-    
+
     <section id="teachers-part" class="pt-65 pb-120">
         <!-- <div class="container"> -->
-            <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">1500</span>+</span>
-                                <p>Trained Students</p>
-                            </div> <!-- singel counter -->
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">10</span>+</span>
-                                <p>Courses Uploaded</p>
-                            </div> <!-- singel counter -->
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="singel-counter text-center mt-40">
-                                <span><span class="counter">2000</span>+</span>
-                                <p>People certifie</p>
-                            </div> <!-- singel counter -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div>
-            <!-- row -->
+        <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8"
+            style="background-image: url(images/bg-2.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="singel-counter text-center mt-40">
+                            <span><span class="counter">1500</span>+</span>
+                            <p>Trained Students</p>
+                        </div> <!-- singel counter -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="singel-counter text-center mt-40">
+                            <span><span class="counter">10</span>+</span>
+                            <p>Courses Uploaded</p>
+                        </div> <!-- singel counter -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="singel-counter text-center mt-40">
+                            <span><span class="counter">1500</span>+</span>
+                            <p>People certifie</p>
+                        </div> <!-- singel counter -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div>
+        <!-- row -->
         <!-- </div> container -->
     </section>
-    
+
     <!--====== TEACHERS PART ENDS ======-->
-   
+
     <!--====== TEASTIMONIAL PART START ======-->
-    <section id="testimonial" class="bg_cover pt-115 pb-120" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+    <section id="testimonial" class="bg_cover pt-115 pb-120" data-overlay="8"
+        style="background-image: url(images/bg-2.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -283,7 +393,8 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                            <p>"Misoftwar transformed our business with their innovative software solutions. Their team was professional and attentive to our needs."</p>
+                            <p>"Misoftware Solutions LLP transformed our business with their innovative software
+                                solutions. Their team was professional and attentive to our needs."</p>
                             <h6>Rubina Helen</h6>
                             <span>Project Manager, Tech Solutions</span>
                         </div>
@@ -298,7 +409,8 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                            <p>"The team at Misoftwar delivered our project on time and exceeded our expectations. Their expertise in software development is unmatched."</p>
+                            <p>"The team at Misoftware Solutions LLP delivered our project on time and exceeded our
+                                expectations. Their expertise in software development is unmatched."</p>
                             <h6>Mark Anderson</h6>
                             <span>CEO, Innovative Tech</span>
                         </div>
@@ -313,7 +425,8 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                            <p>"Working with Misoftwar was a game-changer for our startup. Their solutions helped us scale quickly and efficiently."</p>
+                            <p>"Working with Misoftware Solutions LLP was a game-changer for our startup. Their
+                                solutions helped us scale quickly and efficiently."</p>
                             <h6>Fatima Ali</h6>
                             <span>Co-Founder, StartUp Hub</span>
                         </div>
@@ -322,11 +435,11 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
             </div> <!-- testimonial slied -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== TEASTIMONIAL PART ENDS ======-->
-   
+
     <!--====== PATNAR LOGO PART START ======-->
-    
+
     <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
         <div class="container">
             <div class="row patnar-slied">
@@ -362,12 +475,12 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </div> 
-    
+    </div>
+
     <!--====== PATNAR LOGO PART ENDS ======-->
-   
+
     <!--====== FOOTER PART START ======-->
-    
+
     <footer id="footer-part">
         <div class="footer-top pt-40 pb-70">
             <div class="container">
@@ -383,7 +496,8 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 
                                 </a>
                             </div>
-                            <p>Welcome to Misoftwar Software Training. Our platform provides comprehensive tutorials,
+                            <p>Welcome to Misoftware Solutions LLP Software Training. Our platform provides
+                                comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
                                 <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
@@ -457,13 +571,13 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
             </div>
         </div>
     </footer>
-    
+
     <!--====== FOOTER PART ENDS ======-->
-   
+
     <!--====== BACK TO TOP PART START ======-->
-    
+
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-    
+
     <!--====== BACK TO TOP PART ENDS ======-->
 
 
@@ -473,38 +587,39 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
 
     <!--====== Bootstrap js ======-->
     <script src="js/bootstrap.min.js"></script>
-    
+
     <!--====== Slick js ======-->
     <script src="js/slick.min.js"></script>
-    
+
     <!--====== Magnific Popup js ======-->
     <script src="js/jquery.magnific-popup.min.js"></script>
-    
+
     <!--====== Counter Up js ======-->
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    
+
     <!--====== Nice Select js ======-->
     <script src="js/jquery.nice-select.min.js"></script>
-    
+
     <!--====== Nice Number js ======-->
     <script src="js/jquery.nice-number.min.js"></script>
-    
+
     <!--====== Count Down js ======-->
     <script src="js/jquery.countdown.min.js"></script>
-    
+
     <!--====== Validator js ======-->
     <script src="js/validator.min.js"></script>
-    
+
     <!--====== Ajax Contact js ======-->
     <script src="js/ajax-contact.js"></script>
-    
+
     <!--====== Main js ======-->
     <script src="js/mainpage.js"></script>
-    
+
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="js/map-script.js"></script>
 
 </body>
+
 </html>
