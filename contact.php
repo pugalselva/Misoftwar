@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.php">Home</a>
+                                        <a  href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.php">About us</a>
@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <a href="project.php">Project</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.php">Contact</a>
+                                        <a class="active" href="contact.php">Contact</a>
                                     </li>
                                 </ul>
                             </div>

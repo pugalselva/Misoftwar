@@ -97,7 +97,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.php">Home</a>
+                                        <a  href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.php">About us</a>
@@ -109,7 +109,7 @@ include 'db.php';  // Assuming db.php is in the same directory as react.php
                                         <a href="events.php">Events</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="project.php">Project</a>
+                                        <a class="active" href="project.php">Project</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="contact.php">Contact</a>

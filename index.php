@@ -123,6 +123,62 @@ if (file_exists($file)) {
         .popup-wrapper1 .popup-content .form-header {
             border-radius: 0px !important;
         }
+
+        /* Container Styles */
+        #course-search-form {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        #course-search-form:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Dropdown Styling */
+        .stylish-select {
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Focus Effect */
+        .stylish-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Button Styling */
+        .stylish-btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Button Hover */
+        .stylish-btn:hover {
+            background: linear-gradient(135deg, #0056b3, #003f7f);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .input-group {
+                flex-direction: column;
+            }
+
+            .input-group-append {
+                margin-top: 8px;
+            }
+        }
     </style>
 </head>
 
@@ -170,22 +226,22 @@ if (file_exists($file)) {
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.php">Home</a>
+                                        <a class="active" href="index.php" >Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.php">About us</a>
+                                        <a href="about.php" >About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.php">Courses</a>
+                                        <a href="courses.php" >Courses</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="events.php">Events</a>
+                                        <a href="events.php" >Events</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="project.php">Project</a>
+                                        <a href="project.php" >Project</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.php">Contact</a>
+                                        <a href="contact.php" >Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -223,7 +279,6 @@ if (file_exists($file)) {
     </div>
 
     <!--====== SEARCH BOX PART ENDS ======-->
-
     <!--====== SLIDER PART START ======-->
     <section id="slider-part-3" class="bg_cover" style="background-image: url(images/slider/sw-1.jpg)">
         <div class="container">
@@ -233,34 +288,38 @@ if (file_exists($file)) {
                         <h2>Search for Preferred Courses</h2>
                         <span>More than courses for you</span>
                         <div class="slider-search mt-4">
-                            <form id="course-search-form">
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6 col-md-4">
-                                        <select class="form-control" id="course-select">
-                                            <option value="">Select Course</option>
-                                            <option value="web.php">HTML</option>
-                                            <option value="web.php">CSS</option>
-                                            <option value="web.php">JavaScript</option>
-                                            <option value="react.php">Reactjs</option>
-                                            <option value="angular.php">Angularjs</option>
-                                            <option value="php.php">PHP</option>
-                                            <option value="sql.php">MYSQL</option>
-                                            <option value="net.php">.Net Framework</option>
-                                            <option value="core-java.php">Core-Java</option>
-                                            <option value="spring.php">Spring Framework</option>
-                                        </select>
+                            <form id="course-search-form" class="p-4 bg-white shadow rounded">
+                                <div class="row g-3 align-items-center">
+                                    <!-- Dropdown Select -->
+                                    <div class="col-12 col-md-8">
+                                        <div class="input-group">
+                                            <select class="form-control stylish-select" id="course-select">
+                                                <option value="">Select Course</option>
+                                                <option value="web.php">HTML</option>
+                                                <option value="web.php">CSS</option>
+                                                <option value="web.php">JavaScript</option>
+                                                <option value="react.php">React.js</option>
+                                                <option value="angular.php">Angular.js</option>
+                                                <option value="php.php">PHP</option>
+                                                <option value="sql.php">MySQL</option>
+                                                <option value="net.php">.Net Framework</option>
+                                                <option value="core-java.php">Core Java</option>
+                                                <option value="spring.php">Spring Framework</option>
+                                            </select>
+
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-md-5 col-md-3 ">
-                                        <input type="text" id="search-keyword" class="form-control"
-                                            placeholder="Search keyword">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-3">
-                                        <button type="button" class="btn btn-primary main-btn"
-                                            id="search-button">Search Now</button>
+                                    <!-- Search Button -->
+                                    <div class="col-12 col-md-4">
+                                        <button type="button" class="btn btn-primary stylish-btn w-100"
+                                            id="search-button">
+                                            <i class="fa fa-search"></i> Search Now
+                                        </button>
                                     </div>
                                 </div>
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -706,9 +765,9 @@ if (file_exists($file)) {
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
                     <div class="count-down-cont pt-50">
-                        <h3>Free online and offline demo </h3>
+                        <h3>Free online and offline demo</h3>
                         <h2>Sign up Now</h2>
-                        <div data-countdown="2019/03/01"></div>
+                        <div id="countdown"></div>
                     </div> <!-- count down cont -->
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-8">
@@ -717,7 +776,7 @@ if (file_exists($file)) {
                             <h3>Free Enquiry!</h3>
                         </div>
                         <div class="main-form">
-                            <form id="enquiryForm1" class="form-body">
+                            <form id="enquiryForm" class="form-body">
                                 <div class="form-group">
                                     <input type="text" id="name" name="name" placeholder="Your Name"
                                         required>
@@ -904,7 +963,8 @@ if (file_exists($file)) {
                         <div class="student-slied">
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>“The Mi-Software Solutions LLP program provided me with invaluable hands-on experience and practical
+                                <p>“The Mi-Software Solutions LLP program provided me with invaluable hands-on
+                                    experience and practical
                                     skills that helped me secure a position as a Junior Developer. I couldn't be
                                     happier!”</p>
                                 <h6>Riya Singh</h6>
@@ -913,7 +973,8 @@ if (file_exists($file)) {
 
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>“The mentorship and networking opportunities at Mi-Software Solutions LLP were instrumental in my
+                                <p>“The mentorship and networking opportunities at Mi-Software Solutions LLP were
+                                    instrumental in my
                                     career. I connected with industry leaders and landed a role as a Full Stack
                                     Developer.”</p>
                                 <h6>Vikram Patel</h6>
@@ -922,7 +983,8 @@ if (file_exists($file)) {
 
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>“Completing theMi-Software Solutions LLP course equipped me with the skills and confidence to excel
+                                <p>“Completing the Mi-Software Solutions LLP course equipped me with the skills and
+                                    confidence to excel
                                     in the tech industry. I am now a proud Software Engineer!”</p>
                                 <h6>Neha Joshi</h6>
                                 <span>Software Engineer, Future Tech</span>
@@ -1034,7 +1096,8 @@ if (file_exists($file)) {
 
                                 </a>
                             </div>
-                            <p>Welcome to Mi-Software Solutions LLP Software Training. Our platform provides comprehensive tutorials,
+                            <p>Welcome to Mi-Software Solutions LLP Software Training. Our platform provides
+                                comprehensive tutorials,
                                 guides, and resources to help you master the tools and features of our software.</p>
                             <ul class="mt-20 d-flex">
                                 <li><a href="https://www.facebook.com/profile.php?id=61571215133777"
@@ -1116,7 +1179,7 @@ if (file_exists($file)) {
 
     <!--====== BACK TO TP PART ENDS ======-->
 
-    <div class="modal fade" id="autoPopup" tabindex="-1" role="dialog" aria-labelledby="autoPopupLabel"
+    <div class="modal fade" id="autoPopups" tabindex="-1" role="dialog" aria-labelledby="autoPopupLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1135,15 +1198,15 @@ if (file_exists($file)) {
                                 <form id="enquiryForm">
                                     <div class="form-group">
                                         <input type="text" id="name" name="name" placeholder="Your Name"
-                                        required>
+                                            required>
                                     </div>
                                     <div class="form-group">
                                         <input type="email" id="email" name="email" placeholder="Your Email"
-                                        required>
+                                            required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" id="phone" name="phone" placeholder="Your Phone"
-                                        required>
+                                            required>
                                     </div>
                                     <div class="form-group">
                                         <select id="course" name="course" required>
@@ -1164,7 +1227,7 @@ if (file_exists($file)) {
                                         <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button class="submit-btn" type="submit" >Get it Now!</button>
+                                        <button class="submit-btn" type="submit">Get it Now!</button>
                                     </div>
                                 </form>
                             </div>
@@ -1172,7 +1235,6 @@ if (file_exists($file)) {
                     </div>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </div>
 
@@ -1221,7 +1283,7 @@ if (file_exists($file)) {
     <script>
         $(document).ready(function() {
             $("#autoPopup").modal('show');
-            
+
             // Handle form submission with AJAX
             $("#enquiryForm").submit(function(event) {
                 event.preventDefault(); // Prevent default form submission
@@ -1236,7 +1298,7 @@ if (file_exists($file)) {
                         $("#autoPopup").modal('hide');
                         if (response.trim() === "success") {
                             sessionStorage.setItem("enquiry_shown",
-                            "true"); // Store session data
+                                "true"); // Store session data
                             // Show success alert first
                             Swal.fire({
                                 title: "Success!",
@@ -1285,26 +1347,27 @@ if (file_exists($file)) {
         });
 
         // Ensure the button exists before adding event listener
-        document.addEventListener("DOMContentLoaded", function() {
-            var viewCourseBtn = document.getElementById("view-course-btn");
-            var courseSelect = document.getElementById("course-select");
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     var viewCourseBtn = document.getElementById("view-course-btn");
+        //     var courseSelect = document.getElementById("course-select");
 
-            if (viewCourseBtn && courseSelect) {
-                viewCourseBtn.addEventListener("click", function() {
-                    var selectedCourse = courseSelect.value; // Get the selected value
+        //     if (viewCourseBtn && courseSelect) {
+        //         viewCourseBtn.addEventListener("click", function() {
+        //             var selectedCourse = courseSelect.value; // Get the selected value
 
-                    if (selectedCourse) {
-                        window.location.href = selectedCourse; // Redirect if selected
-                    } else {
-                        alert("Please select a course."); // Show alert if no course selected
-                    }
-                });
-            } else {
-                console.warn("#view-course-btn or #course-select not found.");
-            }
-        });
+        //             if (selectedCourse) {
+        //                 window.location.href = selectedCourse; // Redirect if selected
+        //             } else {
+        //                 alert("Please select a course."); // Show alert if no course selected
+        //             }
+        //         });
+        //     } else {
+        //         console.warn("#view-course-btn or #course-select not found.");
+        //     }
+        // });
+
     </script>
-    
+
 
 </body>
 

@@ -159,7 +159,7 @@ if (file_exists($reviewsFile)) {
                                         <a href="about.php">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.php">Courses</a>
+                                        <a class="active" href="courses.php">Courses</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="events.php">Events</a>

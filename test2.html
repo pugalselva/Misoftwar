@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="course-search-form">
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 col-md-4">
+                <select class="form-control" id="course-select">
+                    <option value="">Select Course</option>
+                    <option value="web.php">HTML</option>
+                    <option value="web.php">CSS</option>
+                    <option value="web.php">JavaScript</option>
+                    <option value="react.php">Reactjs</option>
+                    <option value="angular.php">Angularjs</option>
+                    <option value="php.php">PHP</option>
+                    <option value="sql.php">MYSQL</option>
+                    <option value="net.php">.Net Framework</option>
+                    <option value="core-java.php">Core-Java</option>
+                    <option value="spring.php">Spring Framework</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 col-md-3 ">
+                <input type="text" id="search-keyword" class="form-control"
+                    placeholder="Search keyword">
+            </div>
+            <div class="col-12 col-sm-12 col-md-3">
+                <button type="button" class="btn btn-primary main-btn"
+                    id="search-button">Search Now</button>
+            </div>
+        </div>  
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+        var courses = [
+            { name: "HTML", url: "web.php" },
+            { name: "CSS", url: "web.php" },
+            { name: "JavaScript", url: "web.php" },
+            { name: "Reactjs", url: "react.php" },
+            { name: "Angularjs", url: "angular.php" },
+            { name: "PHP", url: "php.php" },
+            { name: "MYSQL", url: "sql.php" },
+            { name: ".Net Framework", url: "net.php" },
+            { name: "Core-Java", url: "core-java.php" },
+            { name: "Spring Framework", url: "spring.php" }
+        ];
+    
+        // Live filter select options based on user input
+        $("#search-keyword").on("input", function() {
+            var keyword = $(this).val().trim().toLowerCase();
+            var selectBox = $("#course-select");
+    
+            selectBox.empty(); // Clear existing options
+            selectBox.append('<option value="">Select Course</option>'); // Add default option
+    
+            // Filter and add matching options
+            courses.forEach(function(course) {
+                if (course.name.toLowerCase().includes(keyword)) {
+                    selectBox.append('<option value="' + course.url + '">' + course.name + '</option>');
+                }
+            });
+    
+            // Auto-select the first match if available
+            if ($("#course-select option").length > 1) {
+                $("#course-select").prop("selectedIndex", 1);
+            }
+        });
+    
+        // Search button click - Redirect to selected course
+        $("#search-button").click(function() {
+            var selectedOption = $("#course-select").val(); // Get selected course URL
+    
+            if (selectedOption) {
+                window.location.href = selectedOption; // Redirect
+            } else {
+                alert("Course not found. Please select from the list.");
+            }
+        });
+    });
+    
+    </script>
+</body>
+</html>

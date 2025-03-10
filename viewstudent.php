@@ -96,7 +96,7 @@ $data = $obj->read_student();
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="admin_dashboard.php">Dashboard</a>
+                                        <a  href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="studentform.php">Student Registration</a>
@@ -105,7 +105,7 @@ $data = $obj->read_student();
                                         <a href="update_event.php">Events</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
+                                        <a class="active" class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
                                             Student Report
                                         </a>
                                         <ul class="dropdown-menu">
@@ -160,7 +160,7 @@ $data = $obj->read_student();
                         <th>Expected CTC</th>
                         <th>Language Required</th>
                         <th>Uploaded File</th>
-                        <th> Profile PIc </th>
+                        <th> Profile Pic </th>
                         <th>EDIT</th>
                         <th>Delete</th>
                         <th>ID CARD</th>

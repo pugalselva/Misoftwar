@@ -57,6 +57,17 @@ include 'db.php'; // Assuming db.php is in the same directory as react.php
             background-color: #f9f9f9;
         }
 
+        .about-items .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .about-single-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
         .about-single-item {
             background: white;
             padding: 30px;
@@ -162,10 +173,10 @@ include 'db.php'; // Assuming db.php is in the same directory as react.php
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.php">Home</a>
+                                        <a  href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.php">About us</a>
+                                        <a class="active" href="about.php">About us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="courses.php">Courses</a>

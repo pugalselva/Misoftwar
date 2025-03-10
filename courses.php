@@ -95,13 +95,13 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index.php">Home</a>
+                                        <a  href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.php">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="courses.php">Courses</a>
+                                        <a class="active" href="courses.php">Courses</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="events.php">Events</a>

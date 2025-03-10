@@ -274,7 +274,7 @@ include 'database.php';
 
             <!-- Language -->
             <div class="form-group">
-                <label for="language" class="form-label">Languages Known</label>
+                <label for="language" class="form-label">Languages</label>
                 <input type="text" class="form-control" id="language" name="language">
             </div>
 

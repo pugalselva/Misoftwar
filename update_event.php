@@ -154,13 +154,13 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="admin_dashboard.php">Dashboard</a>
+                                        <a  href="admin_dashboard.php">Dashboard</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="studentform.php">Student Registration</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="update_event.php">Events</a>
+                                        <a class="active" href="update_event.php">Events</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
